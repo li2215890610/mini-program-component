@@ -1,0 +1,100 @@
+.template-order .order-item {
+  background: rgba(255, 255, 255, 1);
+  border-radius: 8rpx;
+  margin-bottom: 20rpx;
+  padding: 0 20rpx 0 14rpx;
+}
+
+.template-order .order-item:nth-last-of-type(1) {
+  margin-bottom: 0;
+}
+
+.template-order .order-item .item-check {
+  padding: 24rpx 20rpx 24rpx 24rpx;
+}
+
+.template-order .order-item .item-check .icon-check {
+  display: inline-block;
+  width: 36rpx;
+  height: 36rpx;
+  border: 2rpx solid rgba(155, 155, 155, 1);
+  border-radius: 50%;
+}
+
+.template-order .order-item .item-detail {
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+.template-order .order-item .item-detail>view {
+  padding: 20rpx 0 20rpx 22rpx;
+}
+
+.template-order .order-item .item-detail>view:nth-of-type(1) {
+  border-bottom: solid 2rpx rgba(241, 240, 241, 1);
+}
+
+.template-order .order-item .item-detail .detail-title {
+  font-size: 28rpx;
+  font-family: PingFangSC-Semibold;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 1);
+  line-height: 40rpx;
+}
+
+.template-order .order-item .item-detail .detail-num {
+  font-size: 20rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: rgba(136, 136, 136, 1);
+  line-height: 28rpx;
+  margin-top: 10rpx;
+}
+
+.template-order .order-item .item-detail .detail-time,
+.template-order .order-item .item-detail .detail-tip,
+.template-order .order-item .item-detail .detail-name {
+  font-size: 24rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 1);
+  line-height: 34rpx;
+}
+
+.template-order .order-item .item-detail .detail-tip>text {
+  color: rgba(218, 54, 74, 1);
+}
+
+.template-order .order-item .item-detail .detail-name {
+  margin-top: 10rpx;
+}
+
+.template-order .order-item .item-state {
+  padding: 20rpx 18rpx;
+}
+
+.template-order .order-item .item-state .icon-state {
+  display: inline-block;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.template-order .order-item .item-state .icon-state~view:not(.icon-point) {
+  font-size: 20rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: rgba(204, 182, 123, 1);
+  line-height: 28rpx;
+  margin-top: 10rpx;
+  min-width: 60rpx;
+}
+
+.template-order .order-item .item-state .icon-point {
+  display: inline-block;
+  width: 20rpx;
+  height: 20rpx;
+  background: rgba(226, 46, 46, 1);
+  top: 10rpx;
+  right: 0;
+  border-radius: 50%;
+}

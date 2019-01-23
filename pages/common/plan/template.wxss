@@ -1,0 +1,78 @@
+.template-plan {
+  padding: 40rpx 12rpx 40rpx 14rpx;
+  box-sizing: border-box;
+}
+
+.template-plan .detail-title {
+  padding: 0 0 16rpx 22rpx;
+  box-sizing: border-box;
+  border-bottom: solid 2rpx rgba(241, 240, 241, 1);
+  font-size: 36rpx;
+  font-family: PingFangSC-Semibold;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 1);
+  line-height: 50rpx;
+}
+
+.template-plan .detail-item {
+  padding: 20rpx 24rpx;
+  box-sizing: border-box;
+  border-bottom: solid 2rpx rgba(241, 240, 241, 1);
+}
+
+.template-plan .item-rule {
+  font-size: 28rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 1);
+  line-height: 40rpx;
+}
+
+.template-plan .rule-en {
+  font-size: 20rpx;
+}
+
+.template-plan .item-tip {
+  font-size: 20rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: rgba(204, 182, 123, 1);
+  line-height: 28rpx;
+  padding-left: 22rpx;
+  margin: 16rpx 0 20rpx;
+}
+
+.template-plan .item-tip .tip-en {
+  text-indent: 22rpx;
+}
+
+.template-plan .item-price {
+  font-size: 28rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 1);
+  line-height: 40rpx;
+}
+
+.change-btn {
+  font-size: 20rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: rgba(129, 129, 129, 1);
+  line-height: 28rpx;
+  letter-spacing: 2rpx;
+  margin-top: 50rpx;
+}
+
+.icon-more {
+  display: inline-block;
+  width: 20rpx;
+  height: 20rpx;
+  vertical-align: middle;
+  margin-left: 25rpx;
+}
+
+.icon-more-up {
+  transform-origin: center center;
+  transform: rotate(180deg);
+}

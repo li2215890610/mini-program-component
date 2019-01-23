@@ -1,0 +1,125 @@
+<template name='self'>
+  <view>
+
+    <view class='submit_who_item submit_who_name display-flex position-r'>
+      <label>姓</label>
+      <input type='text' class='input' placeholder='请输入护照上的英文姓' placeholder-class='placeholder' disabled='{{haself}}' value='{{selfInfo.lastName}}' bindblur='isLastName'></input>
+    </view>
+
+    <view class='submit_who_item submit_who_name display-flex position-r'>
+      <label>名</label>
+      <input type='text' class='input' placeholder='请输入护照上的英文名' placeholder-class='placeholder' disabled='{{haself}}' value='{{selfInfo.firstName}}' bindblur='isFirstName'></input>
+    </view>
+
+    <view class='submit_who_item submit_who_gender display-flex'>
+      <label>性别</label>
+      <view class='input display-flex'>
+        <view class='who_gender_item display-flex align-center' data-gender='M' catchtap='{{haself?"":"changeGender"}}'>
+          <view class='display-flex flex-cc'>
+            <text class='{{selfInfo.gender == "M"?"display-inline":"display-none"}}'></text>
+          </view>
+          <view>男</view>
+        </view>
+        <view class='who_gender_item display-flex align-center' data-gender='F' catchtap='{{haself?"":"changeGender"}}'>
+          <view class='display-flex flex-cc'>
+            <text class='{{selfInfo.gender == "F"?"display-inline":"display-none"}}'></text>
+          </view>
+          <view>女</view>
+        </view>
+      </view>
+    </view>
+
+    <view class='submit_who_item submit_who_id display-flex'>
+      <label>护照号</label>
+      <input type='text' class='input' placeholder='请输入护照号' placeholder-class='placeholder' disabled='{{haself}}' value='{{selfInfo.passport}}' bindblur='isPassport'></input>
+    </view>
+
+    <view class='submit_who_item submit_who_birth display-flex'>
+      <label>出生日期</label>
+      <input wx:if='{{haself}}' class='input' placeholder='请选择出生日期' placeholder-class='placeholder' disabled='disabled' value='{{selfInfo.dateOfBirth}}'></input>
+
+      <picker wx:else class="input" mode="date" end='{{now?now:""}}' bindchange="bindDateChange">
+        <view wx:if='{{selfInfo.dateOfBirth}}' class='display-block' style='min-width: 400rpx;min-height: 50rpx;'>{{selfInfo.dateOfBirth}}</view>
+        <view wx:else class='placeholder'>请选择出生日期</view>
+      </picker>
+
+    </view>
+
+    <view class='submit_who_item submit_who_tel display-flex'>
+      <label>联系电话</label>
+      <input type='number' class='input' placeholder='请输入常用号码' placeholder-class='placeholder' disabled='{{haself}}' value='{{selfInfo.phoneNumber}}' bindblur='isPhoneNumber'></input>
+    </view>
+
+    <view class='submit_who_item submit_who_email display-flex'>
+      <label>电子邮箱</label>
+      <input type='text' class='input' placeholder='请输入常用邮箱' placeholder-class='placeholder' disabled='{{haself}}' value='{{selfInfo.email}}' bindblur='isEmail'></input>
+    </view>
+
+    <view class='submit_who_item submit_who_type display-flex'>
+      <label>受益人</label>
+      <input class='input' value='法定受益人' disabled></input>
+    </view>
+  </view>
+</template>
+
+<template name='person'>
+  <block wx:for='{{beneficiary}}' wx:key=''>
+    <view>
+      <view class='submit_who_item submit_who_nav display-flex flex-between'>
+        <view>新增的被保人</view>
+        <view data-index='{{index}}' catchtap='reduceBeneficiary'></view>
+      </view>
+
+      <view class='submit_who_item submit_who_name display-flex position-r'>
+        <label>姓</label>
+        <input type='text' class='input' placeholder='请输入护照上的英文姓' placeholder-class='placeholder' data-index='{{index}}' bindblur='isLastName' disabled='{{item.contactId}}' value='{{item.lastName}}'></input>
+        <view class='contact-enter position-a display-flex flex-cc' data-index='{{index}}' catchtap='contactPicker'>
+          <text class='icon-name'></text>
+        </view>
+      </view>
+
+      <view class='submit_who_item submit_who_name display-flex position-r'>
+        <label>名</label>
+        <input type='text' class='input' placeholder='请输入护照上的英文名' placeholder-class='placeholder' bindblur='isFirstName' data-index='{{index}}' disabled='{{item.contactId}}' value='{{item.firstName}}'></input>
+      </view>
+
+      <view class='submit_who_item submit_who_gender display-flex'>
+        <label>性别</label>
+        <view class='input display-flex'>
+          <view class='who_gender_item display-flex align-center' data-index='{{index}}' data-gender='M' catchtap='{{item.contactId?"":"changeGender"}}'>
+            <view class='display-flex flex-cc'>
+              <text class='{{item.gender == "M"?"display-inline":"display-none"}}'></text>
+            </view>
+            <view>男</view>
+          </view>
+          <view class='who_gender_item display-flex align-center' data-index='{{index}}' data-gender='F' catchtap='{{item.contactId?"":"changeGender"}}'>
+            <view class='display-flex flex-cc'>
+              <text class='{{item.gender == "F"?"display-inline":"display-none"}}'></text>
+            </view>
+            <view>女</view>
+          </view>
+        </view>
+      </view>
+
+      <view class='submit_who_item submit_who_id display-flex'>
+        <label>护照号</label>
+        <input type='text' class='input' placeholder='请输入护照号' placeholder-class='placeholder' data-index='{{index}}' bindblur='isPassport' disabled='{{item.contactId}}' value='{{item.passport}}'></input>
+      </view>
+
+      <view class='submit_who_item submit_who_birth display-flex'>
+        <label>出生日期</label>
+        <input wx:if='{{item.contactId}}' class='input' placeholder='请选择出生日期' placeholder-class='placeholder' disabled='disabled' value='{{item.dateOfBirth}}'></input>
+
+        <picker wx:else class="input" mode="date" end='{{now?now:""}}' data-index='{{index}}' bindchange="bindDateChange">
+          <view wx:if='{{item.dateOfBirth}}' class='display-block' style='min-width: 400rpx;min-height: 50rpx;'>{{item.dateOfBirth}}</view>
+          <view wx:else class='placeholder'>请选择出生日期</view>
+        </picker>
+      </view>
+
+      <view class='submit_who_item submit_who_type display-flex'>
+        <label>受益人</label>
+        <input class='input' value='法定受益人' disabled></input>
+      </view>
+    </view>
+  </block>
+</template>

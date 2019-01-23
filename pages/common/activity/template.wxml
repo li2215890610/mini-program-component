@@ -1,0 +1,14 @@
+<template name='activity'>
+  <swiper bindchange='activityChange'>
+    <block wx:for='{{activityData}}' wx:key=''>
+      <swiper-item>
+        <image mode='widthFix' lazy-load='true' catchtap='activityDetail' data-index='{{index}}' class='slide-img-container' src='{{item.backImgUrl}}'></image>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class='dots position-a display-flex'>
+    <block wx:for='{{activityData}}' wx:key=''>
+      <view class='{{index == activityIndex ? "active" : ""}}'></view>
+    </block>
+  </view>
+</template>

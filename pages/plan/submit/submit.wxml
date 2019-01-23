@@ -1,0 +1,78 @@
+<!--pages/plan/submit/submit.wxml-->
+<import src='../../common/person/template.wxml' />
+<view  class='page-container plan-submit-container'>
+  <view class='plan-submit_title'>填写投保信息</view>
+  <view class='plan-submit_item plan-submit_self'>
+
+    <view class='submit_self_title'>
+      <text class='text-center'>1</text>
+      <text>本人信息（投保人）</text>
+    </view>
+
+    <view class='submit_self_info'>
+      <template is='self' data='{{haself, selfInfo, now}}'></template>
+    </view>
+
+  </view>
+
+  <view class='plan-submit_item plan-submit_who'>
+
+    <view class='submit_who_title display-flex align-center'>
+      <text class='text-center'>2</text>
+      <view class='submit_who_title_right'>
+        <view>为谁投保（被保人）</view>
+        <view>*被保人中须至少包含一位年满18周岁的成人</view>
+      </view>
+      
+    </view>
+
+    <view class='submit_who_btns display-flex'>
+      <view data-type='self' catchtap='changeBeneficiary' class='{{beneficiaryType == "self"?"active":""}}'>本人</view>
+      <view data-type='who' catchtap='changeBeneficiary' class='{{beneficiaryType == "who"?"active":""}}'>他人</view>
+    </view>
+
+    <view wx:if='{{beneficiaryType == "self"}}' class='submit_who_self'>
+      <template is='self' data='{{haself, selfInfo, now}}'></template>
+    </view>
+
+    <view wx:if='{{beneficiary.length>0}}' class='submit_who_list'>
+      <template is='person' data='{{haself, beneficiary, now}}'></template>
+    </view>
+
+    <view class='submit_who_add text-center' catchtap='addBeneficiary'>+ 添加被保人</view>
+
+  </view>
+
+  <!-- button -->
+  <view class='plan-submit position-f display-flex'>
+    <view>
+      <text>¥{{price}} </text>
+      <text>起</text>
+    </view>
+    <form bindsubmit='planSubmit' report-submit='true'>
+      <button class='text-center' form-type='submit'>提交资料</button>
+    </form>
+  </view>
+
+  <view class='contact-picker {{contactShow?"picker-show":""}}' catchtouchmove="true">
+    <view class='picker-mask' catchtap='contactPicker'></view>
+    <view class='picker-container'>
+      <view class='picker-title display-flex flex-between align-center'>
+        <view>选择常用联系人</view>
+        <text catchtap='contactPicker' class='display-inline position-r'>+</text>
+      </view>
+      <scroll-view class='picker-content' scroll-y='{{true}}'>
+        <block wx:for='{{contact}}' wx:key=''>
+          <view class='content-item display-flex align-center' data-index='{{index}}' catchtap='selectContact'>
+            <image lazy-load='true' class='avatar display-block' mode='widthFix' src='{{item.gender=="M"?"../../../images/avatar-gg.png":"../../../images/avatar-mm.png"}}'></image>
+            <view class='display-flex flex-column'>
+              <view class='name'>{{item.lastName}}{{item.firstName}}</view>
+              <view class='passport'>护照号：{{item.passportFormat}}</view>
+            </view>
+          </view>
+        </block>
+      </scroll-view>
+    </view>
+  </view>
+
+</view>

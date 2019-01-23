@@ -1,0 +1,213 @@
+/* pages/plan/complete/complete.wxss */
+
+.plan-complete-container {
+  background: rgba(242, 243, 245, 1);
+  padding: 24rpx 24rpx 140rpx;
+  box-sizing: border-box;
+}
+
+.plan-complete_item {
+  margin-bottom: 20rpx;
+}
+
+.plan-complete_item:nth-last-of-type(1) {
+  margin-bottom: 0;
+}
+
+.plan-card {
+  width: 100%;
+}
+
+/* 会员卡 */
+
+.plan-card .card {
+  width: 100%;
+  border-radius: 8rpx;
+  overflow: hidden;
+}
+
+.plan-card .card .card-bg {
+  width: 100%;
+}
+
+.plan-card .card .card-content {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 24rpx 16rpx 30rpx 40rpx;
+  box-sizing: border-box;
+}
+
+.axa-logo {
+  width: 51rpx;
+  height: 50rpx;
+}
+
+.card-level {
+  margin-left: 31rpx;
+  font-size: 36rpx;
+  font-family: PingFangSC-Semibold;
+  font-weight: 600;
+  color: rgba(255, 233, 175, 1);
+  line-height: 50rpx;
+}
+
+.avatar-img {
+  width: 88rpx;
+  height: 88rpx;
+  border-radius: 50%;
+  margin-left: 10rpx;
+}
+
+.card-name {
+  font-size: 20rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 1);
+  line-height: 28rpx;
+}
+
+.card-id {
+  font-size: 28rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: rgba(255, 234, 176, 1);
+  line-height: 40rpx;
+}
+
+.beneficiary-items swiper {
+  height: 400rpx;
+}
+
+.beneficiary-item {
+  background: rgba(255, 255, 255, 1);
+  padding: 32rpx 12rpx 20rpx 14rpx;
+  border-radius: 8rpx;
+}
+
+.item-title {
+  padding: 8rpx 0 8rpx 22rpx;
+  border-bottom: solid 2rpx rgba(241, 240, 241, 1);
+}
+
+.item-title>view:nth-of-type(1)>view:nth-of-type(1) {
+  font-size: 36rpx;
+  font-family: PingFangSC-Semibold;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 1);
+  line-height: 50rpx;
+}
+
+.item-title>view:nth-of-type(1)>view:nth-of-type(2) {
+  font-size: 20rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: rgba(136, 136, 136, 1);
+  line-height: 28rpx;
+}
+
+.item-title>view:nth-of-type(2) {
+  font-size: 24rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: rgba(172, 148, 85, 1);
+  line-height: 34rpx;
+  min-width:80rpx;
+}
+
+.item-content {
+  padding: 20rpx 24rpx 20rpx;
+}
+
+.item-content>view:nth-of-type(1) {
+  font-size: 28rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 1);
+  line-height: 40rpx;
+  margin-bottom: 20rpx;
+}
+
+.item-content>view:nth-of-type(2), .item-content>view:nth-of-type(3) {
+  font-size: 28rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 1);
+  line-height: 56rpx;
+  letter-spacing: 2rpx;
+}
+
+.beneficiary-content {
+  background: rgba(255, 255, 255, 1);
+  border-radius: 8rpx;
+  padding: 24rpx 12rpx 20rpx 14rpx;
+}
+
+.beneficiary-content .title {
+  padding: 16rpx 22rpx;
+  border-bottom: solid 2rpx rgba(241, 240, 241, 1);
+}
+
+.beneficiary-content .content {
+  padding: 20rpx 24rpx;
+  font-size: 28rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 1);
+  line-height: 40rpx;
+}
+
+.beneficiary-content .content_row>view {
+  width: 50%;
+  flex-grow: 1;
+}
+
+.beneficiary-content .content_row:nth-of-type(1) .text-right {
+  display: none;
+}
+
+.mr10 {
+  margin-right: 10rpx;
+}
+
+.enter-custom {
+  background: rgba(255, 255, 255, 1);
+  padding: 40rpx 22rpx 38rpx 36rpx;
+  border-radius: 8rpx;
+}
+
+.btn-home {
+  background: rgba(41, 60, 122, 1);
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  padding: 36rpx 0 34rpx;
+  font-size: 36rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 1);
+  line-height: 50rpx;
+  letter-spacing: 2rpx;
+}
+
+.icon-custom {
+  display: inline-block;
+  width: 42rpx;
+  height: 42rpx;
+  margin-right: 13rpx;
+  vertical-align: middle;
+  position: relative;
+  top: -6rpx;
+}
+
+.icon-arrow-right {
+  display: inline-block;
+  width: 20rpx;
+  height: 20rpx;
+  border-top: solid 4rpx rgba(0, 0, 0, 1);
+  border-right: solid 4rpx rgba(0, 0, 0, 1);
+  transform: rotate(45deg);
+  position: relative;
+  bottom: -2rpx;
+}

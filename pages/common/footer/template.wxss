@@ -1,0 +1,43 @@
+
+.home-footer {
+  width: 100%;
+}
+
+.home-footer .footer-enter .enter-item {
+  background: rgba(255, 255, 255, 1);
+  font-size: 28rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 1);
+  letter-spacing: 2rpx;
+  padding: 30rpx 39rpx;
+  margin-bottom: 2rpx;
+}
+
+.home-footer .footer-enter .enter-item:nth-last-of-type(1) {
+  margin-bottom: 0;
+}
+
+.icon-help, .icon-custom, .icon-about {
+  display: inline-block;
+  width: 42rpx;
+  height: 42rpx;
+  margin-right: 13rpx;
+  vertical-align: middle;
+}
+
+.icon-help~text, .icon-custom~text, .icon-about~text {
+  position: relative;
+  top: 6rpx;
+}
+
+.icon-arrow-right {
+  display: inline-block;
+  width: 20rpx;
+  height: 20rpx;
+  border-top: solid 4rpx rgba(0, 0, 0, 1);
+  border-right: solid 4rpx rgba(0, 0, 0, 1);
+  transform: rotate(45deg);
+  position: relative;
+  bottom: -2rpx;
+}

@@ -1,0 +1,70 @@
+<!--pages/plan/complete/complete.wxml-->
+<view wx:if='{{loaded}}' class='page-container plan-complete-container'>
+  <!-- 会员卡 -->
+  <!-- <view wx:if='{{userDetail.level > 0}}' class='plan-complete_item plan-card'>
+    <view class='card position-r'>
+      <image mode='widthFix' class='card-bg display-block' src='{{userDetail.memberBackgroundImg}}'></image>
+      <view class='card-content position-a display-flex flex-column flex-between'>
+        <view class='display-flex flex-between'>
+          <view class='display-flex align-center'>
+            <image class='axa-logo display-block' src='../../../images/axa-transparent.png'></image>
+            <view class='card-level'>{{userDetail.levelName}}</view>
+          </view>
+          <view class='display-flex align-center'>
+            <view class='card-name'>{{userDetail.wxName}}</view>
+            <image class='avatar-img display-block' src='{{userDetail.avatarUrl}}'></image>
+          </view>
+        </view>
+        <view class='card-id'>{{userDetail.axaId}}</view>
+      </view>
+    </view>
+  </view> -->
+  <!-- 保障信息 -->
+  <view class='plan-complete_item beneficiary-items'>
+    <swiper indicator-dots='{{orderDetail.ordersItem.contactList.length>1}}' indicator-active-color='rgba(204,182,123,1)' indicator-color='rgba(213,212,213,1)' style='{{orderDetail.ordersItem.contactList.length>1?"":"height: 330rpx;"}}'>
+      <block wx:for='{{orderDetail.ordersItem.contactList}}' wx:key=''>
+        <swiper-item>
+          <view class='beneficiary-item'>
+            <view class='item-title display-flex flex-between'>
+              <view class='text-ellipsis'>
+                <view>{{orderDetail.productName}}</view>
+                <view>{{orderDetail.policyCode}}</view>
+              </view>
+              <view class='display-flex flex-cc'>{{orderDetail.stateMsg}}</view>
+            </view>
+            <view class='item-content'>
+              <view>{{orderDetail.startTimeStr}}——{{orderDetail.endTimeStr}}</view>
+              <view class='text-ellipsis'>被保人：{{item.lastName}}{{item.firstName}}</view>
+              <view>目的地：{{orderDetail.arrivalCountryChineseName}}</view>
+            </view>
+          </view>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <!-- 保障内容 -->
+  <view class='plan-complete_item beneficiary-content'>
+    <view class='title'>保障计划</view>
+    <view class='content'>
+      <block wx:for='{{orderDetail.product.productSpecs.insurancePlanList}}' wx:key=''>
+        <view class='content_row display-flex flex-between'>
+          <view class='display-flex'>
+            <text class='mr10'>·</text>
+            <text>{{item.chineseName}}</text>
+          </view>
+          <view wx:if='{{item.maxAmount}}' class='text-right'>{{item.maxAmount}}元</view>
+        </view>
+      </block>
+    </view>
+  </view>
+  <!-- 联系客服 -->
+  <navigator url='../../service/customer/customer' class='plan-complete_item enter-custom display-flex flex-between align-center'>
+    <view>
+      <image lazy-load='true' class='icon-custom' src='../../../images/icon-custom.png'></image>
+      <text>联系客服</text>
+    </view>
+    <view class='icon-arrow-right'></view>
+  </navigator>
+  <!-- 返回首页 -->
+  <view class='btn-home position-f text-center' catchtap='backHome'>返回首页</view>
+</view>

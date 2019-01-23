@@ -1,0 +1,304 @@
+/* pages/plan/submit/submit.wxss */
+@import '../../common/person/template.wxss';
+@import '../../../font/stylesheet.wxss';
+
+.plan-submit-container {
+  padding: 20rpx 36rpx 232rpx 38rpx;
+  box-sizing: border-box;
+}
+
+.plan-submit-container .plan-submit_title {
+  font-size: 44rpx;
+  font-family: PingFangSC-Semibold;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 1);
+  line-height: 60rpx;
+  padding: 20rpx 0;
+  border-bottom: solid 2rpx rgba(241, 240, 241, 1);
+}
+
+.submit_self_title {
+  padding: 40rpx 0 12rpx;
+  box-sizing: border-box;
+}
+
+.submit_who_title {
+  padding: 110rpx 0 12rpx;
+  box-sizing: border-box;
+}
+
+.submit_who_title>text:nth-of-type(1), .submit_self_title>text:nth-of-type(1) {
+  display: inline-block;
+  width: 60rpx;
+  height: 60rpx;
+  background: rgba(41, 60, 122, 1);
+  border-radius: 50%;
+  font-size: 36rpx;
+  font-family: PingFangSC-Semibold;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 1);
+  line-height: 60rpx;
+}
+
+.submit_who_title .submit_who_title_right>view:nth-of-type(1),
+.submit_self_title>text:nth-of-type(2) {
+  display: inline-block;
+  font-size: 32rpx;
+  font-family: PingFangSC-Semibold;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 1);
+  line-height: 44rpx;
+  margin-left: 20rpx;
+}
+
+.submit_who_title .submit_who_title_right>view:nth-of-type(2) {
+  font-size: 20rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 1);
+  line-height: 28rpx;
+  margin-left: 20rpx;
+}
+
+.submit_who_btns {
+  margin: 40rpx 0 30rpx;
+}
+
+.submit_who_btns>view {
+  padding: 20rpx 52rpx;
+  font-size: 28rpx;
+  font-family: PingFangSC-Semibold;
+  font-weight: 600;
+  color: rgba(41, 60, 122, 1);
+  line-height: 40rpx;
+  border: solid 2rpx rgba(41, 60, 122, 1);
+}
+
+.submit_who_btns>view.active {
+  color: rgba(255, 255, 255, 1);
+  border-color: rgba(41, 60, 122, 1);
+  background: rgba(41, 60, 122, 1);
+  /* background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADYAAAAwCAYAAABaHInAAAAAAXNSR0IArs4c6QAABMBJREFUaAXdmn9oW1UUx+95SdrEaYuiFX8hTAvKaHVpZWwdwqySNLiJv4aoDBnKBHVsgv5hfvhYmuHQqUwFB5OiMh1zTh0j76UqRWHTP/JSo4jIcEP7h25qsUUkW/Le8dzALWv6XpK3JO17yT/33XPvPff7ybm5597XQk6JxgxkSdZmH+A8Wjq+jTHcjQylduErg3GYrBJ9kCrvI7LOdoCbA+MwuUz0dtTZp8jYpW6Hm7f0gqHU18B8axmD39wONi9iAiY3Ll+NelGhZdkvbG4rTcE4xIm03DULxcMEN+w2KK7XEow3ZrN7ffDn1BgiPsLrbvpUBeMgBAU5JfESMuP5tgITMJoae4oZbI9bcl3NiAkwXmpK4l6K3AcURv/5dic+z9vuawkcGNnxiUfCYQYwXatvC9t1JklPkIZD1eawBcYdrQyljvsYW0OOT1Vz3JI2gIJH8tw/GE7u68aeR2mOk1bz2Abjjm4ZGf054PcSHMtZOW66HdiMJGFoZXjHZ4iyNAtndtMcy63msfUbq3Ty44R8caFQPES5LlTZVm8dGPxEG9LN1fvDH5IE4WA4mZ86/mrg9MzfHzJk91Qbc0EREw5XrJP/Dfp9d9OyfFfY6i0JyAAJng6O9PfR85jlOIBfOjq8Qxwql955xel/pidqQXFfDYFxB7BOLg2OjD5GIlO8buNTYoB/AWzUByKjm5kEu0zGftfpCwz13ymfnByP9Rrw3zeUWVeZ9FtgamgpVnrTlNgWSuhvkd1T2WZWL0eNsW3ByOgbvJ3Gby/fC5HWAMBXXejd0BuRZ3NKfLWBeITaLjfzY2ZrKlhZXDqxnnLdARJxkdmEZjZg0s6BSDJaHq/EabfD9V3Ys6k3svVsOXeivp/aAmZjrWxNB+MTZTPxVUzHo3a+YYrROwPh/i18aQqxWSW+FRBfu5DTTkvAuDBNlW9ELKl0SrlBCK1V0vI70tN92UPXrt5e0NTEKwyNZ2uNsWpvGRifMJ+Re0pG6Sj97m6zErDQDscoP/5OX8gDC9vqt7QUjMvIZ15eVjRmDpLQSP2yGu/ZcjAuEfGgR1Pzb1P+ebxxyfV5WBQwIYW28xdpWcqi3spyUcE4SC4d32wA7qUwetsKrAyXSYygoX9EZ8xlrYJb9IgJEHoTNmiUipTr2JXC1sxyycA4xPdfyMuL50oqJeDeZkJxXw0fghsRxA+3GPCuAWDfNuLHbOySRkwI4nesMzPTB2jH3CBsjZaOAOMQ5Vyn5N+kxycbheLjHQMmYDQ1+gIazO7dTgyfKx0HxpXl1PgmA419dFLxzSm1+eBIMM4wmUncpev6x/R4iU2mcnfHgnF1k+PyrbpeTFPkrrIL52gwDpP7Mnq9cY7RvY7dZAduSfNYPUKDw6lfA+Abon3uWD39RR/HR0wIPTUh+6cLpf2U6+4Ttmqla8A4BH8DrKml1+nhmWpQvM1VYAKG7nXPEeYuuh1Y6rdsEE6cWmbV+MNg4BgdoDvMNLoWjMNomdgdaOBh2jG7K+FcDcZhsp/H+6BoKPS/KdecD+d6MA7zQyZ63VkDFNpUVgg4x+cxIbRa2RdKTXn83rX8fb/o1xYREzAn0ns66Q+C71Gu2yhsbVMSFNA7/+T/yXebnMKymNwAAAAASUVORK5CYII=) no-repeat;
+  background-size: 48rpx 48rpx;
+  background-position: top right; */
+}
+
+.submit_who_btns>view:nth-of-type(1) {
+  margin-right: 20rpx;
+}
+
+.contact-enter {
+  right: -34rpx;
+  top: 0;
+  padding: 42rpx 38rpx 38rpx;
+  box-sizing: border-box;
+  z-index: 3;
+}
+
+.submit_who_item .icon-name {
+  display: inline-block;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAAAXNSR0IArs4c6QAAA/FJREFUWAnFmF2IVVUUx+/YqPQxE6iVmTIjjr1oBoaEgiGD4IMD+RSI+QWCyEw+qJjRJAShKL748WAU9SAi4osP0oMkjtlTg0n5UYNQYqZGMejMIH2MY7//6azLOpszZ865d273D/+z19p7rb3W3Wd/ndtQSscUqnfBJfBV+CSsNQYI8C08Dw/Av2Aq2qm9Ax/XkdeJPQ+WGvRwmI58DWoEDUr2T1NqWDbR93Ou/x+QFzo9Eo/xtJG7iDw7NKixroT6oOXwfhjv17hxiPL5sPF/0l+Lc1CS53zMF1yDRq+e+J3gSrB/gstCc8AwaEKdSovf7BOsUy7ZYRtpngZXwRZn2oq8FWrCnoUa7jzQW9BEfxlqPn8FNZ+rQi/eSmA0rs3R+yRsPoL/BP08QO+GRd/UT3E/w5Slb2JltATXyCgDT9CmkRrNX/XHM/zTmhIJalPeCD+EFkSbdSdcDsPNnKoE3kMzv0fIJ+Bu+IWrV/t6mBeJBM2pDcECqfO86MfQ/DoCp+2u7XLQlqWOW4JzXAI9KRE1+v5cz3vpKCdYdPKGOejsNiiREBrZe67yWSfnEqtN8HuijMSRllI+FUSdiR7dSigfwt+C9jHVahPUjq9tSlAyJ+FLUoASOw21BQmnoEa0YlS6SHSh/RvaQlE5EOj30TVf86I8B+WgW8sWuBdaEN3FtsGVMM8or8ZOm7L5+/IP6tthESQSvISn7zCU1+XseRZ2R6A2fo2Y9tJ9cAYsinKCjXjqeMpCdNxkGcRtv1B25bArbKKlr/P2A2ijdxV5M1wG64HyCPrglS4S34fkqVB9Fd7z5ByjnGCeBWBOWaVW8udQC0K8ATUPb8FDsAVWjUpGcCJRtTBGoE2PtFJfhe/CvCiPoHcomqCSs8usT0qdfwn9GWztR33ADHlcEjxMAAus8mM4LQg6G/0M9HadgU2aWnWCC+j1kQv8VloUV9ftbDU3tZCykEjwRSzfgfuh/dIfkTVn3oS6MYf4lAqz/SRsTNG1GC84nx0pNr4qkaD+sLFgaeUG7xnLukKZrX5gHizDyHyUbBbKCeqXaYVlIWxvxlgf+cJteDeSxn7oSB2JzeaObf6fRSPFCtgBW+EeKFyBB2Ef/Bp6KMimuCJvcjIfhG9D3Rk1fwujDQ97BUW+SQoHyuGQeMU57Otn4o863ecM1Zyj1kc1pea54HOKKnRl0mvW90Ml97iokyofi/G3qaaTKoHP0KyxF3l+orW2SgPdvwF/hpbDTlV66KjSTVifAQYNc7jVWNt4ls/Q2dOuw++QFzm9LC5BugntV9Sj1J4Z7ZXhCFIfoYlnF3wdvgInw1pjiAAatR6o43MYlv4FKk+JJkeZIsoAAAAASUVORK5CYII=) no-repeat;
+  background-size: 100% 100%;
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.submit_who_item.submit_who_nav {
+  margin-top: 60rpx;
+  border-bottom: 2rpx solid rgba(151, 151, 151, 1);
+  padding: 20rpx 0;
+  font-size: 28rpx;
+  font-family: PingFangSC-Semibold;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 1);
+  line-height: 40rpx;
+}
+
+.submit_who_item.submit_who_nav>view:nth-of-type(2) {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACYAAAAoCAYAAACSN4jeAAAAAXNSR0IArs4c6QAAAsZJREFUWAntmE2IjWEUx+/4ZsJYyPga2fioWUg+dprGysLWSqZGyVaiWSDZzELZaKIkiWyRSEiyodQoC9/qriTGRyIRw+9/5zn1dOZ9Z+4z977XLO6p/z2fzznnPe/zft2WUm20hOW9YCvoAMOgDG6Bc2AINJz2U/EH+JuDr9jVdEPpBNXyGvL2vkZ1tiOjqc/Y7oB7QJOKm9Pp7QKF0hSyl0FceAC9FRi1IVwEccwjcxbFu1zBKzmFpmK/72JX58RmmjWBFNrogrXXsugPxpPOscnpY6oteJeCA6B9zMgR5zpYfOSX0X/lrJuHfVvke4z8LNKzRF3ll8BdOR+CeD/8b1kH2qqJfQHzwWSidu2xfqApTRZ6QCNDmphI+2tRRRo5tbOCfB1+JMj1ZKp1I0p4GvkM0B57AYan8SN6FyBZN0SjjwiDptSRL3e53vo6qbcLl684tdlY6mxTJzaDAj2g0xVaiL4bLHb2uei9YKWzT0j9ziq7yZ53GU4F3ze4XcUK0UNaa54Cu9IRS9eA7NrcdqUjlrT5rYb4YRljSp1Yd1ist4nNQdajZ0OQ18LjR5vebEWapHxVU2pjOpVGJhv3dunTzQj3cZFrtJja2OgMBVmajaUOtjmx5sRSJ5Aa39xjRU9MzzUjk417u+nGfZzZM3nqqXwdZXkV5E9wQaSHu96GjSz+N4ayGavhqY3tI+lN0AeehAKaxC5wG/SA+DtzT7Dvhb8HNZGOWsWECzVlyl+8IuS3Ood8aNbE9M+NUYcJdeb+YySuWSmV1ZjtHQWsBwsqkfX96XbpXjo9U9U/hTZi8bMgfivNXJRgXEOsLharoX8C5vj1WQVnE6QjWBYFDyLrCzn+5ozcVYttRG4H4kYHEY6bMh7fSYAdUZH8DXVmjteM9x/FoAkV1ViZ3KvAhGgLq66CD6AeDf4kz3NwDOjTLpf+Ae1J/cNSiy/tAAAAAElFTkSuQmCC) no-repeat;
+  width: 37rpx;
+  height: 40rpx;
+  background-size: 100% 100%;
+}
+
+.submit_who_add {
+  padding: 20rpx 0;
+  font-size: 28rpx;
+  font-family: PingFangSC-Semibold;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 1);
+  line-height: 40rpx;
+  margin: 40rpx 0 32rpx;
+  border: 2rpx solid rgba(151, 151, 151, 1);
+}
+
+.submit_who_desc {
+  font-size: 28rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 1);
+  line-height: 40rpx;
+}
+
+.submit_who_desc>navigator {
+  color: rgba(74, 144, 226, 1);
+}
+
+.plan-submit {
+  width: 100%;
+  height: 120rpx;
+  bottom: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 1);
+  z-index: 5;
+  border-top: solid 2rpx #f5f5f5;
+}
+
+.plan-submit>view, .plan-submit>form {
+  line-height: 120rpx;
+}
+
+.plan-submit>view:nth-of-type(1) {
+  font-size: 48rpx;
+  font-family: Agency FB;
+  color: rgba(30, 30, 30, 1);
+  padding: 0 64rpx 0 68rpx;
+}
+
+.plan-submit>view:nth-of-type(1)>text:nth-of-type(2) {
+  font-size: 20rpx;
+  font-family: PingFangSC-Semibold;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 1);
+}
+
+.plan-submit>form {
+  background: rgba(34, 34, 33, 1);
+  font-size: 36rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 1);
+  letter-spacing: 2rpx;
+  flex-grow: 1;
+}
+
+button {
+  padding: 0;
+  line-height: 120rpx;
+  height: 100%;
+  width: 100%;
+  border-radius: 0;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  background: rgba(41, 60, 122, 1);
+  color: rgba(255, 255, 255, 1);
+}
+
+.button-hover {
+  background-color: rgba(41, 60, 122, 1);
+  color: rgba(255, 255, 255, 1);
+}
+
+button::after {
+  border: none;
+}
+
+.submit_who_self .submit_who_email, .submit_self_info .submit_who_type,
+.submit_who_self .submit_who_tel {
+  display: none;
+}
+
+.submit_who_btns~.submit_who_list>view:nth-of-type(1) .submit_who_nav:nth-of-type(1)>view:nth-of-type(2) {
+  display: none;
+}
+
+.submit_who_self~.submit_who_list>view:nth-of-type(1) .submit_who_nav:nth-of-type(1)>view:nth-of-type(2) {
+  display: block;
+}
+
+.picker-mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.3);
+  display: none;
+}
+
+.picker-container {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 750rpx;
+  background: white;
+  transform: translateY(150%);
+  transition: all 0.4s ease;
+  z-index: 11;
+}
+
+.picker-show .picker-container {
+  transform: translateY(0);
+}
+
+.picker-show .picker-mask {
+  display: block;
+}
+
+.picker-title {
+  padding: 30rpx 36rpx;
+  box-sizing: border-box;
+  border-bottom: solid 2rpx rgba(213, 212, 213, 1);
+}
+
+.picker-title>view {
+  font-size: 28rpx;
+  font-family: PingFangSC-Medium;
+  font-weight: 500;
+  color: rgba(74, 74, 74, 1);
+  line-height: 40rpx;
+  letter-spacing: 2rpx;
+}
+
+.picker-title>text {
+  font-size: 60rpx;
+  transform: rotate(45deg);
+  color: rgba(216, 215, 216, 1);
+  line-height: 40rpx;
+  top: -4rpx;
+  right: -6rpx;
+}
+
+.picker-content {
+  max-height: 800rpx;
+}
+
+.picker-content .content-item {
+  padding: 20rpx 36rpx;
+  box-sizing: border-box;
+}
+
+.picker-content .avatar {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  margin-right: 40rpx;
+}
+
+.picker-content .name {
+  font-size: 28rpx;
+  font-family: PingFangSC-Medium;
+  font-weight: 500;
+  color: rgba(74, 74, 74, 1);
+  line-height: 40rpx;
+  letter-spacing: 2rpx;
+}
+
+.picker-content .passport {
+  font-size: 24rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: rgba(74, 74, 74, 1);
+  line-height: 34rpx;
+  letter-spacing: 2rpx;
+}

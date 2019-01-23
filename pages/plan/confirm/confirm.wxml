@@ -1,0 +1,114 @@
+<!--pages/plan/confirm/confirm.wxml-->
+<view wx:if='{{loaded}}' class='page-container plan-confirm-container'>
+  <view class='confirm-title'>填写投保信息</view>
+  <view class='confirm-self'>
+
+    <view class='confirm-self_title'>
+      <text class='text-center'>1</text>
+      <text>本人信息（投保人）</text> 
+    </view>
+
+    <view class='confirm-self_info'>
+      <view>{{query.buyer.lastName}}{{query.buyer.firstName}}</view>
+      <!-- <view>身份证：421************225</view> -->
+      <view>护照号：{{query.buyer.passport}}</view>
+    </view>
+
+  </view>
+
+  <view class='confirm-who'>
+
+    <view class='confirm-who_title'>
+      <text class='text-center'>2</text>
+      <text>为谁投保（被保人）</text>
+    </view>
+
+    <block wx:for='{{query.contactList}}' wx:key=''>
+      <view class='confirm-who_info display-flex'>
+        <view class='who_info_base'>
+          <view class='display-flex align-center'>
+            <text>{{item.lastName}}{{item.firstName}}</text>
+            <!-- <text class='icon-cert'></text>
+            <text>已认证</text> -->
+          </view>
+          <view>护照号：{{item.passportFormat}}</view>
+        </view>
+        <view class='who_info_money display-flex flex-cc position-r'>
+          <text class='money-num'>¥{{item.price}}</text>
+          <view wx:if='{{query.discountCodeName}}' class='money-discount position-a text-center'>
+            <text class='position-r'>{{query.discountCodeName}}折</text>
+          </view>
+
+        </view>
+      </view>
+    </block>
+
+    <!-- <view class='confirm-who_desc'>
+      <text>保费与被保人性别、年龄相关，详见</text>
+      <navigator class='display-inline' url='../rate/rate'>完整费率表</navigator>
+    </view> -->
+
+  </view>
+
+  <view wx:if='{{form!="index"}}' class='plan-confirm_discount position-f display-flex flex-between' catchtap='discountPicker'>
+    <view>会员优惠</view>
+    <view>
+      <text>{{discount!=-1?discountList[discount].name:'暂不使用优惠'}}</text>
+      <text class='icon-arrow-right'></text>
+    </view>
+  </view>
+
+  <view class='plan-confirm_check position-f'>
+    <view class='display-flex'>
+      <view class='display-flex align-center'>
+        <view class='icon-check display-flex flex-cc' catchtap='changeCheck'>
+          <text class='display-inline' wx:if='{{isCheck}}'></text>
+        </view>
+        <text>我已确认</text>
+      </view>
+      <view class='check_protocol display-flex align-center'>
+        <navigator url='../protocol/protocol?protocolType=notice'>投保须知及声明</navigator>
+        <text>|</text>
+        <!-- <navigator url='../protocol/protocol?protocolType=protocol&provisionUrl={{query.provisionUrl}}'>服务协议</navigator> -->
+        <text catchtap='openPDF'>保险条款</text>
+        <!-- <text>|</text> -->
+        <!-- <navigator url='../protocol/protocol?protocolType=agreement'>特别约定</navigator> -->
+      </view>
+    </view>
+    <view class='plan-submit position-f display-flex'>
+      <view class='submit-amount display-flex flex-cc {{discount?"active":""}}'>
+        <text class='amount-num'>¥{{query.amount}}</text>
+        <view wx:if='{{query.discountCodeName}}' class='amount-discount'>
+          <text class='discount-num'>{{query.discountCodeName}}</text>
+          <text class='discount-txt'>折</text>
+        </view>
+      </view>
+      <view class='text-center' bindtap='planSubmit'>立即投保</view>
+    </view>
+  </view>
+
+  <view class='discount-picker {{discountShow?"picker-show":""}}' catchtouchmove="true">
+    <view class='picker-mask' catchtap='discountPicker'></view>
+    <view class='picker-container'>
+      <view class='picker-title text-center position-r'>
+        <view>会员优惠</view>
+        <text catchtap='discountPicker' class='display-inline position-a'>+</text>
+      </view>
+      <scroll-view class='picker-content' scroll-y='{{true}}'>
+        <block wx:for='{{discountList}}' wx:key=''>
+          <view class='discount-item content-item display-flex align-center flex-between' data-index='{{index}}' data-id='{{item.id}}' catchtap='selectdiscount'>
+            <view class='item-desc'>{{item.name}}</view>
+            <image wx:if='{{index === discount}}' lazy-load='true' class='icon-discount-check' src='../../../images/icon-complete.png'></image>
+            <text wx:else class='icon-discount-check'></text>
+          </view>
+        </block>
+        <view class='discount-item content-item display-flex align-center flex-between' data-index='-1' data-id='' catchtap='selectdiscount'>
+          <view class='item-desc'>暂不使用优惠</view>
+          <image wx:if='{{-1 == discount}}' lazy-load='true' class='icon-discount-check' src='../../../images/icon-complete.png'></image>
+          <text wx:else class='icon-discount-check'></text>
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+
+</view>
