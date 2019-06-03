@@ -1,62 +1,27 @@
+// pages/index/index.js
 Page({
+
+  /**
+   * 页面的初始数据
+   */
   data: {
-    listInputForm: [0],
-    array: ['A', 'B', 'C'],
-    isReview: false,
-    isVerify: false,
-    value: []
-  },
-
-  insertListInputForm: function () {
-    let listInputForm = [...this.data.listInputForm];
-
-    listInputForm.push(listInputForm.length);
-
-    this.setData({
-      listInputForm: listInputForm
-    });
 
   },
-  changeCurriculumName: function (e) {
-    let data = this.data.listInputForm[e.currentTarget.dataset.index];
-    this.setData({
-      [`listInputForm[${e.currentTarget.dataset.index}]`]: {
-        ...data,
-        curriculumName: e.detail.value
-      }
+
+  navigateToForm: function (options) {
+    wx.navigateTo({
+      url: '/pages/form/form',
+      success: function (res) { },
+      fail: function (res) { },
+      complete: function (res) { },
     })
   },
-  changeTeacherName: function (e) {
-    console.log(e)
-    console.log(e.detail.value)
-    let data = this.data.listInputForm[e.currentTarget.dataset.index];
-    this.setData({
-      [`listInputForm[${e.currentTarget.dataset.index}]`]: {
-        ...data,
-        teacherName: e.detail.value
-      }
+  navigateToPhone: function (options) {
+    wx.navigateTo({
+      url: '/pages/get-phone/get-phone',
+      success: function (res) { },
+      fail: function (res) { },
+      complete: function (res) { },
     })
-
   },
-  deleteBind: function () {
-
-
-    let listInputForm = [...this.data.listInputForm];
-    if (listInputForm.length > 1) {
-      listInputForm.pop(listInputForm.length);
-
-      this.setData({
-        listInputForm: listInputForm
-      });
-    } else {
-      wx.showToast({
-        title: '至少保留一个',
-        icon: 'none'
-      })
-    }
-
-  },
-  savaClick: function () {
-    console.log(this.data.listInputForm)
-  }
 })

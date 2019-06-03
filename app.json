@@ -1,11 +1,14 @@
 {
-  "pages":[
-    "pages/index/index"    
+  "pages": [
+    "pages/index/index",
+    "pages/form/form",
+    "pages/get-phone/get-phone"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
-  }
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json"
 }
