@@ -1,6 +1,0 @@
-<!--pages/plan/protocol/protocol.wxml-->
-<view class='page-container' wx:if='{{loaded}}'>
-  <web-view wx:if='{{protocolType == "notice"}}' src='{{pageBaseUrl}}notice.html'></web-view>
-  <web-view wx:if='{{protocolType == "agreement"}}' src='{{pageBaseUrl}}agreement.html'></web-view>
-  <web-view wx:if='{{protocolType == "protocol"}}' src='{{provisionUrl}}'></web-view>
-</view>

@@ -4,7 +4,7 @@ Page({
     array: ['A', 'B', 'C'],
     isReview: false,
     isVerify: false,
-    value:[]
+    value: []
   },
 
   insertListInputForm: function () {
@@ -17,12 +17,12 @@ Page({
     });
 
   },
-  changeCurriculumName:function(e){
+  changeCurriculumName: function (e) {
     let data = this.data.listInputForm[e.currentTarget.dataset.index];
     this.setData({
-      [`listInputForm[${e.currentTarget.dataset.index}]`]:{
+      [`listInputForm[${e.currentTarget.dataset.index}]`]: {
         ...data,
-        curriculumName:e.detail.value
+        curriculumName: e.detail.value
       }
     })
   },
@@ -31,32 +31,32 @@ Page({
     console.log(e.detail.value)
     let data = this.data.listInputForm[e.currentTarget.dataset.index];
     this.setData({
-      [`listInputForm[${e.currentTarget.dataset.index}]`]:{
+      [`listInputForm[${e.currentTarget.dataset.index}]`]: {
         ...data,
         teacherName: e.detail.value
       }
     })
-    
+
   },
   deleteBind: function () {
 
 
     let listInputForm = [...this.data.listInputForm];
-    if(listInputForm.length > 1){
+    if (listInputForm.length > 1) {
       listInputForm.pop(listInputForm.length);
 
       this.setData({
         listInputForm: listInputForm
       });
-    }else{
+    } else {
       wx.showToast({
         title: '至少保留一个',
-        icon:'none'
+        icon: 'none'
       })
     }
 
   },
-  savaClick: function(){
+  savaClick: function () {
     console.log(this.data.listInputForm)
   }
 })
