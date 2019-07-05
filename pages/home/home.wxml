@@ -1,3 +1,5 @@
 <button bindtap="navigateToForm">动态表单</button>
 
 <button bindtap="navigateToPhone">手机号组件</button>
+
+<button bindtap="navigateToSearch">搜索组件</button>

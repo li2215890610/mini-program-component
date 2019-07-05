@@ -2,7 +2,8 @@
   "pages": [
     "pages/home/home",
     "pages/form/form",
-    "pages/get-phone/get-phone"
+    "pages/get-phone/get-phone",
+    "pages/search/search"
   ],
   "window": {
     "backgroundTextStyle": "light",

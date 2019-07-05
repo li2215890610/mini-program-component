@@ -1,0 +1,8 @@
+
+
+<search 
+  value="" 
+  placeholder="搜索" 
+  maxlength="140" 
+  bind:handleChange="handleChange"
+/>

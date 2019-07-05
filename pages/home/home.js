@@ -24,4 +24,12 @@ Page({
       complete: function (res) { },
     })
   },
+  navigateToSearch: function (options) {
+    wx.navigateTo({
+      url: '/pages/search/search',
+      success: function (res) { },
+      fail: function (res) { },
+      complete: function (res) { },
+    })
+  },
 })
