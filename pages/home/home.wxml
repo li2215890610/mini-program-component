@@ -3,3 +3,5 @@
 <button bindtap="navigateToPhone">手机号组件</button>
 
 <button bindtap="navigateToSearch">搜索组件</button>
+
+<button bindtap='navigateToCurtain'>窗帘</button>

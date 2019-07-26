@@ -1,0 +1,10 @@
+<View wx:if="{{isOpened}}" class="curtain">
+  <View class="curtain__container">
+    <View class='curtain__body'>
+      <slot></slot>
+      <View class='f f-c-c' bindtap="handleCloseBtn">
+        点我
+      </View>
+    </View>
+  </View>
+</View>

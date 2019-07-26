@@ -32,4 +32,12 @@ Page({
       complete: function (res) { },
     })
   },
+  navigateToCurtain: function (options) {
+    wx.navigateTo({
+      url: '/pages/curtain/curtain',
+      success: function (res) { },
+      fail: function (res) { },
+      complete: function (res) { },
+    })
+  }
 })

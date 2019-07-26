@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "curtain": "../../components/curtain/curtain"
+  }
+}
