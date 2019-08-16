@@ -5,31 +5,28 @@ Page({
    * 页面的初始数据
    */
   data: {
-
-  },
-
-  navigateToForm: function (options) {
-    wx.navigateTo({
+    goPage: [{
       url: '/pages/form/form',
-      success: function (res) { },
-      fail: function (res) { },
-      complete: function (res) { },
-    })
-  },
-  navigateToPhone: function (options) {
-    wx.navigateTo({
+      btnText: '动态表单',
+    }, {
       url: '/pages/get-phone/get-phone',
-      success: function (res) { },
-      fail: function (res) { },
-      complete: function (res) { },
-    })
-  },
-  navigateToSearch: function (options) {
-    wx.navigateTo({
+      btnText: '手机号组件',
+    }, {
       url: '/pages/search/search',
-      success: function (res) { },
-      fail: function (res) { },
-      complete: function (res) { },
+      btnText: '搜索组件',
+    }]
+  },
+
+  navigateTo: function({
+    currentTarget
+  }) {
+    console.log(currentTarget.dataset.url)
+    wx.navigateTo({
+      url: `${currentTarget.dataset.url}`,
+      success: function(res) {},
+      fail: function(res) {},
+      complete: function(res) {},
     })
   },
+
 })

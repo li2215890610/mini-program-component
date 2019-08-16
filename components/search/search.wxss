@@ -1,5 +1,4 @@
-/* pages/search.wxss */
-@import 'iconfont.wxss';
+@import '../../styles/iconfont.wxss';
 
 .search-bar__container {
   position: relative;

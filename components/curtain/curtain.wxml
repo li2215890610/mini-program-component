@@ -1,0 +1,12 @@
+<view wx:if="{{isOpened}}">
+  <view class="curtain">
+    <view class="curtain__container">
+      <view class="curtain__body">
+
+        <view class="f f-c-c close__circle">
+
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

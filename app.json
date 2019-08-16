@@ -3,7 +3,8 @@
     "pages/home/home",
     "pages/form/form",
     "pages/get-phone/get-phone",
-    "pages/search/search"
+    "pages/search/search",
+    "pages/curtain/curtain"
   ],
   "window": {
     "backgroundTextStyle": "light",
