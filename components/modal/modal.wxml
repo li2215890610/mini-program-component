@@ -1,0 +1,14 @@
+<view class="modal">
+  <view class="modal-inner" style="width:{{width}};">
+    <view class="modal-title">
+      {{title}}
+      <view class="modal-close" bindtap="handleClickClose">
+        <!-- <AtIcon value="close" size="15" color="#999999"></AtIcon> -->
+        <view class="iconfont icon-close"></view>
+      </view>
+    </view>
+    <view class="modal-content">
+      <slot></slot>
+    </view>
+  </view>
+</view>

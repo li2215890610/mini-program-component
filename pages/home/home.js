@@ -17,6 +17,9 @@ Page({
     },{
       url:'/pages/curtain/curtain',
       btnText:'窗帘'
+    },{
+      url:'/pages/modal/modal',
+      btnText: '弹窗组件'
     }]
   },
 

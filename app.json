@@ -4,7 +4,8 @@
     "pages/form/form",
     "pages/get-phone/get-phone",
     "pages/search/search",
-    "pages/curtain/curtain"
+    "pages/curtain/curtain",
+    "pages/modal/modal"
   ],
   "window": {
     "backgroundTextStyle": "light",
