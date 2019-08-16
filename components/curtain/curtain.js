@@ -1,5 +1,8 @@
-// components/curtain/curtain.js
+// components/curtain.js
 Component({
+  options: {
+    addGlobalClass: true,
+  },
   /**
    * 组件的属性列表
    */
@@ -7,7 +10,7 @@ Component({
     isOpened: {
       type: Boolean,
       value: false
-    }
+    },
   },
 
   /**
@@ -21,6 +24,8 @@ Component({
    * 组件的方法列表
    */
   methods: {
-
+    handleCloseBtn: function(){
+      this.triggerEvent('handleCloseBtn', false) 
+    }
   }
 })

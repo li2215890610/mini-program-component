@@ -14,19 +14,19 @@ Page({
     }, {
       url: '/pages/search/search',
       btnText: '搜索组件',
+    },{
+      url:'/pages/curtain/curtain',
+      btnText:'窗帘'
     }]
   },
 
-  navigateTo: function({
-    currentTarget
-  }) {
-    console.log(currentTarget.dataset.url)
+  navigateTo: function(e) {
+    console.log(e.currentTarget.dataset.url)
     wx.navigateTo({
-      url: `${currentTarget.dataset.url}`,
+      url: `${e.currentTarget.dataset.url}`,
       success: function(res) {},
       fail: function(res) {},
       complete: function(res) {},
     })
   },
-
 })
