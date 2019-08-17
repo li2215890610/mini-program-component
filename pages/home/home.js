@@ -20,6 +20,9 @@ Page({
     },{
       url:'/pages/modal/modal',
       btnText: '弹窗组件'
+    },{
+      url:'/pages/button/button',
+      btnText:'按钮组件'
     }]
   },
 

@@ -1,0 +1,58 @@
+<view>
+
+  <!-- wxp template -->
+  <view class="container">
+    <view class="title">普通按钮</view>
+    <view class="button-wrap" wx:for="{{types}}" wx:for-item="type" wx:key="key">
+      <wxc-button size="normal" type="{{type}}" value="{{type}}" ></wxc-button>
+    </view>
+  </view>
+
+  <view class="container">
+    <view class="title">镂空按钮</view>
+    <view class="button-wrap" wx:for="{{types}}" wx:for-item="type" wx:key="key">
+      <wxc-button plain="{{true}}" size="normal" type="{{type}}" value="{{type}}" ></wxc-button>
+    </view>
+  </view>
+
+  <view class="container">
+    <view class="title">小按钮</view>
+    <view class="button-small-wrap">
+      <wxc-button size="small" type="beauty" value="small" ></wxc-button>
+    </view>
+    <view class="button-small-wrap">
+      <wxc-button plain="{{true}}" size="small" type="beauty" value="small" ></wxc-button>
+    </view>
+  </view>
+
+  <view class="container">
+    <view class="title">大按钮带 loading 状态</view>
+    <view class="button-large-wrap">
+      <wxc-button size="large" type="beauty" loading="{{true}}" value="large button" ></wxc-button>
+    </view>
+    <view class="button-large-wrap">
+      <wxc-button plain="{{true}}" size="large" type="beauty" loading="{{true}}" value="large button" ></wxc-button>
+    </view>
+  </view>
+
+  <view class="container">
+    <view class="title">自定义按钮</view>
+    <!-- <view class="button-small-wrap">
+      <wxc-button type="beauty" btnStyle="min-width: 66rpx;padding: 0;border-radius: 66rpx"><wxc-icon color="#fff" size="36" type="cart"></wxc-icon></wxc-button>
+    </view>
+    <view class="button-small-wrap">
+      <wxc-button btnStyle="{{style}}">预约直播 <wxc-icon color="#fff" type="arrow-right"></wxc-icon></wxc-button>
+    </view> -->
+    <view class="button-small-wrap">
+      <wxc-button type="beauty" btnStyle="width: 312rpx;" >立即换购</wxc-button>
+    </view>
+  </view>
+  
+  <view class="container">
+    <view class="title">表单</view>
+    <view class="button-small-wrap">
+      <wxc-button bindsubmit="onSubmit" type="beauty" btnStyle="width: 312rpx;" >按钮</wxc-button>
+    </view>
+  </view>
+
+</view>
