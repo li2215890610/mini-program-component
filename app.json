@@ -6,7 +6,8 @@
     "pages/search/search",
     "pages/curtain/curtain",
     "pages/modal/modal",
-    "pages/button/button"
+    "pages/button/button",
+    "pages/steps/steps"
   ],
   "window": {
     "backgroundTextStyle": "light",

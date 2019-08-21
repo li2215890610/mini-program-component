@@ -23,6 +23,9 @@ Page({
     },{
       url:'/pages/button/button',
       btnText:'按钮组件'
+    },{
+      url:'/pages/steps/steps',
+      btnText:"步骤条"
     }]
   },
 

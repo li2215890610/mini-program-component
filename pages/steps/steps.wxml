@@ -1,0 +1,35 @@
+
+<view class="steps--{{direction}}">
+
+  <view class="step__wrapper">
+    <view
+      wx:for="{{ steps }}"
+      wx:key="index"
+      class="step step--{{direction}}"
+    >
+      <view class="step__title" style="{{ index === active ? 'color: ' + activeColor : '' }}">
+        <view>{{ item.text }}</view>
+        <view>{{ item.desc }}</view>
+      </view>
+      <view class="step__circle-container">
+        <view class="step__circle" wx:if="{{ index !== active }}" style="{{ index < active ? 'background-color: ' + activeColor : '' }}" />
+        <icon wx:else name="checked" color="{{ activeColor }}" class="step__active" />
+      </view>
+      <view wx:if="{{ index !== steps.length - 1 }}" class="step__line" style="{{ index < active ? 'background-color: ' + activeColor : '' }}" />
+    </view>
+  </view>
+</view>
+
+<wxs module="status">
+function get(index, active) {
+  if (index < active) {
+    return 'step--finish';
+  } else if (index === active) {
+    return 'step--process';
+  }
+
+  return '';
+}
+
+module.exports = get;
+</wxs>
