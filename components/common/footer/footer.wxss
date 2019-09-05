@@ -1,0 +1,32 @@
+.footer{
+  padding:30rpx;
+  text-align:center;
+  position:fixed;
+  bottom:0;
+  left:0;
+  right:0;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+
+}
+.title{
+  font-size:30rpx;
+  color:#a5877d;
+}
+.site{
+  font-size: 20rpx;
+  color:#999;
+}
+.loading{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom:30rpx;
+}
+.loading-title{
+  margin-left:20rpx;
+  font-size: 30rpx;
+  color:#333;
+}

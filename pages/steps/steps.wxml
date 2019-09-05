@@ -15,17 +15,3 @@
   </view>
   
 </view>
-
-<wxs module="status">
-  function get(index, active) {
-    if (index < active) {
-      return 'step__finish';
-    } else if (index === active) {
-      return 'step__process';
-    }
-
-    return '';
-  }
-
-  module.exports = get;
-</wxs>

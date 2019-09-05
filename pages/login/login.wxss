@@ -1,0 +1,55 @@
+page{
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  width:90%;
+  margin:0 auto;
+
+}
+.container{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top:100rpx;
+}
+.inputs{
+  margin-bottom: 20rpx;
+}
+.submit{
+  margin:0 auto;
+  display: flex;
+  justify-content: center;
+}
+.logo_con{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 100rpx;
+  justify-content: center;
+  align-items: center;
+}
+.logo{
+  width: 140rpx;
+  height: 140rpx;
+  margin-bottom: 20rpx;
+  display: block;
+  align-self: center;
+}
+.footer-btn{
+  margin-top:20rpx;
+  display: flex;
+  justify-content: space-between;
+  font-size: 26rpx;
+  color:#999;
+  text-decoration: underline;
+}
+.sub-account{
+  position: relative;
+}
+.uesr-info-btn{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top:0;
+  bottom:0;
+  opacity: 0;
+}

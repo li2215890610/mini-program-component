@@ -1,0 +1,8 @@
+<view class="footer" style="{{ loading ? 'top:0;' : '' }}">
+    <view class="loading" wx:if="{{loading}}">
+        <image src="../../../images/loading.gif" mode="aspectFit" style="width:40rpx;height:40rpx;"></image>
+        <view wx:if="{{title}}" class="loading-title">{{title}}</view>
+    </view>
+    <view class="title">智慧门店</view>
+    <view class="site">baidu.com</view>
+</view>

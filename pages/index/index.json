@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "footer": "../../components/common/footer/footer"
+  },
+  "navigationBarTitleText": "Hello World",
+  "navigationBarBackgroundColor": "#FFFFFF",
+  "backgroundColor": "#333333",
+  "navigationBarTextStyle": "black"
+}
