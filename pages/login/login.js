@@ -1,11 +1,6 @@
 
 var app = getApp();
 
-
-    // "wxc-input": "../../packages/@minui/wxc-input/dist/index",
-    // "wxc-button": "../../packages/@minui/wxc-button/dist/index",
-    // "wxc-avatar": "../../packages/@minui/wxc-avatar/dist/index",
-
 Page({
   data: {
     phone: "",
@@ -14,10 +9,9 @@ Page({
     userInfo: null
   },
   onLoad: function onLoad() {
-    var _this = this;
 
     wx.getSetting({
-      success: function success(res) {
+      success: (res)=> {
         if (res.authSetting['scope.userInfo']) {
           // 已经授权，可以直接调用 getUserInfo 获取头像昵称
           wx.getUserInfo({
