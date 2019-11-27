@@ -15,8 +15,8 @@ Page({
         if (res.authSetting['scope.userInfo']) {
           // 已经授权，可以直接调用 getUserInfo 获取头像昵称
           wx.getUserInfo({
-            success: function success(res) {
-              _this.setData({
+            success: (res)=> {
+              this.setData({
                 userInfo: res
               });
             }
@@ -69,21 +69,8 @@ Page({
             iv: userInfo.iv
           };
 
-          //发起网络请求
-          app.subAccountLogin(postData).then(function (ticket) {
-            return app.getSession(ticket);
-          }).then(function (jinju_session) {
-            wx.hideLoading();
-            app.saveSession(jinju_session);
-            app.saveAccountType("sub");
-            app.tryToGoToOrderListUseSession();
-          }).catch(function (err) {
-            wx.hideLoading();
-            wx.showToast({
-              title: err.message,
-              icon: 'none'
-            });
-          });
+          //发起网络请求 http Request
+
         } else {
           wx.hideLoading();
           wx.showToast({
@@ -96,7 +83,6 @@ Page({
     });
   },
   handleTapLogin: function handleTapLogin() {
-    var _this2 = this;
 
     var _data = this.data,
         phone = _data.phone,
@@ -129,33 +115,35 @@ Page({
     wx.showLoading({
       title: '正在登录',
       mask: 'true',
-      success: function success() {
-        _this2.setData({
+      success: ()=> {
+        this.setData({
           loading: true
         });
       }
     });
+
+
     app.login({
       phone: this.data.phone,
       password: this.data.password
-    }).then(function (ticket) {
-      return app.getSession(ticket);
-    }).then(function (jinju_session) {
-      app.saveSession(jinju_session);
-      app.saveAccountType("admin");
-      app.tryToGoToOrderListUseSession();
-      _this2.setData({
-        loading: false
-      }, function () {
-        wx.hideLoading();
-      });
-    }).catch(function (err) {
+    }).then( (ticket)=> {
+      // return app.getSession(ticket);
+    }).then( (jinju_session)=> {
+      // app.saveSession(jinju_session);
+      // app.saveAccountType("admin");
+      // app.tryToGoToOrderListUseSession();
+      // _this2.setData({
+      //   loading: false
+      // }, function () {
+      //   wx.hideLoading();
+      // });
+    }).catch( (err)=> {
       wx.hideLoading();
       wx.showToast({
         title: err.message,
         icon: 'none',
         success: function success() {
-          _this2.setData({
+          this.setData({
             loading: false
           });
         }
