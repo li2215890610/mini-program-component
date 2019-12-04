@@ -37,7 +37,7 @@ Page({
   },
   handleTapResetPassword: function handleTapResetPassword() {
     wx.navigateTo({
-      url: "/pages/reset-password/index"
+      url: "/pages/reset-password/reset-password"
     });
   },
   bindGetUserInfo: function bindGetUserInfo(res) {

@@ -38,6 +38,10 @@
 			"currentL": -1,
 			"list": []
 		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
 		"miniprogram": {
 			"current": 2,
 			"list": [
@@ -59,6 +63,13 @@
 					"id": -1,
 					"name": "步骤条",
 					"pathName": "pages/steps/steps",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "重置密码",
+					"pathName": "pages/reset-password/reset-password",
 					"scene": null
 				}
 			]

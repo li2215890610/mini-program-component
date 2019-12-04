@@ -7,7 +7,6 @@
             <view>欢迎使用杨大侠助手-登录</view>
         </view>
 
-
         <view class="inputs f fc">
           <view class="f f-s-c form__item">
             <text class="input__label">手机号</text>
@@ -37,7 +36,14 @@
         </view>
 
         <view class="submit">
-            <button size="large" type="darl" bindtap="handleTapLogin" style="background-color:#FF835A;border-color:#FF835A;color:#fff;">登录</button>
+            <button 
+              size="large" 
+              type="darl" 
+              bindtap="handleTapLogin" 
+              style="background-color:#FF835A;border-color:#FF835A;color:#fff;"
+            >
+              登录
+            </button>
         </view>
 
         <view class="footer-btn">
@@ -51,4 +57,5 @@
     </view>
 
     <footer></footer>
+
 </view>
