@@ -84,11 +84,9 @@ Page({
   },
   handleTapLogin: function handleTapLogin() {
 
-    var _data = this.data,
-        phone = _data.phone,
-        password = _data.password;
+    const { data, phone, password} = this.data;
 
-    if (!phone) {
+    if(!phone) {
       wx.showToast({
         title: '请输入手机号',
         icon: 'none'
@@ -123,32 +121,25 @@ Page({
     });
 
 
-    app.login({
-      phone: this.data.phone,
-      password: this.data.password
-    }).then( (ticket)=> {
-      // return app.getSession(ticket);
-    }).then( (jinju_session)=> {
-      // app.saveSession(jinju_session);
-      // app.saveAccountType("admin");
-      // app.tryToGoToOrderListUseSession();
-      // _this2.setData({
-      //   loading: false
-      // }, function () {
-      //   wx.hideLoading();
-      // });
-    }).catch( (err)=> {
-      wx.hideLoading();
-      wx.showToast({
-        title: err.message,
-        icon: 'none',
-        success: function success() {
-          this.setData({
-            loading: false
-          });
-        }
-      });
-    });
+    // app.login({
+    //   phone: this.data.phone,
+    //   password: this.data.password
+    // }).then( (ticket)=> {
+    //   // return app.getSession(ticket);
+    // }).then( (jinju_session)=> {
+
+    // }).catch( (err)=> {
+    //   wx.hideLoading();
+    //   wx.showToast({
+    //     title: err.message,
+    //     icon: 'none',
+    //     success: function success() {
+    //       this.setData({
+    //         loading: false
+    //       });
+    //     }
+    //   });
+    // });
   }
 
 });
