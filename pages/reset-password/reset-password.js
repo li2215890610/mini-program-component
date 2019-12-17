@@ -10,7 +10,6 @@ Page({
     cd: 0
   },
   timer: null,
-  onLoad: function onLoad() { },
   handlePhoneChange: function handlePhoneChange(e) {
     this.setData({
       phone: e.detail.value

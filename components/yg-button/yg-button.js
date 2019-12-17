@@ -77,34 +77,34 @@ Component({
   },
   data: {},
   methods: {
-    onSubmit: function onSubmit(event) {
-      var detail = event.detail;
-      var option = {};
+    onSubmit(event) {
+      let detail = event.detail;
+      let option = {};
       this.triggerEvent('submit', detail, option);
     },
-    btnClick: function btnClick(event) {
-      var detail = event.detail;
-      var option = {};
+    btnClick(event) {
+      let detail = event.detail;
+      let option = {};
       this.triggerEvent('click', detail, option);
     },
-    getUserInfo: function getUserInfo(event) {
-      var detail = event.detail;
-      var option = {};
+    getUserInfo(event) {
+      let detail = event.detail;
+      let option = {};
       this.triggerEvent('getuserinfo', detail, option);
     },
-    onContact: function onContact(event) {
-      var detail = event.detail;
-      var option = {};
+    onContact(event) {
+      let detail = event.detail;
+      let option = {};
       this.triggerEvent('contact', detail, option);
     },
-    getPhoneNumber: function getPhoneNumber(event) {
-      var detail = event.detail;
-      var option = {};
+    getPhoneNumber(event) {
+      let detail = event.detail;
+      let option = {};
       this.triggerEvent('getphonenumber', detail, option);
     },
-    onError: function onError(event) {
-      var detail = event.detail;
-      var option = {};
+    onError(event) {
+      let detail = event.detail;
+      let option = {};
       this.triggerEvent('errror', detail, option);
     }
   }

@@ -36,14 +36,15 @@
         </view>
 
         <view class="submit">
-            <button 
-              size="large" 
-              type="darl" 
-              bindtap="handleTapLogin" 
-              style="background-color:#FF835A;border-color:#FF835A;color:#fff;"
-            >
-              登录
-            </button>
+
+          <wxc-button 
+            size="large" 
+            value="登录"
+            type="darl"
+            bindtap="handleTapLogin"
+            btn-style="background-color:#FF835A;border-color:#FF835A;color:#fff;"
+          ></wxc-button>
+
         </view>
 
         <view class="footer-btn">

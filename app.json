@@ -2,8 +2,8 @@
   "pages": [
     "pages/index/index",
     "pages/login/login",
-    "pages/reset-password/reset-password",
     "pages/home/home",
+    "pages/reset-password/reset-password",
     "pages/form/form",
     "pages/get-phone/get-phone",
     "pages/search/search",
