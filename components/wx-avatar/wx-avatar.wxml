@@ -1,0 +1,13 @@
+  <view class="avatar">
+
+    <block wx:if="{{src}}">
+      <view class="avatar__pic avatar__mold--{{mold}}" style="background-image: url({{src}}); background-repeat: no-repeat; background-position: center center; background-size: cover"></view>
+    </block>
+
+    <!-- <wxc-cc>
+      <slot></slot>
+    </wxc-cc> -->
+
+    <!-- <wx-badge class="avatar__badge" wx:if="{{count}}">{{count}}</wx-badge> -->
+  
+  </view>

@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "wx-badge": "../../wx-badge/wx-badge"
+  }
+}
