@@ -5,3 +5,4 @@
 </curtain>
 
 <button bindtap='handleCloseBtn'>点我</button>
+  

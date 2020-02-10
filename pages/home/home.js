@@ -26,6 +26,9 @@ Page({
     },{
       url:'/pages/steps/steps',
       btnText:"步骤条"
+    },{
+        url: '/pages/notice/notice',
+        btnText: "通告栏"
     }]
   },
 

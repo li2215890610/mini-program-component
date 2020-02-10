@@ -10,7 +10,8 @@
     "pages/curtain/curtain",
     "pages/modal/modal",
     "pages/button/button",
-    "pages/steps/steps"
+    "pages/steps/steps",
+    "pages/notice/notice"
   ],
   "window": {
     "backgroundTextStyle": "light",
