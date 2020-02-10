@@ -1,4 +1,3 @@
-// pages/curtain/curtain.js
 Page({
 
   /**

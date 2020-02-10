@@ -3,7 +3,10 @@
     <view class="container">
 
         <view class="logo_con">
-            <image src="https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTLzrZxldu32futWFgtVibpX0rfCmsKYdDHAk0jqB3LPEgFwYVJ0LgA19cVKOPuL1icIu9ALtFE1JictQ/132" class="logo"/>
+          <avatar 
+            class="logo"
+            count="7"           src="https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTLzrZxldu32futWFgtVibpX0rfCmsKYdDHAk0jqB3LPEgFwYVJ0LgA19cVKOPuL1icIu9ALtFE1JictQ/132"
+            ></avatar>
             <view>欢迎使用杨大侠助手-登录</view>
         </view>
 

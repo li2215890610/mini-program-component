@@ -117,29 +117,12 @@ Page({
         this.setData({
           loading: true
         });
+        wx.redirectTo({
+          url: '/pages/home/home',
+        })
       }
     });
 
-
-    // app.login({
-    //   phone: this.data.phone,
-    //   password: this.data.password
-    // }).then( (ticket)=> {
-    //   // return app.getSession(ticket);
-    // }).then( (jinju_session)=> {
-
-    // }).catch( (err)=> {
-    //   wx.hideLoading();
-    //   wx.showToast({
-    //     title: err.message,
-    //     icon: 'none',
-    //     success: function success() {
-    //       this.setData({
-    //         loading: false
-    //       });
-    //     }
-    //   });
-    // });
   }
 
 });
