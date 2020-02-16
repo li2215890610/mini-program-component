@@ -1,4 +1,3 @@
-// components/badge.js
 Component({
   behaviors: [],
   properties: {

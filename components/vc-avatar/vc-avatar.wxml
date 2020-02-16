@@ -8,6 +8,6 @@
       <slot></slot>
     </wxc-cc> -->
 
-    <!-- <wx-badge class="avatar__badge" wx:if="{{count}}">{{count}}</wx-badge> -->
+    <!-- <vc-badge class="avatar__badge" wx:if="{{count}}">{{count}}</vc-badge> -->
   
   </view>

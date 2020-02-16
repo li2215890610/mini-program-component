@@ -1,4 +1,3 @@
-// components/curtain.js
 Component({
   options: {
     addGlobalClass: true,

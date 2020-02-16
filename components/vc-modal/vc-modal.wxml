@@ -3,8 +3,7 @@
     <view class="modal-title">
       {{title}}
       <view class="modal-close" bindtap="handleClickClose">
-        <!-- <AtIcon value="close" size="15" color="#999999"></AtIcon> -->
-        <view class="iconfont icon-close"></view>
+        <vc-icon class="notice__close" type="icon-close" size="55" ></vc-icon>
       </view>
     </view>
     <view class="modal-content">

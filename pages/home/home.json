@@ -1,6 +1,6 @@
 {
   "navigationBarTitleText": "中控",
   "usingComponents": {
-    "wxc-icon": "../../components/wx-icon/wx-icon"
+    "vc-icon": "../../components/vc-icon/vc-icon"
   }
 }

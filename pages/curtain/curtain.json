@@ -1,5 +1,5 @@
 {
   "usingComponents": {
-    "curtain": "../../components/curtain/curtain"
+    "vc-curtain": "../../components/vc-curtain/vc-curtain"
   }
 }

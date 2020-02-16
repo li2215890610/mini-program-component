@@ -33,7 +33,3 @@
   color: red;
   font-weight: bold;
 }
-
- .icon-roundclose{
-   font-size: 55rpx;
- }

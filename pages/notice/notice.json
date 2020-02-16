@@ -1,5 +1,5 @@
 {
   "usingComponents": {
-    "wxc-notice": "../../components/notice/notice"
+    "vc-notice": "../../components/vc-notice/vc-notice"
   }
 }

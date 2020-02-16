@@ -1,0 +1,10 @@
+<view wx:if="{{isOpened}}" class="curtain">
+  <view class="curtain__container">
+    <view class='curtain__body'>
+      <slot></slot>
+      <view class='f f-c-c' bindtap="handleCloseBtn">
+        <vc-icon type='icon-roundclose' size="55"/>
+      </view>
+    </view>
+  </view>
+</view>

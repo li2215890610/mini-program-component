@@ -1,4 +1,3 @@
-// pages/search.js
 Component({
   options: {
     addGlobalClass: true,

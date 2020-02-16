@@ -1,6 +1,6 @@
 {
   "component": true,
   "usingComponents": {
-    "wxc-icon":"../wx-icon/wx-icon"
+    "vc-icon":"../vc-icon/vc-icon"
   }
 }

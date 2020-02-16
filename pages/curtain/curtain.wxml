@@ -1,8 +1,8 @@
-<curtain isOpened="{{isOpened}}" bind:handleCloseBtn="handleCloseBtn">
+<vc-curtain isOpened="{{isOpened}}" bind:handleCloseBtn="handleCloseBtn">
   <view>
     <image src="https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTIYQ6PaOjpib4l5SxjIC3oJr5CrljjMOjMIUZKkwrYHQL0hg8wzrHBrTDSziadYAhyYotbyvIicZrjgA/132"></image>
   </view>
-</curtain>
+</vc-curtain>
 
 <button bindtap='handleCloseBtn'>点我</button>
   

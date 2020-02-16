@@ -1,8 +1,8 @@
-<modal wx:if="{{show_modal}}" title="提示" bind:handleClose="handleClose">
+<vc-modal wx:if="{{show_modal}}" title="提示" bind:handleClose="handleClose">
   <view>
     sssss
   </view>
-</modal>
+</vc-modal>
 
 
 <button bindtap="handleShow">点我</button>

@@ -41,6 +41,3 @@
   padding: 24rpx;
 }
 
- .icon-close{
-   font-size: 55rpx;
- }
