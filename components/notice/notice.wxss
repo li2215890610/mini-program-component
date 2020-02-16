@@ -17,9 +17,6 @@
   align-items: center;
 }
 
-.notice {
-}
-
 .notice__icon {
   display: block;
   width: 36rpx;
@@ -34,9 +31,6 @@
   white-space: nowrap;
   font-size: 24rpx;
   line-height: 70rpx;
-}
-
-.notice__text {
 }
 
 .notice__text--wrap {
