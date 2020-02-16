@@ -7,3 +7,26 @@
     <view class="phone-select" style="background-color:red">自动填写</view>
   </button>
 </view>
+
+
+<view class="row">
+    <text class="label">验证码</text>
+
+    <view class="value">
+      <input 
+        type="text" 
+        bindinput="handleVerifyCodeChange" 
+        placeholder="短信验证码" 
+        mode="none" 
+        adjust-position="{{true}}" 
+        />
+    </view>
+    <wxc-button 
+      size="normal" 
+      type="{{ cd ? 'disabled' : 'dark'}}" 
+      value="{{cd ? cd + 's后可再次发送' : '获取短信验证码'}}"
+      bindtap="handleTapGetVerifyCode"
+    ></wxc-button>
+    <!--btnStyle="border-radius: 66rpx;"-->
+
+</view>
