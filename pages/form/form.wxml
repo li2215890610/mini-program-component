@@ -7,7 +7,7 @@
       <button bindtap="deleteBind">删除课程</button>
     </view>
 
-    <view wx:for="{{listInputForm}}" class="con" wx:key="{{index}}">
+    <view wx:for="{{listInputForm}}" class="con" wx:key="index">
 
       <input name="courseName" class="input-address" maxlength="50" placeholder="课程名称(必填)：" data-index='{{index}}' bindinput='changeCurriculumName' />
 
