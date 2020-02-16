@@ -11,6 +11,7 @@
       <view class="step__circle--container">
         <view class="step__circle" wx:if="{{ index !== active }}" style="{{ index < active ? 'background-color: ' + activeColor : '' }}" />
         <view wx:else class='iconfont icon-roundcheckfill step__active' style="color:{{ activeColor }}" ></view>
+         <!--<wxc-icon wx:else class='step__active' size="32" value="icon-roundcheckfill" color="{{activeColor}}"/>-->
       </view>
       
       <view wx:if="{{ index !== steps.length - 1 }}" class="step__line" style="{{ index < active ? 'background-color: ' + activeColor : '' }}" />

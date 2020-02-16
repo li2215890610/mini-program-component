@@ -1,5 +1,4 @@
 <view class="row">
-  <!-- <view class="iconfont icon-phone"></view> -->
   <view class="label">手机号</view>
   <view class="value">
     <input value="{{phone}}" bindinput="handleInputPhone" placeholder="请填写收货人的手机号" />

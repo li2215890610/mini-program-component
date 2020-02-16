@@ -1,4 +1,6 @@
 {
   "component": true,
-  "usingComponents": {}
+  "usingComponents": {
+    "wxc-icon":"../wx-icon/wx-icon"
+  }
 }

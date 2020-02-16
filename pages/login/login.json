@@ -1,7 +1,7 @@
 {
   "usingComponents": {
     "footer": "../../components/common/footer/footer",
-    "wxc-button": "../../components/yg-button/yg-button",
+    "wxc-button": "../../components/wx-button/wx-button",
     "avatar": "../../components/wx-avatar/wx-avatar"
   },
   "navigationBarTextStyle": "black",
