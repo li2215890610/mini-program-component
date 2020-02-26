@@ -1,5 +1,5 @@
 {
   "usingComponents": {
-    "wxc-button": "../../components/wx-button/wx-button"
+    "vc-button": "../../components/vc-button/vc-button"
   }
 }

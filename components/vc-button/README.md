@@ -1,4 +1,4 @@
-# wxc-button
+# vc-button
 
 > MinUI 小程序组件 - 按钮组件
 
@@ -42,7 +42,7 @@
 
 #### v1.0.1（2018-6-5）
 
-- `wxc-button` 点击事件名由 `bind:tap` 更名为 `bind:click`。
+- `vc-button` 点击事件名由 `bind:tap` 更名为 `bind:click`。
 
 #### v1.0.0（2018-02-26）
 

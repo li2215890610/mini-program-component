@@ -40,13 +40,13 @@
 
         <view class="submit">
 
-          <wxc-button 
+          <vc-button 
             size="large" 
             value="登录"
             type="darl"
             bindtap="handleTapLogin"
             btn-style="background-color:#FF835A;border-color:#FF835A;color:#fff;"
-          ></wxc-button>
+          ></vc-button>
 
         </view>
 

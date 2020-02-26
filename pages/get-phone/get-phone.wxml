@@ -21,12 +21,12 @@
         adjust-position="{{true}}" 
         />
     </view>
-    <wxc-button 
+    <vc-button 
       size="normal" 
       type="{{ cd ? 'disabled' : 'dark'}}" 
       value="{{cd ? cd + 's后可再次发送' : '获取短信验证码'}}"
       bindtap="handleTapGetVerifyCode"
-    ></wxc-button>
+    ></vc-button>
     <!--btnStyle="border-radius: 66rpx;"-->
 
 </view>
