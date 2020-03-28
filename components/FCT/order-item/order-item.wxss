@@ -1,0 +1,112 @@
+
+.order__item{
+  background-color: #fff;
+  margin: 20rpx 25rpx;
+  padding: 30rpx 25rpx;
+  border-radius: 15rpx;
+}
+
+.order__item--line{
+  background-color: #f5f7f9;
+  height: 3rpx;
+  margin: 27rpx 0;
+}
+
+.order__id{
+  font-size:27rpx;
+}
+
+.order__tag{
+  font-size:27rpx;
+  color: #fff;
+  padding: 5rpx 10rpx;
+  border-radius: 5rpx;
+}
+
+.order__tag--seccess{
+  background-color: #b58a4d;
+}
+
+.order__tag--error{
+  background-color: #c40412;
+}
+
+.order__tag--cancel{
+  background-color: #999;
+}
+
+.hotel__name{
+  color: #000000;
+  font-size: 30rpx;
+  margin-left: 10rpx;
+}
+
+.hotel__grade{
+  width: 29rpx;
+  height: 28rpx;
+}
+
+.hotel__info,.user__info{
+  margin-bottom: 30rpx;
+}
+
+.price{
+  color: #ee4c51;
+  font-size: 30rpx;
+  margin-left: 10rpx;
+}
+
+.rmb{
+  color: #d9b290;
+  font-size: 26rpx;
+}
+
+.hotel__proportion--left{
+  width: 70%;
+}
+
+.hotel__proportion--right{
+  width: 30%;
+}
+
+.move_into{
+  color: #000000;
+  font-size: 26rpx;
+}
+
+.move_into___date{
+  color: #aca5a1;
+  font-size: 26rpx;
+  margin-left: 20rpx;
+}
+
+.move_into___date--num{
+  color: #aca5a1;
+  font-size: 23rpx;
+  border: solid 1px #b58a4d;
+  padding: 2rpx 10rpx;
+  border-radius: 2rpx;
+  margin-left: 30rpx;
+}
+
+.order__confirmation--number{
+  color: #000000;
+  font-size: 26rpx;
+}
+
+.confirmation__number{
+  color: #000000;
+  font-size: 26rpx; 
+  margin-left: 30rpx; 
+  font-weight: bold;
+}
+
+.create__item{
+  color: #000000;
+  font-size: 25rpx;
+}
+
+.order__item--bottom--right{
+  color: #848769;
+  font-size: 25rpx;
+}

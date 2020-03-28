@@ -1,0 +1,4 @@
+<vc-abnor 
+  type="ORDER"
+  title="{{title}}"
+/>

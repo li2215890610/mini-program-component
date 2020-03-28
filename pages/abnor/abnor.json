@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+      "vc-abnor": "../../components/vc-abnor/index"
+  }
+}
