@@ -2,3 +2,12 @@ page{
   background-color: #f5f7f9;
   padding-bottom: 10rpx;
 }
+
+.order___list{
+  margin-top: 195rpx;
+}
+.search__box{
+  position: fixed;
+  width: 100%;
+  top: 0;
+}

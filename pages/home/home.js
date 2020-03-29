@@ -29,6 +29,9 @@ Page({
     }, {
       url: '/pages/notice/notice',
       btnText: "通告栏"
+    },{
+        url: '/pages/abnor/abnor',
+        btnText: "异常数据"
     }]
   },
 

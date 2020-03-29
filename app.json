@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/abnor/abnor",
     "pages/order-list/order-list",
+    "pages/abnor/abnor",
     "pages/index/index",
     "pages/login/login",
     "pages/home/home",

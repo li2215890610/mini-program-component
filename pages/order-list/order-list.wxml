@@ -1,11 +1,17 @@
 
+<view class="search__box">
+  <order-search/>
+</view>
 
 
-<!-- <order-item/>
+<view class="order___list">
+<order-item/>
+
 <order-item/>
 <order-item/>
 <order-item/>
 <order-item/>
 <order-item/>
 <order-item/>
-<order-item/> -->
+<order-item/>
+</view>

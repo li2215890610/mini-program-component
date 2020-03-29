@@ -1,0 +1,52 @@
+<view class='search'>
+  <view class="user__info f">
+    <view class='user__name f1 f f-c-c'>
+      <view class="f-s-c">
+        入住人
+      </view>
+      <view class="f-c-c">
+        <view class="user__name--input">
+          <input placeholder="Zhang San" type="text" />
+        </view>
+      </view>
+    </view>
+
+    <view class='user__name f1 f f-s-c'>
+      <view class="f-s-c">
+        入住时间
+      </view>
+      <view class="f-c-c">
+        <view class="picker">
+          <picker 
+            bindchange="bindPickerChange" 
+            value="{{index}}" 
+            range="{{array}}" 
+            range-key="{{'value'}}" 
+          >
+            {{array[index].value}}
+          </picker>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='tab__list f'>
+    <view class="f1 f-c-c">
+      <view 
+        class="f-c-c tab__item {{tabIndex === 0 ? 'selectd':''}}"
+        bindtap="tabClick" 
+        data-index="0"
+      >
+        预定成功
+      </view>
+    </view>
+    <view class="f1 f-c-c">
+      <view 
+        class="f-c-c tab__item {{tabIndex === 1 ? 'selectd':''}}"  
+        bindtap="tabClick" 
+        data-index="1"
+      >
+        全部
+      </view>
+    </view>
+  </view>
+</view>
