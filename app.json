@@ -1,6 +1,7 @@
 {
   "pages": [
-    "pages/order-list/order-list",
+    "pages/FCT/order-list/order-list",
+    "pages/FCT/order-details/order-details",
     "pages/abnor/abnor",
     "pages/index/index",
     "pages/login/login",

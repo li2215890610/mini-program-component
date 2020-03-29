@@ -1,6 +1,0 @@
-{
-  "usingComponents": {
-    "order-item": "../../components/FCT/order-item/order-item",
-    "order-search":"../../components/FCT/order-search/order-search"
-  }
-}

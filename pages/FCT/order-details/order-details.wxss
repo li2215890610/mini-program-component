@@ -1,0 +1,167 @@
+/* pages/order-details/order-details.wxss */
+page{
+  background-color: #f5f7f9;
+  padding-bottom: 20rpx;
+}
+
+.panel{
+  background-color: #fff;
+  margin: 20rpx 25rpx;
+}
+
+.order__state--success, 
+.order__state--cancel,
+.order__state--error{
+  padding:  20rpx;
+}
+
+.order__state--success{
+  background-color: #b38b4c;
+}
+
+.success__img{
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.success__font{
+  font-size: 34rpx;
+  color: #fff;
+  margin-left: 10rpx;
+}
+
+.cancel__order{
+  border: solid 1px #fff;
+  font-size: 30rpx;
+  color: #fff;
+  padding: 5rpx 10rpx;
+  border-radius: 10rpx;
+}
+
+.order__state--error{
+  background-color: #c50813;
+}
+
+.error-success{
+  margin-top: 15rpx;
+  font-size: 26rpx;
+  color: #fff;
+}
+
+.order__state--cancel{
+  background-color: #999;
+}
+
+.hotel__name{
+  font-size: 28rpx;
+  font-weight: bold;
+}
+
+.hotel__cell{
+  padding: 25rpx 20rpx;
+}
+
+.cell__line{
+  background-color: #f5f7f9;
+  height: 3rpx;
+  margin: 0 20rpx;
+}
+
+.hotel__date,
+.hotel_address,
+.hotel__phone,
+.user_num--box,
+.order__id{
+  font-size: 28rpx;
+}
+
+.hotel__time{
+  margin-left: 10rpx;
+}
+
+.enter__date{
+  width: 50%;
+}
+
+.out__date{
+  width: 50%;
+}
+
+.right_arrow{
+  width: 28rpx;
+  height: 28rpx;
+  border-top: 4rpx solid #b38b4c;
+  border-right: 4rpx solid #b38b4c;
+  transform: rotate(45deg);
+}
+
+.web__view--btn{
+  padding: 30rpx;
+}
+
+.btn{
+  font-size: 30rpx;
+  width: 250rpx;
+  background-color: #b38b4c;
+  color: #fff;
+  border-radius: 5px;
+  line-height: 64rpx;
+}
+
+.cell__table--head{
+  padding: 25rpx 20rpx;
+}
+
+.cell__table--head--img{
+  width: 35rpx;
+  height: 35rpx;
+}
+
+.cell__table--head--text{
+  font-size: 28rpx;
+  margin-left: 15rpx;
+}
+
+.user_num{
+  font-weight: bold;
+}
+
+.hotel__cell--left{
+  width: 200rpx;
+}
+.hotel__cell--right{
+  color: #888888;
+}
+.day__num{
+  border: solid 1px #b38b4c;
+  padding: 3rpx 5rpx;
+  margin-left: 10rpx;
+  border-radius: 5rpx;
+  font-size: 20rpx;
+  color: #b38b4c;
+}
+
+.tab__list{
+  font-size: 27rpx;
+  height: 80rpx;
+  border-bottom: solid 1px #f4f4f4;
+}
+
+.tab__item{
+  height: 100%;
+  color: #aca5a1;
+}
+
+.selectd{
+  border-bottom: solid 1px #b58a4d;
+  color: #b58a4d;
+}
+
+.commission{
+  color: #e73014;
+  font-weight: bold;
+}
+
+.total__price{
+  color: #bb5234;
+}

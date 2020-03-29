@@ -1,6 +1,6 @@
 page{
   background-color: #f5f7f9;
-  padding-bottom: 10rpx;
+  padding-bottom: 30rpx;
 }
 
 .order___list{
