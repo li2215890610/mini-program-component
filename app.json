@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/FCT/my/my",
     "pages/FCT/order-details/order-details",
     "pages/FCT/order-list/order-list",
     "pages/abnor/abnor",
