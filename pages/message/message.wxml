@@ -1,0 +1,11 @@
+<message message="{{message}}" type="{{type}}" id='message'/>
+
+
+<button 
+  wx:for="{{btnList}}" 
+  wx:key="index" 
+  bindtap="onMessage"
+  data-type="{{item.type}}"
+>
+  {{item.btnText}}
+</button>

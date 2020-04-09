@@ -6,6 +6,9 @@ Page({
    */
   data: {
     goPage: [{
+      url: '/pages/message/message',
+      btnText: '消息通知',
+    }, {
       url: '/pages/form/form',
       btnText: '动态表单',
     }, {

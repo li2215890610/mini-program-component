@@ -1,0 +1,3 @@
+<view class='message {{showMessgae === true ? "show" : (showMessgae === false ? "hide": "")}} message--{{type}}'>
+  {{message}}
+</view>

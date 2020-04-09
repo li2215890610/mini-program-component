@@ -1,0 +1,262 @@
+<button class="clean-btn" open-type="getUserInfo" bindgetuserinfo="onGotUserInfo">
+	<view class="f f-mycell f-mycell__image">
+		<view class="f-s-c">
+			头像
+		</view>
+		<view class="f1 f-e-c">
+			<image class="f-images" src="https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTLzrZxldu32futWFgtVibpX0rfCmsKYdDHAk0jqB3LPEgFwYVJ0LgA19cVKOPuL1icIu9ALtFE1JictQ/132"></image>
+			<view class="f-right_arrow"></view>
+		</view>
+	</view>
+</button>
+
+<view class='title_head f'>
+	<view class="f1 f-s-c">基本信息</view>
+	<view class="f-e-c">
+		<view class=" f-btn__box f f-c-c">
+			保存	
+		</view>
+	</view>
+</view>
+
+<view class="f f-mycell">
+	<view class="f-s-c ">
+		微信昵称
+	</view>
+	<view class="f1 f-e-c">
+		<view class="f-right">杨大侠</view>
+	</view>
+</view>
+<view class="item--line"></view>
+
+<view class="f f-mycell">
+	<view class="f-s-c ">
+		姓名
+	</view>
+	<view class="f1 f-e-c">
+		<input placeholder="请输入姓名" class="f-right f-input__text--right" />
+	</view>
+</view>
+<view class="item--line"></view>
+
+<view class="f f-mycell">
+	<view class="f-s-c ">
+		姓别
+	</view>
+	<view class="f1 f-e-c f-right">
+		<view>男</view>
+	</view>
+</view>
+<view class="item--line"></view>
+
+<view class="f f-mycell">
+	<view class="f-s-c ">
+		手机号
+	</view>
+	<view class="f1 f-e-c f-right">
+		<input placeholder="请输入手机号" class="f-right f-input__text--right" />
+	</view>
+</view>
+<view class="item--line"></view>
+
+<view class="f f-mycell">
+	<view class="f-s-c ">
+		邮箱
+	</view>
+	<view class="f1 f-e-c f-right">
+		<input placeholder="请输入邮箱" class="f-right f-input__text--right" />
+	</view>
+</view>
+<view class="item--line"></view>
+
+<view class='title_head f'>
+	<view class="f1 f-s-c">特殊日子</view>
+	<view class="f-e-c">
+		<view class=" f-btn__box f f-c-c">
+			保存	
+		</view>
+	</view>
+</view>
+
+
+<view class="f f-mycell">
+	<view class="f-s-c ">
+		我的生日
+	</view>
+	<view class="f1 f-e-c f-right">
+		<view>2017-01-03</view>
+		<view class="f-right_arrow"></view>
+	</view>
+</view>
+
+<view class="item--line"></view>
+
+<view class="f f-mycell">
+	<view class="f-s-c ">
+		我的纪念日
+	</view>
+	<view class="f1 f-e-c f-right">
+
+		<input placeholder="请输入我的纪念日" class="f-right f-input__text--right" />
+
+	</view>
+</view>
+
+<view class="item--line"></view>
+
+<view class='title_head f'>
+	<view class="f1 f-s-c">我的收获地址</view>
+	<view class="f-e-c">
+		<view class=" f-btn__box f f-c-c">
+			保存	
+		</view>
+	</view>
+</view>
+
+
+<view class="f f-mycell">
+	<view class="f-s-c ">
+		收货人
+	</view>
+	<view class="f1 f-e-c f-right">
+		<input placeholder="请输入收货人" class="f-right f-input__text--right" />
+	</view>
+</view>
+<view class="item--line"></view>
+
+<view class="f f-mycell">
+	<view class="f-s-c ">
+		电话
+	</view>
+	<view class="f1 f-e-c f-right">
+		<input placeholder="请输入电话" class="f-right f-input__text--right" />
+	</view>
+</view>
+<view class="item--line"></view>
+
+<view class="f f-mycell">
+	<view class="f-s-c ">
+		地区
+	</view>
+	<view class="f1 f-e-c f-right">
+		<input placeholder="请输入地区" class="f-right f-input__text--right" />
+	</view>
+</view>
+<view class="item--line"></view>
+
+<view class="f f-mycell">
+	<view class="f-s-c ">
+		详细地址
+	</view>
+	<view class="f1 f-e-c f-right">
+		<input placeholder="请输入详细地址" class="f-right f-input__text--right" />
+	</view>
+</view>
+<view class="item--line"></view>
+
+<view class="f f-mycell">
+	<view class="f-s-c ">
+		邮编
+	</view>
+	<view class="f1 f-e-c f-right">
+		<input placeholder="请输入邮编" class="f-right f-input__text--right" />
+	</view>
+</view>
+
+<view class="item--line"></view>
+
+<view class='title_head f'>
+	<view class="f1 f-s-c">我的发票抬头</view>
+	<view class="f-e-c">
+		<view class=" f-btn__box f f-c-c">
+			保存	
+		</view>
+	</view>
+</view>
+
+<view class="f f-mycell">
+	<view class="f-s-c ">
+		抬头类型
+	</view>
+	<view class="f1 f-e-c">
+		<view class="btn f-btn_select">个人</view>
+		<view class="btn">单位</view>
+	</view>
+</view>
+
+<view class="f f-mycell">
+	<view class="f-s-c ">
+		个人抬头名称
+	</view>
+	<view class="f1 f-e-c f-right">
+		<input placeholder="请输入名称" class="f-right f-input__text--right" />
+	</view>
+</view>
+
+<view class="item--line"></view>
+
+<view class="f f-mycell">
+	<view class="f-s-c ">
+		发票名称
+	</view>
+	<view class="f1 f-e-c f-right">
+		<input placeholder="请输入发票名称" class="f-right f-input__text--right" />
+	</view>
+</view>
+
+<view class="item--line"></view>
+
+<view class="f f-mycell">
+	<view class="f-s-c ">
+		税号
+	</view>
+	<view class="f1 f-e-c f-right">
+		<input placeholder="请输入税号" class="f-right f-input__text--right" />
+	</view>
+</view>
+
+<view class="item--line"></view>
+
+<view class="f f-mycell">
+	<view class="f-s-c ">
+		单位地址
+	</view>
+	<view class="f1 f-e-c f-right">
+		<input placeholder="请输入单位地址" class="f-right f-input__text--right" />
+	</view>
+</view>
+
+<view class="item--line"></view>
+
+<view class="f f-mycell">
+	<view class="f-s-c ">
+		电话号码
+	</view>
+	<view class="f1 f-e-c f-right">
+		<input placeholder="请输入电话号码" class="f-right f-input__text--right" />
+	</view>
+</view>
+
+<view class="item--line"></view>
+
+<view class="f f-mycell">
+	<view class="f-s-c ">
+		开户银行
+	</view>
+	<view class="f1 f-e-c f-right">
+		<input placeholder="请输入开户银行" class="f-right f-input__text--right" />
+	</view>
+</view>
+
+<view class="item--line"></view>
+
+<view class="f f-mycell">
+	<view class="f-s-c ">
+		银行账号号码
+	</view>
+	<view class="f1 f-e-c f-right">
+		<input placeholder="请输入银行账号号码" class="f-right f-input__text--right" />
+	</view>
+</view>
+
+<view class="item--line"></view>
