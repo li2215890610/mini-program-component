@@ -1,13 +1,7 @@
 {
   "pages": [
-    "pages/FCT/brand-list/brand-list",
     "pages/home/home",
     "pages/message/message",
-    "pages/FCT/hotel-list/hotel-list",
-    "pages/FCT/my-info/my-info",
-    "pages/FCT/my/my",
-    "pages/FCT/order-details/order-details",
-    "pages/FCT/order-list/order-list",
     "pages/abnor/abnor",
     "pages/index/index",
     "pages/login/login",
