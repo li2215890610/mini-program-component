@@ -30,11 +30,7 @@
 |`bindgetphonenumber`  | [说明]：同微信小程序 `button` 组件。获取用户手机号回调<br>[类型]：`Handler`<br>|
 |`binderrror`          | [说明]：同微信小程序 `button` 组件。当使用开放能力时，发生错误的回调调<br>[类型]：`Handler`<br>|
 |`bind:submit`         | [说明]：`button` 组件 `form-type` 设置为 `submit`, 内置 `form` 表单，点击按钮时触发 `submit` 事件，可用于获取 `formId` 等，`event.detail = {value, formId}`|
-			
-## Note
 
-> - 小程序组件系统中组件是隔离的，组件外层套 `form` 标签时两者是不通的，现在组件中内置 `form` 标签用于获取 `formId`。
-> - 小程序组件系统中组件是隔离的，所以提交表单时无法用 `form` 表单获取输入框中的值，只能单独获取。
 
 
 
