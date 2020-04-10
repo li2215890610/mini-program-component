@@ -1,7 +1,0 @@
-{
-  "usingComponents": {
-    "vc-search":"../../../components/vc-search/vc-search",
-    "vc-button": "../../components/vc-button/vc-button"
-
-  }
-}
