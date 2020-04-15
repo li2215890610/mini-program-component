@@ -7,3 +7,6 @@
   notice="{{notice}}">
 </vc-notice>
 
+  <vc-notice scroll="{{true}}" close="{{true}}" show-icon="{{true}}" notice="{{notice}}" bind:close="onClose"></vc-notice>
+
+  <vc-notice notice="{{notice}}" color="#ff5777" bgColor="#ffe8ee"></vc-notice>

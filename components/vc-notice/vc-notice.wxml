@@ -1,11 +1,13 @@
 <view wx:if="{{isShow && notice}}" class="notice" style="background-color: {{bgColor}};">
-    <vc-icon wx:if="{{showIcon}}" class="notice__icon" type="icon-notification" size="38" color="{{iconColor}}" ></vc-icon>
-    <view class="notice__text--wrap" style="color: {{color}};">
-        <view wx:if="{{scroll}}" class="notice__text notice__text--animate"><text class="notice__text--span">{{notice}}</text><text class="notice__text--span">{{notice}}</text></view>
-        <view wx:else="" class="notice__text"><text class="notice__text--span">{{notice}}</text></view>
-    </view>
-    <block wx:if="{{close}}">
-        <view class="notice__text--overlay" style="background: linear-gradient(to right, {{bgRgba}}, {{bgColor}});"></view>
-        <vc-icon class="notice__close" type="icon-close" size="36" color="#fff" bindtap="onDismissNotice" ></vc-icon>
-    </block>
+	<vc-icon wx:if="{{showIcon}}" class="notice__icon" type="icon-notification" size="38" color="{{iconColor}}"></vc-icon>
+	<view class="notice__text--wrap" style="color: {{color}};">
+		<view wx:if="{{scroll}}" class="notice__text notice__text--animate">
+            <text class="notice__text--span">{{notice}}</text>
+        </view>
+		<view wx:else="" class="notice__text"><text class="notice__text--span">{{notice}}</text></view>
+	</view>
+	<block wx:if="{{close}}">
+		<view class="notice__text--overlay" style="background: linear-gradient(to right, {{bgRgba}}, {{bgColor}});"></view>
+		<vc-icon class="notice__close" type="icon-close" size="36" color="#fff" bindtap="onDismissNotice"></vc-icon>
+	</block>
 </view>
