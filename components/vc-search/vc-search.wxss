@@ -3,9 +3,6 @@
   position: relative;
   overflow: hidden;
   height: 30PX;
-}
-
-.search-bar__container {
   flex: 1;
   width: 100%;
   background-color: #f7f7f7;
