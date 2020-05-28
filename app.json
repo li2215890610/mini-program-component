@@ -1,6 +1,7 @@
 {
   "pages": [
-    "pages/home/home",
+    "pages/home/home", 
+    "pages/left-slide/left-slide",
     "pages/message/message",
     "pages/abnor/abnor",
     "pages/index/index",

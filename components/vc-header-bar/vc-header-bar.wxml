@@ -1,0 +1,11 @@
+	<view class="header--box" style="height: {{nav.headerBox ? headerBoxHeight : 0}} ">
+		<view class="header {{nav.fixed ? 'header--fixed':''}}" 
+		style="height:{{titleBarHeight}};padding-top:{{statusBarHeight}};background-color:{{nav.bg}};opacity: {{nav.opacity || 1}}"
+    >
+
+			<vc-icon wx:if="{{nav.isBackNav}}" bindtap="back" class="header-back" type="icon-back" size="48" color="{{nav.color ? nav.color: '#FFFFFF'}}"></vc-icon>
+
+			<view class="header-title" style="color: {{nav.color ? nav.color: '#FFFFFF'}}" wx:if="{{nav.navTitle}}">{{nav.navTitle}}</view>
+
+		</view>
+	</view>

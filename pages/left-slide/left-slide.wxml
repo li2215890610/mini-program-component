@@ -1,0 +1,6 @@
+<view class="container">
+ <view class="touch-item {{item.isTouchMove ? 'touch-move-active' : ''}}" data-index="{{index}}" bindtouchstart="handleTouchstart" bindtouchmove="handleTouchmove" wx:for="{{list}}" wx:key="index">
+  <view class="content">{{item.content}}</view>
+  <view class="del" catchtap="handleDelect" data-index="{{index}}">删除</view>
+ </view>
+</view>

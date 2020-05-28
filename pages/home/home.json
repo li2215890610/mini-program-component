@@ -1,6 +1,8 @@
 {
   "navigationBarTitleText": "中控",
+  "navigationStyle":"custom",
   "usingComponents": {
-    "vc-icon": "../../components/vc-icon/vc-icon"
+    "vc-icon": "../../components/vc-icon/vc-icon",
+    "vc-header-bar":"../../components/vc-header-bar/vc-header-bar"
   }
 }
