@@ -5,5 +5,11 @@ App({
   },
   globalData: {
     userInfo: null
+  },
+  testShow: function (params) {
+    wx.showToast({
+      title: '出来了',
+      duration: 6 * 1000
+    })
   }
 })
