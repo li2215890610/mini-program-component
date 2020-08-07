@@ -1,0 +1,12 @@
+<suk-panel 
+  id="sku-paenl"
+  bind:handleShowSkuPanel="handleShowSkuPanel"
+  bind:handleHideSkuPanel="handleHideSkuPanel"
+/>
+
+
+<button
+  bindtap="onClick"
+>
+  点我
+</button>

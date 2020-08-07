@@ -1,0 +1,9 @@
+
+<view class="f">
+  <view class="sku-panel__close">
+    <vc-icon bindtap="handleClose"  class="close" type="icon-close" size="38" color="#ff5777"></vc-icon>
+  </view>
+  <image
+    class="sku__img"
+    src="http://s.jinjuxiaodian.com/jinju_resource/593b78b8f8f9d516ca03a8cb/1f580b60-d37c-11e9-9381-f559d67a9fbe.png"></image>
+</view>

@@ -29,9 +29,12 @@ Page({
   },
 
   onLoad: function(query) {
-    if (query && query.type === 'timeline') {
-      console.log(query);
-      app.testShow()
+
+    if (wx.getLaunchOptionsSync().scene  === 1154) {
+      if (query && query.type === 'timeline') {
+        console.log(query);
+        app.testShow()
+      }
     }
   },
   
@@ -42,11 +45,10 @@ Page({
     }
   },
   onShareTimeline: function () {
-    // &product_id=5f1f98d63d265f6eb5f122a1&activity_type=111&fxid=5f1f98d63d265f6eb5f122a1&tuan_id=5f1f98d63d265f6eb5f122a1&activity_id=5f1f98d63d265f6eb5f122a1&seckill_id=5f1f98d63d265f6eb5f122a1
     return {
       query: "type=timeline&store_id=5f1f98d63d265f6eb5f122a1",
       title: "我的",
-      path:"/pages/steps/steps"
+      imageUrl: '',
     }
   }
 })

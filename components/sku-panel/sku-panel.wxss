@@ -1,0 +1,40 @@
+.sku-panel {
+  position: fixed;
+  bottom: -790px;
+  left: 0;
+  right: 0;
+  z-index: 4;
+  transform: translateY(0px);
+  transition: transform 0.3s cubic-bezier(.36, .66, .04, 1);
+}
+
+.sku-panel.show {
+  transform: translateY(-790px);
+}
+
+.sku-panel__mask {
+  position: fixed;
+  top: 100%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  background-color: rgba(0, 0, 0, 0);
+  transition: background-color 0.15s cubic-bezier(.36, .66, .04, 1);
+  transform: translateZ(10);
+}
+
+.sku-panel__mask.show {
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.sku-panel__selector{
+  padding: 30rpx;
+  background-color: #fff;
+}
+
+.sku-info {
+  padding-bottom: 30px;
+  border-bottom: 1Px solid #f4f4f4;
+}

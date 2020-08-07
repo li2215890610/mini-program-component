@@ -5,7 +5,6 @@ Page({
    * 页面的初始数据
    */
   data: {
-    list: [1, 2],
     setNav: {
       'bg': '#323232', //背景色
       'navTitle': "城市",
@@ -48,6 +47,9 @@ Page({
     }, {
       url: '/pages/left-slide/left-slide',
       btnText: "右滑删除"
+    },{
+      url:'/pages/sku-selector/sku-selector',
+      btnText:'sku选择'
     }]
   },
   navigateTo: function (e) {
