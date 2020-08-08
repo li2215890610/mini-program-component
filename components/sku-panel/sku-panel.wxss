@@ -38,3 +38,7 @@
   padding-bottom: 30px;
   border-bottom: 1Px solid #f4f4f4;
 }
+
+.sku-attribute{
+  height: 330rpx;
+}

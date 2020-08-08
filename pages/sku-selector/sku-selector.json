@@ -1,5 +1,6 @@
 {
   "usingComponents": {
-    "suk-panel": "../components/sku-panel/sku-panel"
+    "suk-panel": "../components/sku-panel/sku-panel",
+    "scrollView":"../../components/sku-panel/sku-attribute/sku-attribute"
   }
 }

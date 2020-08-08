@@ -4,7 +4,22 @@ Component({
    * 组件的属性列表
    */
   properties: {
-
+    stock: {
+      type: Number,
+      value: 0
+    },
+    price: {
+      type: Number,
+      value: 0
+    },
+    originPrice: {
+      type: Number,
+      value: 0
+    },
+    name: {
+      type: String,
+      value: ''
+    }
   },
 
   /**

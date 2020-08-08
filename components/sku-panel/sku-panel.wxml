@@ -8,7 +8,9 @@
       <view class="sku-info">
         <sku-info bind:handleClose="handleClickHide"/>
       </view>
-      <button bindtap="handleClickShow">显示</button>
+      <view class="sku-attribute">
+        <sku-attribute/>
+      </view>
       <button bindtap="handleClickHide">隐藏</button>
       <vc-button 
         size="large" 

@@ -12,3 +12,38 @@
   border: 1px solid #f4f4f4;
   margin-right: 20rpx;
 }
+
+.sku-info__price-now{
+  vertical-align: middle;
+  line-height: 1;
+  display: inline;
+  padding-right: 10rpx;
+}
+
+.sku-info__price-now text{
+  color: #202020;
+  font-size: 15px;
+  font-weight: bold;
+  text-decoration: none;
+}
+.sku-info__price-origin{
+  vertical-align: middle;
+  line-height: 1;
+  display: inline;
+}
+.sku-info__price-origin text{
+  color: #ADADAD;
+  font-size: 10px;
+  font-weight: normal;
+  text-decoration: line-through;
+}
+
+.sku-info__name{
+  font-size: 24rpx;
+  color: #5d5d5d;
+}
+.sku-info__stock{
+  font-size: 24rpx;
+  color: #5d5d5d;
+  margin-top: 10rpx;
+}

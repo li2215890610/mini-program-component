@@ -2,6 +2,7 @@
   "component": true,
   "usingComponents": {
     "vc-button":"../vc-button/vc-button",
-    "sku-info":"./sku-info/sku-info"
+    "sku-info":"./sku-info/sku-info",
+    "sku-attribute":"./sku-attribute/sku-attribute"
   }
 }
