@@ -5,6 +5,9 @@
 />
 
 <scrollView/>
+
+<vc-counter/>
+
 <button
   bindtap="onClick"
 >

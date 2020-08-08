@@ -11,7 +11,10 @@ Component({
    * 组件的初始数据
    */
   data: {
-
+    list: [{
+      name: '红色',
+      item:['XL','XL','XL','XL','XL','XL','XL','XL','XL','XL','XL','XL','XL','XL','XL','XL','XL','XL','XL','XL','XL','XL','XL','XL','XL','XL','XL','XL','XL','XL',]
+    }]
   },
 
   /**

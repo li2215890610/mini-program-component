@@ -1,1 +1,6 @@
 /* pages/sku-selector/sku-selector.wxss */
+
+
+button{
+  margin-top: 100px;
+}
