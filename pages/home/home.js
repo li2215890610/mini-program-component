@@ -50,6 +50,12 @@ Page({
     },{
       url:'/pages/sku-selector/sku-selector',
       btnText:'sku选择'
+    },{
+      url: '/pages/row4/row4',
+      btnText: "一行四个"
+    },{
+      url:"/pages/double-row/double-row",
+      btnText:"双列商品"
     }]
   },
   navigateTo: function (e) {
