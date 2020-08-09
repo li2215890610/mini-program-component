@@ -5,7 +5,6 @@ Page({
    * 页面的初始数据
    */
   data: {
-    list: [1, 2],
     setNav: {
       'bg': '#323232', //背景色
       'navTitle': "城市",
@@ -45,49 +44,21 @@ Page({
     }, {
       url: '/pages/abnor/abnor',
       btnText: "异常数据"
-    },{
+    }, {
       url: '/pages/left-slide/left-slide',
       btnText: "右滑删除"
+    },{
+      url:'/pages/sku-selector/sku-selector',
+      btnText:'sku选择'
     }]
   },
-
   navigateTo: function (e) {
     console.log(e.currentTarget.dataset.url)
     wx.navigateTo({
       url: `${e.currentTarget.dataset.url}`,
-      success: function (res) {},
-      fail: function (res) {},
-      complete: function (res) {},
-    })
-  },
-
-  handleSpecial: function name(params) {
-    this.setData({
-      specialShow: !this.data.specialShow
-    })
-  },
-
-  bindDateChange: function (e) {
-    console.log('picker发送选择改变，携带值为', e.detail.value)
-    this.setData({
-      date: e.detail.value
-    })
-  },
-  bindPickerChange: function (e) {
-    console.log('picker发送选择改变，携带值为', e.detail.value)
-    this.setData({
-      index: e.detail.value
-    })
-  },
-  bindTimeChange: function (e) {
-    console.log('picker发送选择改变，携带值为', e.detail.value)
-    this.setData({
-      time: e.detail.value
-    })
-  },
-  bindDateMonthChange: function (e) {
-    this.setData({
-      dateMonth: e.detail.value
+      success: function (res) { },
+      fail: function (res) { },
+      complete: function (res) { },
     })
   }
 })

@@ -1,0 +1,15 @@
+<suk-panel 
+  id="sku-paenl"
+  bind:handleShowSkuPanel="handleShowSkuPanel"
+  bind:handleHideSkuPanel="handleHideSkuPanel"
+/>
+
+<scrollView/>
+
+<vc-counter/>
+
+<button
+  bindtap="onClick"
+>
+  点我
+</button>

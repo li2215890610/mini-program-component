@@ -16,6 +16,7 @@
     "pages/modal/modal",
     "pages/button/button",
     "pages/steps/steps",
+    "pages/sku-selector/sku-selector",
     "pages/notice/notice"
   ],
   "window": {

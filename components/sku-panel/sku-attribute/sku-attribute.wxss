@@ -1,0 +1,40 @@
+.sku-attribute{
+  padding-bottom: 20rpx;
+  border-bottom: 2rpx solid #f4f4f4;
+}
+.sku-attribute,.sku-attribute-list{
+  height: 330rpx;
+}
+
+.attribute-item{
+  padding-bottom: 10rpx;
+  padding-top: 20rpx;
+}
+
+.attribute-name{
+  font-size: 24rpx;
+}
+
+.value-list{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.value-list__item{
+  box-sizing: border-box;
+  padding-right: 20rpx;
+  padding-top: 20rpx;
+}
+.value-list__item view{
+  display: inline-block;
+  padding: 0 32rpx;
+  height: 60rpx;
+  color: #666;
+  font-size: 28rpx;
+  text-align: center;
+  line-height: calc(60rpx - 4rpx);
+  vertical-align: middle;
+  border: 2rpx solid #F7F7F7;
+  border-radius: 8rpx;
+  background-color: #F7F7F7;
+}

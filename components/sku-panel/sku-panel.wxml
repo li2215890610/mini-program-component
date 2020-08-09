@@ -1,0 +1,22 @@
+<view 
+  class="sku-panel__mask {{isShow ? 'show':''}}"
+  catchtap="handleClickHide"
+  bindtouchmove="handleTouch"
+> 
+  <view class="sku-panel {{isShow ? 'show':''}}" catchtap="handleClickInner">
+   <view class="sku-panel__selector" >
+      <view class="sku-info">
+        <sku-info bind:handleClose="handleClickHide"/>
+      </view>
+      <sku-attribute/>
+      <view>
+        <vc-button 
+          size="large" 
+          type="{{isShow ? 'beauty':'disabled'}}" 
+          value="选择规格"
+          catchtap="handleClickConfirm"
+        />
+      </view>
+   </view>
+  </view>
+</view>

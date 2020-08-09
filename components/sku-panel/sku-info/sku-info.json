@@ -1,6 +1,6 @@
 {
   "component": true,
   "usingComponents": {
-    "vc-badge": "../vc-badge/vc-badge"
+    "vc-icon":"../../vc-icon/vc-icon"
   }
 }
