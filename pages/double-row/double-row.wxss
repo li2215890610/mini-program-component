@@ -1,0 +1,18 @@
+
+.L-img__list{
+  padding-top: 20rpx;
+  padding-left: 20rpx;
+  flex-wrap: wrap;
+  background-color: #fff;
+}
+.L-img__list--item{
+  min-width: 50%;
+  max-width: 50%;
+  margin-bottom: 20rpx;
+}
+.L-img__item-info{
+  padding-right: 20rpx;
+}
+.L-img__list--box{
+  padding: 0 20rpx;
+}

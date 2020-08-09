@@ -1,0 +1,21 @@
+
+
+.L-list-city{
+  flex-wrap: wrap;
+  padding-right: 5rpx;
+}
+.L-list-item-city{
+  width: calc(25% - 25rpx);
+  padding: 20rpx 0;
+  font-size: 25rpx;
+  background-color: red;
+  color: #F5F4F3;
+  margin:20rpx 0 0 20rpx;
+  text-align: center；
+}
+.L-list-item-city view{
+  text-align: center;
+  width: 120rpx;
+  height: 34rpx;
+  overflow: hidden;
+}

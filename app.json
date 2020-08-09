@@ -1,10 +1,12 @@
 {
   "pages": [
     "pages/home/home", 
+    "pages/double-row/double-row",
+    "pages/index/index",
+    "pages/row4/row4",
     "pages/left-slide/left-slide",
     "pages/message/message",
     "pages/abnor/abnor",
-    "pages/index/index",
     "pages/login/login",
     "pages/reset-password/reset-password",
     "pages/form/form",

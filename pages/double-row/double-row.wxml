@@ -1,0 +1,32 @@
+<view class="L-img__list f">
+  <view class="L-img__list--item" wx:for="{{tabList}}" wx:key="index">
+    <view class="L-img__item-info">
+      <view style="height:320rpx;background:url(http://s.jinjuxiaodian.com/jinju_loading_picture.png) no-repeat center center;background-size:cover;">
+
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="L-img__list--box">
+  <view class="L-img__list f">
+    <view class="L-img__list--item" wx:for="{{tabList}}" wx:key="index">
+      <view class="L-img__item-info">
+        <view style="height:320rpx;background:url(http://s.jinjuxiaodian.com/jinju_loading_picture.png) no-repeat center center;background-size:cover;">
+
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view>L-img__item-info  margin-right:20rpx</view>
+<view class="L-img__list--box">
+  <view class="L-img__list f">
+    <view class="L-img__list--item" wx:for="{{tabList}}" wx:key="index">
+      <view class="L-img__item-info" style="height:320rpx;background:url(http://s.jinjuxiaodian.com/jinju_loading_picture.png) no-repeat center center;background-size:cover; margin-right:20rpx">
+        
+      </view>
+    </view>
+  </view>
+</view>

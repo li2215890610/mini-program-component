@@ -1,0 +1,7 @@
+				<view class="L-list-city f">
+					<view wx:for="{{cityList}}" wx:key="index" class="L-list-item-city f f-c-c">
+						<view>
+							{{item}}
+						</view>
+					</view>
+				</view>
