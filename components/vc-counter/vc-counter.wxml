@@ -1,15 +1,18 @@
 <view class="stepper"> 
   <!-- 减号 --> 
   <!-- <text class="{{minusStatus}}" bindtap="bindMinus">-</text>  -->
-  <view class="f f-c-c">
-    <vc-icon type="icon-move" size="42" color="red"/>
+  <view class="normal" bindtap="bindMinus">
+    <view class="f f-c-c"><vc-icon type="icon-move" size="42" color="red"/></view>
   </view>
   <!-- 数值 --> 
   <input type="number" bindchange="bindManual" value="{{num}}" /> 
   <!-- 加号 --> 
-  <!-- <text class="normal" bindtap="bindPlus">+</text> -->
-  <view class="f">
-    <view class="f1 f-c-c"><vc-icon type="icon-add1" size="42" color="red"/></view>
+  <view class="normal" bindtap="bindPlus">
+    <view class="f f1">
+      <view class="f f-c-c f1">
+        <vc-icon type="icon-add1" size="42" color="red"/>
+      </view>
+    </view>
   </view>
 
 </view>
