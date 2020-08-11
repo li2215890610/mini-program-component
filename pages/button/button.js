@@ -12,6 +12,5 @@ Page({
 
   onSubmit: function (event) {
     console.log(event.detail);
-    
   }
 })
