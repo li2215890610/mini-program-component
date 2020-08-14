@@ -8,6 +8,7 @@ App({
   },
   onLaunch: function (qurey) {
     console.log(qurey, "onLaunchonLaunch");
+    //判断api 是否可用
     if (wx.canIUse("getUpdateManager")) {
       const updateManager = wx.getUpdateManager();
       updateManager.onCheckForUpdate(function (res) {
