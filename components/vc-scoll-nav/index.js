@@ -1,5 +1,4 @@
 Component({
-  externalClasses: ['sol-class'],
   properties: {
     tabs: {
       type: Array,
