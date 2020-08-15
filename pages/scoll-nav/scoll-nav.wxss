@@ -1,1 +1,8 @@
-/* pages/scoll-nav/scoll-nav.wxss */
+/* pages/tab-scroller/index.wxss */
+.container {
+  height: 100vh;
+}
+
+.content {
+  padding-top: 100rpx;
+}
