@@ -56,6 +56,9 @@ Page({
     },{
       url:"/pages/double-row/double-row",
       btnText:"双列商品"
+    },{
+      url:'/pages/scoll-nav/scoll-nav',
+      btnText:"滚动导航"
     }]
   },
   navigateTo: function (e) {

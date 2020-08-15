@@ -1,0 +1,8 @@
+<sol-scoll-nav tabs="{{list}}" current="{{index}}" bindchange="onTabsChange"></sol-scoll-nav>
+<!-- <swiper class="container" current="{{index}}" duration="300" bindchange="onSwitchTab">
+  <swiper-item  >
+    <view class="content" wx:for="{{lists}}" wx:for-item="itemName">
+      {{index}}--{{itemName}}
+    </view>  
+  </swiper-item>
+</swiper> -->

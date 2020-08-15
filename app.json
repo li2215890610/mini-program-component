@@ -17,7 +17,8 @@
     "pages/button/button",
     "pages/steps/steps",
     "pages/sku-selector/sku-selector",
-    "pages/notice/notice"
+    "pages/notice/notice",
+    "pages/scoll-nav/scoll-nav"
   ],
   "window": {
     "backgroundTextStyle": "light",

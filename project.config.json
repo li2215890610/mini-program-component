@@ -126,6 +126,14 @@
 					"id": -1,
 					"name": "sku选择器面板",
 					"pathName": "pages/sku-selector/sku-selector",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "滚动导航",
+					"pathName": "pages/scoll-nav/scoll-nav",
+					"query": "",
 					"scene": null
 				}
 			]
