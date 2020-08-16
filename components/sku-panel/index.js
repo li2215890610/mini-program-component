@@ -1,10 +1,17 @@
-// components/sku-panel/sku-panel.js
+
 Component({
   /**
    * 组件的属性列表
    */
   properties: {
-
+    attributes:{
+      type: Array,
+      value:[]
+    },
+    sku:{
+      type: Array,
+      value:[]
+    }
   },
 
   /**

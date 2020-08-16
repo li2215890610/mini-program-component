@@ -51,12 +51,11 @@ Component({
           showNavDrap: !this.data.showNavDrap
         })
       }
-      var _this = this
       // 设置当前位置
       const query = wx.createSelectorQuery().in(this)
       query
         .selectAll('.label-item')
-        .boundingClientRect(function (rect) {
+        .boundingClientRect((rect)=> {
           let width = 0
           for (let i = 0; i < index; i++) {
             width += rect[i].width
@@ -65,11 +64,11 @@ Component({
           let clientWidth = wx.getSystemInfoSync().windowWidth / 2
 
           if (width > clientWidth) {
-            _this.setData({
+            this.setData({
               navScrollLeft: width + rect[index].width / 2 - clientWidth
             })
           } else {
-            _this.setData({
+            this.setData({
               navScrollLeft: 0
             })
           }

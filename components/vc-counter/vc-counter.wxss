@@ -10,7 +10,7 @@
 } 
    
 /*数值*/ 
-.stepper input { 
+.stepper .input { 
   width: 40px; 
   height: 26px; 
   float: left; 

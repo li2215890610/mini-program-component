@@ -2,9 +2,10 @@
   id="sku-paenl"
   bind:handleShowSkuPanel="handleShowSkuPanel"
   bind:handleHideSkuPanel="handleHideSkuPanel"
+  attributes="{{attributes}}"
 />
 
-<scrollView/>
+<scrollView attributes="{{attributes}}"/>
 
 <vc-counter/>
 

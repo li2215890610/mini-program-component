@@ -1,18 +1,21 @@
-// pages/sku-selector/sku-selector.js
+import skuData from "sku.js";
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    suk: skuData.sku,
+    attributes: skuData.product_attributes,
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    console.log(skuData,'_____');
+    
   },
 
   /**
@@ -27,7 +30,6 @@ Page({
    */
   onShow: function () {
     this.selectComponent('#sku-paenl').handleClickShow();
-
   },
   onClick: function () {
    this.selectComponent('#sku-paenl').handleClickShow();

@@ -1,31 +1,17 @@
 <view class="sku-attribute">
   <scroll-view scroll-y class="sku-attribute-list">
-    <view class="attribute-item" wx:for="{{list}}" wx:key="index">
-      <view class="attribute-name">{{item.name}}</view>
+    <view 
+      class="attribute-item" 
+      wx:for="{{attributes}}" 
+      wx:key="index"
+      wx:for-item="attribute"
+    >
+      <view class="attribute-name">{{attribute.name}}</view>
       <view class="value-list">
-        <view class="value-list__item" wx:for="{{item.item}}" wx:key="index">
-          <view>XL</view>
+        <view class="value-list__item" wx:for="{{attribute.values}}" wx:key="index">
+          <view class="value-list__item_name">{{item.name}}</view>
         </view>
       </view>
     </view>
-
-    <view class="attribute-item" wx:for="{{list}}" wx:key="index">
-      <view class="attribute-name">{{item.name}}</view>
-      <view class="value-list">
-        <view class="value-list__item" wx:for="{{item.item}}" wx:key="index">
-          <view>XL</view>
-        </view>
-      </view>
-    </view>
-
-    <view class="attribute-item" wx:for="{{list}}" wx:key="index">
-      <view class="attribute-name">{{item.name}}</view>
-      <view class="value-list">
-        <view class="value-list__item" wx:for="{{item.item}}" wx:key="index">
-          <view>XL</view>
-        </view>
-      </view>
-    </view>
-
   </scroll-view>
 </view>

@@ -25,7 +25,7 @@
   padding-right: 20rpx;
   padding-top: 20rpx;
 }
-.value-list__item view{
+.value-list__item .value-list__item_name{
   display: inline-block;
   padding: 0 32rpx;
   height: 60rpx;

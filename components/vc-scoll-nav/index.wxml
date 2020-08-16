@@ -3,13 +3,7 @@
 		<view class="more-bot" bindtap="showAllNav" />
 		<scroll-view scroll-x="true" class="label-scoll" scroll-left="{{ navScrollLeft }}">
 			<view id="nav">
-				<view
-				 class="label-item {{ activeIndex==index?'active':'' }}"
-				 wx:for="{{ tabs }}"
-				 wx:key="index"
-				 data-index="{{ index }}"
-				 bindtap="onClick"
-				>
+				<view class="label-item {{ activeIndex==index?'active':'' }}" wx:for="{{ tabs }}" wx:key="index" data-index="{{ index }}" bindtap="onClick">
 					<view class="inner">
 						<text>{{ item.title }}</text>
 						<text class="num">{{ item.num }}</text>
@@ -23,14 +17,7 @@
 				<view class="more-top" bindtap="showAllNav" />
 			</view>
 			<view class="nav-list-content">
-				<view
-				 class="nav-item {{ activeIndex==index?'active':'' }}"
-				 wx:for="{{ tabs }}"
-				 wx:key="index"
-				 data-pop="{{ true }}"
-				 data-index="{{ index }}"
-				 bindtap="onClick"
-				>
+				<view class="nav-item {{ activeIndex==index?'active':'' }}" wx:for="{{ tabs }}" wx:key="index" data-pop="{{ true }}" data-index="{{ index }}" bindtap="onClick">
 					{{ item.title }}
 					<text>{{ item.num }}</text>
 				</view>
@@ -39,4 +26,3 @@
 		<div class='pop-mask' wx:if="{{ showNavDrap }}" bindtap="showAllNav" />
 	</view>
 </view>
-
