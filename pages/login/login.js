@@ -8,7 +8,7 @@ Page({
     loading: false,
     userInfo: null
   },
-  onLoad: function onLoad() {
+  onLoad() {
 
     wx.getSetting({
       success: (res)=> {
@@ -25,22 +25,22 @@ Page({
       }
     });
   },
-  handlePhoneChange: function handlePhoneChange(e) {
+  handlePhoneChange: function (e) {
     this.setData({
       phone: e.detail.value
     });
   },
-  handlePasswordChange: function handlePasswordChange(e) {
+  handlePasswordChange: function (e) {
     this.setData({
       password: e.detail.value
     });
   },
-  handleTapResetPassword: function handleTapResetPassword() {
+  handleTapResetPassword: function () {
     wx.navigateTo({
       url: "/pages/reset-password/reset-password"
     });
   },
-  bindGetUserInfo: function bindGetUserInfo(res) {
+  bindGetUserInfo: function (res) {
     if (res.detail.errMsg === "getUserInfo:ok") {
       this.setData({
         userInfo: res.detail
@@ -53,7 +53,7 @@ Page({
       });
     }
   },
-  subAccountLogin: function subAccountLogin() {
+  subAccountLogin: function () {
     var userInfo = this.data.userInfo;
     wx.showLoading({
       title: '正在登录',
@@ -82,7 +82,7 @@ Page({
       }
     });
   },
-  handleTapLogin: function handleTapLogin() {
+  handleTapLogin: function () {
 
     const { data, phone, password} = this.data;
 
@@ -122,7 +122,6 @@ Page({
         })
       }
     });
-
   }
 
 });

@@ -3,51 +3,59 @@ Component({
     addGlobalClass: true,
   },
   properties: {
-    //
+    maxValue: {
+      type: Number,
+      value: 10000
+    },
+    minValue: {
+      type: Number,
+      value: 1
+    },
+    defaultValue: {
+      type: Number,
+      value: 1
+    }
   },
   data: {
-    // 这里是一些组件内部数据
-    // input默认是1 
-    num: 1,
-    // 使用data数据对象设置样式名 
-    minusStatus: 'disabled'
+    value: 1,
+  },
+  attached: function () {
+    let { defaultValue} = this.data;
+
+    this.setData({
+      value: defaultValue,
+    })
   },
   methods: {
-    // 这里放置自定义方法
-    /* 点击减号 */
-    bindMinus: function () {
-      let num = this.data.num;
+    reduce: function () {
+      let { value, minValue} = this.data;
       // 如果大于1时，才可以减 
-      if (num > 1) {
-        num--;
+      if (value > minValue) {
+        value--;
+        // 将数值与状态写回 
+        this.setData({
+          value: value,
+        });
       }
-      // 只有大于一件的时候，才能normal状态，否则disable状态 
-      let minusStatus = num <= 1 ? 'disabled' : 'normal';
-      // 将数值与状态写回 
-      this.setData({
-        num: num,
-        minusStatus: minusStatus
-      });
     },
-    /* 点击加号 */
-    bindPlus: function () {
-      let num = this.data.num;
+    add: function () {
+      let { value, maxValue} = this.data;
       // 不作过多考虑自增1 
-      num++;
-      // 只有大于一件的时候，才能normal状态，否则disable状态 
-      let minusStatus = num < 1 ? 'disabled' : 'normal';
-      // 将数值与状态写回 
-      this.setData({
-        num: num,
-        minusStatus: minusStatus
-      });
+      if (value !== maxValue) {
+        console.log(maxValue)
+        value++;
+        // 将数值与状态写回 
+        this.setData({
+          value: value,
+        });
+      }
     },
-    /* 输入框事件 */
-    bindManual: function (e) {
-      let num = e.detail.value;
-      // 将数值与状态写回 
+    onChange: function (e) {
+      const { value} = e.detail;
       this.setData({
-        num: num
+        value
+      },()=>{
+        this.triggerEvent('onChange',value)
       });
     }
   }

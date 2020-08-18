@@ -1,1 +1,6 @@
-<vc-counter/>
+<vc-counter 
+  bind:onChange="onChange" 
+  maxValue="4" 
+  minValue="2"
+  defaultValue="2"
+/>

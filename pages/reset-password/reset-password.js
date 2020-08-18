@@ -1,6 +1,3 @@
-
-var app = getApp();
-
 Page({
   data: {
     phone: "",
@@ -10,22 +7,22 @@ Page({
     cd: 0
   },
   timer: null,
-  handlePhoneChange: function handlePhoneChange(e) {
+  handlePhoneChange: function (e) {
     this.setData({
       phone: e.detail.value
     });
   },
-  handlePasswordChange: function handlePasswordChange(e) {
+  handlePasswordChange: function (e) {
     this.setData({
       password: e.detail.value
     });
   },
-  handleVerifyCodeChange: function handleVerifyCodeChange(e) {
+  handleVerifyCodeChange: function (e) {
     this.setData({
       code: e.detail.value
     });
   },
-  startCD: function startCD() {
+  startCD: function () {
 
     clearInterval(this.timer);
 
@@ -43,7 +40,7 @@ Page({
       });
     }, 1000);
   },
-  handleTapGetVerifyCode: function handleTapGetVerifyCode(e) {
+  handleTapGetVerifyCode: function () {
 
     const { cd, phone} = this.data;
 
@@ -90,7 +87,7 @@ Page({
     //   }
     // });
   },
-  handleTapConfirm: function handleTapConfirm() {
+  handleTapConfirm: function () {
 
     const { loading, phone, password, code} = this.data;
 
