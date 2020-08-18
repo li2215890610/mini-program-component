@@ -1,11 +1,11 @@
+/**
+ * url: https://developers.weixin.qq.com/miniprogram/dev/reference/api/App.html#onLaunch-Object-object
+ */
 App({
-  onLaunch: function () {
-    // 展示本地存储能力
-
-  },
   globalData: {
     userInfo: null
   },
+  //生命周期回调——监听小程序初始化。
   onLaunch: function (qurey) {
     console.log(qurey, "onLaunchonLaunch");
     //判断api 是否可用
@@ -39,14 +39,26 @@ App({
       });
     }
   },
+  //小程序启动，或从后台进入前台显示时触发
   onShow: function (qurey) {
-    console.log(qurey, "onLoadonLoadonLoad");
+    console.log(qurey, "onShowonShowonShow");
   },
-  testShow: function (params) {
-
-    wx.showToast({
-      title: '出来了',
-      duration: 6 * 1000
+  //小程序从前台进入后台时触发
+  onHide () {
+    // Do something when hide.
+  },
+  //小程序发生脚本错误或 API 调用报错时触发
+  onError (msg) {
+    console.log(msg)
+  },
+  //小程序要打开的页面不存在时触发
+  onPageNotFound(res) {
+    wx.redirectTo({
+      url: 'pages/index/index'
     })
+  },
+  //系统切换主题时触发。也可以使用 
+  onThemeChange: function(){
+
   }
 })
