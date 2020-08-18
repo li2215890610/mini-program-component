@@ -27,14 +27,7 @@ Component({
       value: true
     },
   },
-
-  /**
-   * 组件的初始数据
-   */
-  data: {
-    // focus: true,
-  },
-
+  
   /**
    * 组件的方法列表
    */
@@ -52,9 +45,7 @@ Component({
       },()=>{
         this.triggerEvent('handleChange', e.detail.value) 
       })
-
     },
-
 
     handleFocus: function () {
       this.setData({
@@ -75,8 +66,7 @@ Component({
         focus: false,
         value: e.detail.value
       },()=>{
-        this.triggerEvent('handleChange', `${e.detail.value} ------`) 
-
+        this.triggerEvent('handleChange', `${e.detail.value}`) 
       })
     },
   }

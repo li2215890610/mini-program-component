@@ -18,7 +18,8 @@
     "pages/steps/steps",
     "pages/sku-selector/sku-selector",
     "pages/notice/notice",
-    "pages/scoll-nav/scoll-nav"
+    "pages/scoll-nav/scoll-nav",
+    "pages/counter/index"
   ],
   "window": {
     "backgroundTextStyle": "light",

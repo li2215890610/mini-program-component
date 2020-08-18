@@ -1,4 +1,3 @@
-// pages/index/index.js
 Page({
 
   /**
@@ -59,6 +58,9 @@ Page({
     },{
       url:'/pages/scoll-nav/scoll-nav',
       btnText:"滚动导航"
+    },{
+      url:'/pages/counter/index',
+      btnText:"步进器"
     }]
   },
   navigateTo: function (e) {
