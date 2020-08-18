@@ -10,14 +10,6 @@ Component({
     mold: {
       type: String,
       value: 'circle'
-    },
-    count: {
-      type: Number,
-      value: ''
-    },
-    approve: {
-      type: String,
-      value: ''
     }
   },
   data: {},
