@@ -4,37 +4,44 @@ Component({
   },
   properties: {
     maxValue: {
-      type: Number,
-      value: 10000
+      type: [Number, String],
+      value: 10000,
+      observer: function(newVal){
+        this.setData({
+          maxValue: parseInt(newVal, 10)
+        })
+      }
     },
     minValue: {
-      type: Number,
-      value: 1
+      type: [Number, String],
+      value: 1,
+      observer: function(newVal){
+        this.setData({
+          minValue: parseInt(newVal, 10)
+        })
+      }
     },
-    defaultValue: {
-      type: Number,
-      value: 1
+    value: {
+      type: [Number, String],
+      value: 1,
+      observer: function(newVal){
+        this.setData({
+          value: parseInt(newVal, 10)
+        })
+      }
     }
-  },
-  data: {
-    value: 1,
-  },
-  attached: function () {
-    let { defaultValue} = this.data;
-
-    this.setData({
-      value: defaultValue,
-    })
   },
   methods: {
     reduce: function () {
       let { value, minValue} = this.data;
-      // 如果大于1时，才可以减 
+      // 如果大于 minValue 时，才可以减 
       if (value > minValue) {
         value--;
         // 将数值与状态写回 
         this.setData({
-          value: value,
+          value
+        },()=>{
+          this.triggerEvent('onChange',value)
         });
       }
     },
@@ -42,21 +49,31 @@ Component({
       let { value, maxValue} = this.data;
       // 不作过多考虑自增1 
       if (value !== maxValue) {
-        console.log(maxValue)
         value++;
         // 将数值与状态写回 
         this.setData({
-          value: value,
+          value
+        },()=>{          
+          this.triggerEvent('onChange',value)
         });
       }
     },
     onChange: function (e) {
+      const { maxValue, minValue } = this.data;
       const { value} = e.detail;
-      this.setData({
-        value
-      },()=>{
-        this.triggerEvent('onChange',value)
-      });
+      const newValue = parseInt(value)
+      
+      if(newValue >= minValue && newValue <= maxValue){
+        this.setData({
+          value: newValue
+        },()=>{
+          this.triggerEvent('onChange',newValue)
+        });
+      }else{
+        this.setData({
+          value: maxValue
+        })
+      }
     }
   }
 })

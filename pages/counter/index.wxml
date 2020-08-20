@@ -2,5 +2,5 @@
   bind:onChange="onChange" 
   maxValue="4" 
   minValue="2"
-  defaultValue="2"
+  value="2"
 />
