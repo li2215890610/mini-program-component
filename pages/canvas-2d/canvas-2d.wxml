@@ -1,0 +1,17 @@
+<view class="sg-qr">
+  <view class="qr__inner">
+
+    <canvas
+      type="2d"
+      id="product-qr-canvas"
+      style="width:{{canvasWidth}}px;height:630px"
+    /> 
+
+  </view>
+
+  <view class="qr__footer">
+    <Button bindtap="saveImageToPhotosAlbum">
+      保存到相册
+    </Button>
+  </view>
+</view>

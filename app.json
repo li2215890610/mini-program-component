@@ -1,5 +1,7 @@
 {
   "pages": [
+    "pages/canvas-2d/canvas-2d",
+    "pages/canvas/canvas",
     "pages/home/home", 
     "pages/double-row/double-row",
     "pages/index/index",
