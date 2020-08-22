@@ -10,7 +10,7 @@
   </view>
 
   <view class="qr__footer">
-    <Button bindtap="saveImageToPhotosAlbum">
+    <Button bindtap="saveImage">
       保存到相册
     </Button>
   </view>

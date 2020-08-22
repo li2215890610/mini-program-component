@@ -298,18 +298,14 @@ Page({
       
       ctx.draw(false, () => {
         wx.canvasToTempFilePath({
-            destWidth: 750,
-            destHeight: 1260,
-            canvasId: "product-qr-canvas"
+            canvasId: "product-qr-canvas",
+            success:(res)=>{
+              console.log(res);
+            },
+            fail:()=>{
+
+            }
           })
-          .then(res => {
-            console.log(res);
-          })
-          .catch(err => {
-            wx.show({
-              title: "生成分销码失败，请重试"
-            });
-          });
       });
     })
   },
