@@ -53,7 +53,7 @@ Page({
       url: '/pages/row4/row4',
       btnText: "一行四个"
     },{
-      url:"/pages/double-row/double-row",
+      url:'/pages/double-row/double-row',
       btnText:"双列商品"
     },{
       url:'/pages/scoll-nav/scoll-nav',
@@ -61,6 +61,12 @@ Page({
     },{
       url:'/pages/counter/index',
       btnText:"步进器"
+    },{
+      url:'/pages/canvas-2d/canvas-2d',
+      btnText:"canvas-2d"
+    },{
+      url:'/pages/canvas/canvas',
+      btnText: 'canvas'
     }]
   },
   navigateTo: function (e) {
