@@ -1,6 +1,10 @@
+# avatar
+
+> 小程序组件 - 头像
+
 ### Avatar Props
 
 | 名称                  | 描述                         |
 |----------------------|------------------------------|
 |`src`           |  头像图片地址  |
-|`mold`         | 头像规格，circle(正圆)、square(正方)，默认 circle 
+|`mold`         | 头像规格，circle(正圆)、square(正方)，默认 circle |

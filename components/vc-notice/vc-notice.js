@@ -13,13 +13,13 @@ Component({
       type: String,
       value: ''
     },
-    bgColor: {
-      type: String,
-      value: '#ff5777' // 通告栏背景色
-    },
     color: {
       type: String,
       value: '#fff' // 文字颜色
+    },
+    bgColor: {
+      type: String,
+      value: '#ff5777' // 通告栏背景色
     },
     showIcon: {
       type: Boolean,
@@ -35,7 +35,7 @@ Component({
     },
     bgRgba: {
       type: String,
-      value: 'rgba(255, 85, 119, 0)' // 背景颜色的rgba形式，a的值为0，配合close使用
+      value: 'rgba(255, 87, 119, 0)' // 背景颜色的rgba形式，a的值为0，配合close使用
     }
   },
   data: {},
