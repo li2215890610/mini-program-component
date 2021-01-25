@@ -2,17 +2,22 @@
   <view class="sku-panel__close">
     <vc-icon bindtap="handleClose" class="close" type="icon-close" size="40" color="#ff5777"></vc-icon>
   </view>
-  <image class="sku__img"
+  <!-- <image class="sku__img"
     src="http://s.jinjuxiaodian.com/jinju_resource/593b78b8f8f9d516ca03a8cb/1f580b60-d37c-11e9-9381-f559d67a9fbe.png">
-  </image>
+  </image> -->
+  <image 
+    class="sku__img"
+    src="{{img}}"
+    mode="aspectFit"
+  />
   <view class="f1 f fc">
     <view class="f1">
       <view>
-        <view class="sku-info__price-now"><text>￥5.0</text></view>
-        <view class="sku-info__price-origin"><text>￥200</text></view>
+        <view class="sku-info__price-now"><text>￥{{price}}</text></view>
+        <view class="sku-info__price-origin"><text>{{originPrice}}</text></view>
       </view>
-      <view class="sku-info__stock">剩余 99997 件</view>
+      <view class="sku-info__stock">剩余 {{stock}} 件</view>
     </view>
-    <view class="sku-info__name">已选择：XXL 黑色 春季</view>
+    <view class="sku-info__name">已选择：{{name}}</view>
   </view>
 </view>

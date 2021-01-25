@@ -3,13 +3,20 @@
     <view 
       class="attribute-item" 
       wx:for="{{attributes}}" 
-      wx:key="index"
+      wx:key="indexGroup"
       wx:for-item="attribute"
     >
       <view class="attribute-name">{{attribute.name}}</view>
       <view class="value-list">
-        <view class="value-list__item" wx:for="{{attribute.values}}" wx:key="index">
-          <view class="value-list__item_name">{{item.name}}</view>
+        <view 
+          class="value-list__item" 
+          bindtap="selectValue" 
+          wx:for="{{attribute.values}}" 
+          wx:key="index" 
+          data-attribute="{{attribute._id}}"  
+          data-value="{{item}}"
+        >
+          <view class="value-list__item_name  {{item.str_id === defaultSelect[attribute._id] ? 'action':''}}">{{item.name}}</view>
         </view>
       </view>
     </view>

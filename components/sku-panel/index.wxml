@@ -6,13 +6,23 @@
   <view class="sku-panel {{isShow ? 'show':''}}" catchtap="handleClickInner">
    <view class="sku-panel__selector" >
       <view class="sku-info">
-        <sku-info bind:handleClose="handleClickHide"/>
+        <sku-info 
+          bind:handleClose="handleClickHide"
+          stock="{{defaultSelect.count_rest}}"
+          name="{{defaultSelect.name}}"
+          originPrice="{{defaultSelect.origin_price}}"
+          price="{{defaultSelect.price}}"
+          img="{{defaultSelect.pic}}"
+        />
       </view>
-      <sku-attribute attributes="{{attributes}}"/>
+      <sku-attribute 
+        attributes="{{attributes}}" sku="{{sku}}"
+        bind:handleChange="handleChange"
+      />
       <view>
         <vc-button 
           size="large" 
-          type="{{isShow ? 'beauty':'disabled'}}" 
+          type="{{btnDisabled ? 'beauty':'disabled'}}" 
           value="选择规格"
           catchtap="handleClickConfirm"
         />

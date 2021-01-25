@@ -19,7 +19,11 @@ Component({
     name: {
       type: String,
       value: ''
-    }
+    },
+    img:  {
+      type: String,
+      value: ''
+    },
   },
 
   /**

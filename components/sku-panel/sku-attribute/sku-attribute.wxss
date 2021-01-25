@@ -38,3 +38,13 @@
   border-radius: 8rpx;
   background-color: #F7F7F7;
 }
+
+
+.value-list__item_name.action{
+  color: white;
+  background: red;
+}
+
+.empty{
+  opacity: 0.3;
+}

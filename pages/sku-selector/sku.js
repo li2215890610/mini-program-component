@@ -98,7 +98,7 @@ export default {
       "pic": "http://s.jinjuxiaodian.com/jinju_resource/593b78b8f8f9d516ca03a8cb/16520b00-a01e-11ea-aac3-f777df03dbf6.png",
       "detail_pics": [],
       "state": 1,
-      "count_rest": 100,
+      "count_rest": 0,
       "count_sold": 0,
       "origin_price": 299,
       "attr_value_str": "11_4,16_7,88_4",
@@ -618,34 +618,35 @@ export default {
       "pic": "http://s.jinjuxiaodian.com/jinju_resource/593b78b8f8f9d516ca03a8cb/398fddc0-a3d6-11ea-aac3-f777df03dbf6.png",
       "detail_pics": [],
       "state": 1,
-      "count_rest": 100,
+      "count_rest": 0,
       "count_sold": 0,
       "origin_price": 299,
       "attr_value_str": "11_6,16_10,88_4",
       "product_code": "48"
     }
   ],
+
   product_attributes: [
     {
       "_id": 11,
       "name": "颜色xxx",
       "values": [
-        {
-          "_id": 0,
-          "name": "hongse"
-        },
-        {
-          "_id": 1,
-          "name": "baise"
-        },
-        {
-          "_id": 2,
-          "name": "啊啊啊"
-        },
-        {
-          "_id": 3,
-          "name": "aa"
-        },
+        // {
+        //   "_id": 0,
+        //   "name": "hongse"
+        // },
+        // {
+        //   "_id": 1,
+        //   "name": "baise"
+        // },
+        // {
+        //   "_id": 2,
+        //   "name": "啊啊啊"
+        // },
+        // {
+        //   "_id": 3,
+        //   "name": "aa"
+        // },
         {
           "_id": 4,
           "name": "红色"
@@ -664,34 +665,34 @@ export default {
       "_id": 16,
       "name": "尺寸",
       "values": [
-        {
-          "_id": 0,
-          "name": "S"
-        },
-        {
-          "_id": 1,
-          "name": "L"
-        },
-        {
-          "_id": 2,
-          "name": "M"
-        },
-        {
-          "_id": 3,
-          "name": "XL"
-        },
-        {
-          "_id": 4,
-          "name": "XXL"
-        },
-        {
-          "_id": 5,
-          "name": "XXXL"
-        },
-        {
-          "_id": 6,
-          "name": "31"
-        },
+        // {
+        //   "_id": 0,
+        //   "name": "S"
+        // },
+        // {
+        //   "_id": 1,
+        //   "name": "L"
+        // },
+        // {
+        //   "_id": 2,
+        //   "name": "M"
+        // },
+        // {
+        //   "_id": 3,
+        //   "name": "XL"
+        // },
+        // {
+        //   "_id": 4,
+        //   "name": "XXL"
+        // },
+        // {
+        //   "_id": 5,
+        //   "name": "XXXL"
+        // },
+        // {
+        //   "_id": 6,
+        //   "name": "31"
+        // },
         {
           "_id": 7,
           "name": "42"
@@ -721,10 +722,6 @@ export default {
         {
           "_id": 1,
           "name": "夏天"
-        },
-        {
-          "_id": 2,
-          "name": "动天"
         },
         {
           "_id": 3,

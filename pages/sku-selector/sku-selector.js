@@ -6,16 +6,36 @@ Page({
    * 页面的初始数据
    */
   data: {
-    suk: skuData.sku,
-    attributes: skuData.product_attributes,
+    sku: skuData.sku,
+    attributes: [],
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(skuData,'_____');
+
+    const value = skuData.product_attributes.map((group)=>{
+      // console.log(group);
+      return {
+        ...group,
+        values: group.values.map((item)=>{
+          return {
+            ...item,
+            str_id: `${group._id}_${item._id}`
+          }
+        })
+      }
+    })
+    // console.log(value);
     
+    this.setData({
+      attributes:value
+    },()=>{
+      // console.log(this.data.attributes);
+      
+    })
+
   },
 
   /**

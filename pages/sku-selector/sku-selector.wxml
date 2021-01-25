@@ -3,11 +3,12 @@
   bind:handleShowSkuPanel="handleShowSkuPanel"
   bind:handleHideSkuPanel="handleHideSkuPanel"
   attributes="{{attributes}}"
+  sku="{{sku}}"
 />
 
-<scrollView attributes="{{attributes}}"/>
+<!-- <scrollView attributes="{{attributes}}"/>
 
-<vc-counter/>
+<vc-counter/> -->
 
 <button
   bindtap="onClick"
