@@ -65,6 +65,59 @@ Component({
 
       })
 
+    },
+    handleChange: function ({ 
+      currentTarget
+    }) {
+
+      const { attributes, defaultSelect} = this.data;
+      console.log(attributes);
+      const {
+        attribute: attribute_id,
+        value: selectValues
+      } = currentTarget.dataset;
+      
+      const newAttributes = [...attributes]
+      for (let i = 0; i < newAttributes.length; i++) {
+        const { _id, values} = newAttributes[i];
+        
+        if (_id === attribute_id) {
+          console.log(values);
+          
+          for (let j = 0; j < values.length; j++) {
+            const element = values[j];
+            console.log(element);
+
+            if (element.isSelect === -1) {
+              // 如果是不可选就直接 跳出循环
+              break
+            }else if (element.isSelect === 1) {
+              // 同一组数据库 已经是选中状态 修改为未选中
+              element.isSelect = 0
+            }else{
+
+              if (element._id === selectValues._id && element.isSelect === 0) {
+                element.isSelect = 1
+              } else if (element._id === selectValues._id && element.isSelect === 1){
+                element.isSelect = 0
+              }else{
+                
+              }
+
+
+            }
+
+
+          }
+          break
+        }
+
+      }
+
+      this.setData({
+        attributes: newAttributes
+      })
+
     }
   }
 })

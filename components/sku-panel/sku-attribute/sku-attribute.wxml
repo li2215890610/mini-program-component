@@ -8,15 +8,17 @@
     >
       <view class="attribute-name">{{attribute.name}}</view>
       <view class="value-list">
+        <!-- bindtap="selectValue"  -->
         <view 
           class="value-list__item" 
-          bindtap="selectValue" 
+          bindtap="handleChange"
           wx:for="{{attribute.values}}" 
           wx:key="index" 
           data-attribute="{{attribute._id}}"  
           data-value="{{item}}"
         >
-          <view class="value-list__item_name  {{item.str_id === defaultSelect[attribute._id] ? 'action':''}}">{{item.name}}</view>
+          <!-- <view class="value-list__item_name  {{item.str_id === defaultSelect[attribute._id] ? 'action':''}}">{{item.name}}</view> -->
+          <view class="value-list__item_name {{item.isSelect === -1 ? 'empty':''}} {{item.isSelect === 1 ? 'action':'empty'}}">{{item.name}}</view>
         </view>
       </view>
     </view>
