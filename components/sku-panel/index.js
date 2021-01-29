@@ -37,13 +37,24 @@ Component({
     }
   },
   observers: {
+    'selectIndexArr': function (params) {
+      const { selectValue, selectIndexArr} = this.data;
+      const includeIndex = selectIndexArr.includes(-1)
+      //监听选中的 selectIndexArr
+      if (selectValue && includeIndex) {
+        this.setData({
+          selectValue: null
+        })
+      }
+    }
   },
   /**
    * 组件的初始数据
    */
   data: {
     isShow: false,
-    selectValue: {},
+    selectValue: null,
+    selectIndexArr:[]
   },
 
   /**
@@ -57,7 +68,39 @@ Component({
 
     },
     handleClickConfirm: function (params) {
-      const { selectValue} = this.data;
+      const { selectValue, selectIndexArr, productAttributes} = this.data;
+      console.log(selectIndexArr.length,'_______selectIndexArr______');
+      // console.log(productAttributes,'_________productAttributes_______');
+      
+      // let messageList = []
+      // productAttributes.map((e)=>{
+      //   messageList.push(e.name)
+      // })
+
+      // if (!selectIndexArr.length) {
+      //   wx.showToast({
+      //     title: `请选择 ${messageList[0]}:  ${messageList[1]} ${messageList[2]}`,
+      //     icon:"none"
+      //   })
+      //   return
+      // }
+      
+      // for (const key in selectIndexArr) {
+      //   console.log(selectIndexArr[key],'______selectIndexArr[key]_____');
+        
+      //  if (selectIndexArr[key] > 0) {
+       
+      //   wx.showToast({
+      //     title: `请选择 ${messageList[key]}`,
+      //     icon:"none",
+      //   })
+      //  }
+      // }
+
+
+
+
+
 
       this.triggerEvent('handleClickConfirm',{
         selectValue
@@ -70,10 +113,13 @@ Component({
       console.log(detail, 'handleChange,_______handleChange');
       const { selectValue,selectIndexArr} = detail;
       
+      this.setData({
+        selectIndexArr
+      })
+
       if (selectValue && selectValue._id) {
         this.setData({
           selectValue,
-          selectIndexArr
         })
       }
 

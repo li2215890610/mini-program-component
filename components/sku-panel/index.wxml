@@ -21,10 +21,9 @@
         bind:handleChange="handleChange"
       />
       <view>
-        <!-- type="{{btnDisabled ? 'beauty':'disabled'}}"  -->
         <vc-button 
           size="large" 
-          type="beauty" 
+          type="{{selectValue ? 'beauty':'disabled'}}" 
           value="选择规格"
           catchtap="handleClickConfirm"
         />
