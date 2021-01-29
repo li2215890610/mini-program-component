@@ -8,21 +8,23 @@
       <view class="sku-info">
         <sku-info 
           bind:handleClose="handleClickHide"
-          stock="{{defaultSelect.count_rest}}"
-          name="{{defaultSelect.name}}"
-          originPrice="{{defaultSelect.origin_price}}"
-          price="{{defaultSelect.price}}"
-          img="{{defaultSelect.pic}}"
+          stock="{{selectValue.stock}}"
+          name="{{selectValue.name}}"
+          originPrice="{{selectValue.origin_price}}"
+          price="{{selectValue.price}}"
+          img="{{selectValue.pic}}"
         />
       </view>
       <sku-attribute 
-        attributes="{{attributes}}" sku="{{sku}}"
+        productAttributes="{{productAttributes}}" 
+        productSku="{{productSku}}"
         bind:handleChange="handleChange"
       />
       <view>
+        <!-- type="{{btnDisabled ? 'beauty':'disabled'}}"  -->
         <vc-button 
           size="large" 
-          type="{{btnDisabled ? 'beauty':'disabled'}}" 
+          type="beauty" 
           value="选择规格"
           catchtap="handleClickConfirm"
         />

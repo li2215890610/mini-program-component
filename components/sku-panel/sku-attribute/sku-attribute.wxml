@@ -2,23 +2,25 @@
   <scroll-view scroll-y class="sku-attribute-list">
     <view 
       class="attribute-item" 
-      wx:for="{{attributes}}" 
+      wx:for="{{productAttributes}}" 
       wx:key="indexGroup"
       wx:for-item="attribute"
+      wx:for-index="n"
     >
       <view class="attribute-name">{{attribute.name}}</view>
       <view class="value-list">
-        <!-- bindtap="selectValue"  -->
         <view 
           class="value-list__item" 
           bindtap="handleChange"
-          wx:for="{{attribute.values}}" 
+          wx:for="{{attribute.item}}" 
           wx:key="index" 
-          data-attribute="{{attribute._id}}"  
-          data-value="{{item}}"
+
+          data-show="{{item.isShow}}" 
+          data-item="{{item}}" 
+          data-n="{{n}}" 
+          data-index="{{index}}"
         >
-          <!-- <view class="value-list__item_name  {{item.str_id === defaultSelect[attribute._id] ? 'action':''}}">{{item.name}}</view> -->
-          <view class="value-list__item_name {{item.isSelect === -1 ? 'empty':''}} {{item.isSelect === 1 ? 'action':'empty'}}">{{item.name}}</view>
+          <view class="value-list__item_name {{item.isShow ? '' : 'empty' }} {{attrSelectIndex[n] == index?'active':''}}">{{item.name}}</view>
         </view>
       </view>
     </view>
