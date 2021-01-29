@@ -54,12 +54,12 @@ Component({
        *  attrSelectIndex     是否选中 因为不确定是多规格还是但规格，所以这里定义数组来判断
        *  saveCompareValue    和选中的值进行匹配的数据
        */
-      let { selectValueArr, attrSelectIndex, boxArr, saveCompareValue} = this.data
+      let { selectValueArr, attrSelectIndex, saveCompareValue} = this.data
   
-      console.log('___start__');
-      console.log(selectValueArr,'_____selectValueArr_____');
-      console.log(attrSelectIndex,'_____attrSelectIndex_____');
-      console.log('_____');
+      // console.log('___start__');
+      // console.log(selectValueArr,'_____selectValueArr_____');
+      // console.log(attrSelectIndex,'_____attrSelectIndex_____');
+      // console.log('_____');
   
       //selectValueArr中存放被选中的值，选中的值与当前(item)不一样就说明是新值，修改selectValueArr
       if (selectValueArr[n] != selectName) {
@@ -71,10 +71,10 @@ Component({
         attrSelectIndex[n] = -1; //去掉选中的颜色
       }
   
-      console.log('___end__');
-      console.log(selectValueArr,'_____selectValueArr_____');
+      // console.log('___end__');
+      // console.log(selectValueArr,'_____selectValueArr_____');
       console.log(attrSelectIndex,'_____attrSelectIndex_____');
-      console.log('_____');
+      // console.log('_____');
   
       this.checkItem()
   
@@ -83,10 +83,12 @@ Component({
         attrSelectIndex,
         saveCompareValue,
       },()=>{
-        this.triggerEvent('handleChange', {
-          selectValue: saveCompareValue[selectValueArr],
-          selectIndexArr: attrSelectIndex,
-        }) 
+        if (attrSelectIndex.length === 3) {
+          this.triggerEvent('handleChange', {
+            selectValue: saveCompareValue[selectValueArr],
+            selectIndexArr: attrSelectIndex,
+          })  
+        }
       })
       
     },
@@ -146,7 +148,7 @@ Component({
         saveCompareValue[productSku[i].difference] = productSku[i];
       }
   
-      console.log(saveCompareValue);
+      // console.log(saveCompareValue);
       
       for (let i = 0; i < newProductAttributes.length; i++) {
   
