@@ -42,11 +42,22 @@ Component({
       const includeIndex = selectIndexArr.includes(-1)
       //监听选中的 selectIndexArr
       if (selectValue && includeIndex) {
-        this.setData({
-          selectValue: null
-        })
+        // this.setData({
+        //   selectValue: null
+        // })
+        this.initData()
       }
     }
+  },
+  lifetimes: {
+    attached: function() {
+      // 在组件实例进入页面节点树时执行 
+      // 初始化数据
+      this.initData()
+    },
+    detached: function() {
+      // 在组件实例被从页面节点树移除时执行
+    },
   },
   /**
    * 组件的初始数据
@@ -71,7 +82,7 @@ Component({
       const { selectValue, selectIndexArr, productAttributes} = this.data;
       console.log(selectIndexArr.length,'_______selectIndexArr______');
       // console.log(productAttributes,'_________productAttributes_______');
-      
+
       // let messageList = []
       // productAttributes.map((e)=>{
       //   messageList.push(e.name)
@@ -123,6 +134,35 @@ Component({
         })
       }
 
+    },
+    initData: function (params) {
+      let { productSku } = this.data;
+
+      let priceList = []
+      productSku.map((e)=>{
+        priceList.push(e.price)
+      })
+
+      priceList.sort()
+
+      let sortPriceList = Array.from(new Set(priceList))
+      
+      const skuDefaultValue = {
+        pic: productSku[0].pic
+      }
+      
+      if (sortPriceList.length >= 2) {
+        skuDefaultValue['price'] = `${sortPriceList[0]}~${sortPriceList[sortPriceList.length -1]}`
+      }else{
+        skuDefaultValue['price'] = `${sortPriceList[0]}`
+      }
+
+      
+      this.setData({
+        selectValue: skuDefaultValue
+      })
+      console.log(skuDefaultValue,'_____________selectValue___________');
+      
     },
     handleClickShow: function (params) {
       this.setData({

@@ -7,17 +7,17 @@
   </image> -->
   <image 
     class="sku__img"
-    src="{{img}}"
+    src="{{skuInfo.pic}}"
     mode="aspectFit"
   />
   <view class="f1 f fc">
     <view class="f1">
       <view>
-        <view class="sku-info__price-now"><text>￥{{price}}</text></view>
-        <view class="sku-info__price-origin"><text>{{originPrice}}</text></view>
+        <view class="sku-info__price-now"><text>￥{{skuInfo.price}}</text></view>
+        <view wx:if="{{skuInfo._id}}" class="sku-info__price-origin"><text>{{skuInfo.originPrice}}</text></view>
       </view>
-      <view class="sku-info__stock">剩余 {{stock}} 件</view>
+      <view wx:if="{{skuInfo._id}}" class="sku-info__stock">剩余 {{skuInfo.stock}} 件</view>
     </view>
-    <view class="sku-info__name">已选择：{{name}}</view>
+    <view wx:if="{{skuInfo._id}}" class="sku-info__name">已选择：{{skuInfo.name}}</view>
   </view>
 </view>

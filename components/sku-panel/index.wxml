@@ -8,11 +8,7 @@
       <view class="sku-info">
         <sku-info 
           bind:handleClose="handleClickHide"
-          stock="{{selectValue.stock}}"
-          name="{{selectValue.name}}"
-          originPrice="{{selectValue.origin_price}}"
-          price="{{selectValue.price}}"
-          img="{{selectValue.pic}}"
+          skuInfo="{{selectValue}}"
         />
       </view>
       <sku-attribute 
@@ -23,7 +19,7 @@
       <view>
         <vc-button 
           size="large" 
-          type="{{selectValue ? 'beauty':'disabled'}}" 
+          type="{{selectValue._id ? 'beauty':'disabled'}}" 
           value="选择规格"
           catchtap="handleClickConfirm"
         />

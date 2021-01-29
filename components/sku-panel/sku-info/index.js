@@ -4,25 +4,30 @@ Component({
    * 组件的属性列表
    */
   properties: {
-    stock: {
-      type: Number,
-      value: 0
-    },
-    price: {
-      type: Number,
-      value: 0
-    },
-    originPrice: {
-      type: Number,
-      value: 0
-    },
-    name: {
-      type: String,
-      value: ''
-    },
-    img:  {
-      type: String,
-      value: ''
+    skuInfo: {
+      type: Object,
+      value: null | {
+        stock: {
+          type: Number,
+          value: 0
+        },
+        price: {
+          type: Number | String,
+          value: 0
+        },
+        originPrice: {
+          type: Number,
+          value: 0
+        },
+        name: {
+          type: String,
+          value: ''
+        },
+        img:  {
+          type: String,
+          value: ''
+        },
+      }
     },
   },
 
@@ -38,7 +43,8 @@ Component({
    */
   methods: {
     handleClose: function () {
-      console.log('handleClose')
+      console.log('handleClose',this.data)
+      
       this.triggerEvent('handleClose')
     }
   }
