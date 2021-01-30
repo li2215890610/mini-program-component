@@ -107,15 +107,11 @@ Component({
       //   })
       //  }
       // }
-
-
-
-
-
-
-      this.triggerEvent('handleClickConfirm',{
-        selectValue
-      })
+      if (selectValue._id) {
+        this.triggerEvent('handleClickConfirm',{
+          selectValue
+        }) 
+      }
     },
     handleChange: function ({
       detail
