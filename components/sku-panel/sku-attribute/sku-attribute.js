@@ -92,6 +92,36 @@ Component({
       })
       
     },
+    initData: function () {
+
+      let { productSku, saveCompareValue , productAttributes} = this.data
+
+      let newProductAttributes = [...productAttributes]
+  
+      for (let i in productSku) {
+        //修改sku数据结构格式，改成键值对的方式，以方便和选中之后的值进行匹配
+        saveCompareValue[productSku[i].difference] = productSku[i];
+      }
+  
+      // console.log(saveCompareValue);
+      
+      for (let i = 0; i < newProductAttributes.length; i++) {
+  
+        for (let j = 0; j < newProductAttributes[i].item.length; j++) {
+  
+          //初始化所有数据均可选
+          newProductAttributes[i].item[j].isShow = true 
+        }
+      }
+  
+      this.setData({
+        productAttributes: newProductAttributes,
+        saveCompareValue,
+        // attrSelectIndex: [0, 0, 0],
+        // selectValueArr: []
+      })
+  
+    },
     checkItem: function (params) {
     
       let { selectValueArr, productAttributes} = this.data
@@ -137,34 +167,5 @@ Component({
       return !saveCompareValue[result] ? false : saveCompareValue[result].stock == 0 ? false :true; 
       //匹配选中的数据的库存，若不为空返回true反之返回false
     },
-    initData: function () {
-
-      let { productSku, saveCompareValue , productAttributes} = this.data
-
-      let newProductAttributes = [...productAttributes]
-  
-      for (let i in productSku) {
-        //修改sku数据结构格式，改成键值对的方式，以方便和选中之后的值进行匹配
-        saveCompareValue[productSku[i].difference] = productSku[i];
-      }
-  
-      // console.log(saveCompareValue);
-      
-      for (let i = 0; i < newProductAttributes.length; i++) {
-  
-        for (let j = 0; j < newProductAttributes[i].item.length; j++) {
-  
-          //初始化所有数据均可选
-          newProductAttributes[i].item[j].isShow = true 
-        }
-      }
-  
-      this.setData({
-        productAttributes: newProductAttributes,
-        saveCompareValue,
-      })
-  
-    },
-
   }
 })
