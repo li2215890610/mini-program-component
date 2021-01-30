@@ -2,13 +2,10 @@
   id="sku-paenl"
   bind:handleShowSkuPanel="handleShowSkuPanel"
   bind:handleHideSkuPanel="handleHideSkuPanel"
-  attributes="{{attributes}}"
-  sku="{{sku}}"
+  bind:handleClickConfirm="handleClickConfirm"
+  productAttributes="{{productAttributes}}"
+  productSku="{{productSku}}"
 />
-
-<!-- <scrollView attributes="{{attributes}}"/>
-
-<vc-counter/> -->
 
 <button
   bindtap="onClick"

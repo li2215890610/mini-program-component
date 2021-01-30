@@ -1,5 +1,5 @@
 export default {
-  sku: [
+  product_sku: [
     {
       "_id": "5f2e44d297bc022dbac2d2b8",
       "name": "红色 41 春天",
