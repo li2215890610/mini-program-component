@@ -15,10 +15,12 @@
           wx:for="{{attribute.item}}" 
           wx:key="index" 
 
+          data-show="{{item.isShow}}" 
           data-item="{{item}}" 
-          data-groupId="{{attribute._id}}"
+          data-n="{{n}}" 
+          data-index="{{index}}"
         >
-          <view class="value-list__item_name {{item.isShow ? '' : 'empty' }} {{selectValueArr[attribute._id] === item._id?'active':''}}">{{item.name}}</view>
+          <view class="value-list__item_name {{item.isShow ? '' : 'empty' }} {{attrSelectIndex[n] == index?'active':''}}">{{item.name}}</view>
         </view>
       </view>
     </view>

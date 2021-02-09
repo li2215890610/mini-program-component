@@ -37,25 +37,23 @@ Component({
     }
   },
   observers: {
-    // 'selectIndexArr': function (params) {
-    //   const { selectValue, selectIndexArr} = this.data;
-    //   const includeIndex = selectIndexArr.includes(-1)
-    //   //监听选中的 selectIndexArr
-    //   if (selectValue && includeIndex) {
-    //     // this.setData({
-    //     //   selectValue: null
-    //     // })
-    //     this.initData()
-    //   }
-    // }
+    'selectIndexArr': function (params) {
+      const { selectValue, selectIndexArr} = this.data;
+      const includeIndex = selectIndexArr.includes(-1)
+      //监听选中的 selectIndexArr
+      if (selectValue && includeIndex) {
+        // this.setData({
+        //   selectValue: null
+        // })
+        this.initData()
+      }
+    }
   },
   lifetimes: {
     attached: function() {
       // 在组件实例进入页面节点树时执行 
       // 初始化数据
-      this.setData({
-        selectValue: this.initData()
-      })
+      this.initData()
     },
     detached: function() {
       // 在组件实例被从页面节点树移除时执行
@@ -81,8 +79,34 @@ Component({
 
     },
     handleClickConfirm: function (params) {
-      const { selectValue } = this.data;
+      const { selectValue, selectIndexArr, productAttributes} = this.data;
+      console.log(selectIndexArr.length,'_______selectIndexArr______');
+      // console.log(productAttributes,'_________productAttributes_______');
+
+      // let messageList = []
+      // productAttributes.map((e)=>{
+      //   messageList.push(e.name)
+      // })
+
+      // if (!selectIndexArr.length) {
+      //   wx.showToast({
+      //     title: `请选择 ${messageList[0]}:  ${messageList[1]} ${messageList[2]}`,
+      //     icon:"none"
+      //   })
+      //   return
+      // }
       
+      // for (const key in selectIndexArr) {
+      //   console.log(selectIndexArr[key],'______selectIndexArr[key]_____');
+        
+      //  if (selectIndexArr[key] > 0) {
+       
+      //   wx.showToast({
+      //     title: `请选择 ${messageList[key]}`,
+      //     icon:"none",
+      //   })
+      //  }
+      // }
       if (selectValue._id) {
         this.triggerEvent('handleClickConfirm',{
           selectValue
@@ -94,17 +118,18 @@ Component({
     }) {
       //选择sku面板
       console.log(detail, 'handleChange,_______handleChange');
-      const { value} = detail;
+      const { selectValue,selectIndexArr} = detail;
       
-      if (value && value._id) {
+      this.setData({
+        selectIndexArr
+      })
+
+      if (selectValue && selectValue._id) {
         this.setData({
-          selectValue: value,
-        })
-      }else{
-        this.setData({
-          selectValue: this.initData()
+          selectValue,
         })
       }
+
     },
     initData: function (params) {
       let { productSku } = this.data;
@@ -128,9 +153,12 @@ Component({
         skuDefaultValue['price'] = `${sortPriceList[0]}`
       }
 
+      
+      this.setData({
+        selectValue: skuDefaultValue
+      })
       console.log(skuDefaultValue,'_____________selectValue___________');
-
-      return skuDefaultValue      
+      
     },
     handleClickShow: function (params) {
       this.setData({
