@@ -19,12 +19,22 @@
         defaultValue="{{defaultValue}}"
       />
       <view>
-        <vc-button 
-          size="large" 
-          type="{{selectValue._id && selectValue.stock !== 0 ? 'beauty':'disabled'}}" 
-          value="选择规格"
-          catchtap="handleClickConfirm"
-        />
+      <view class="counter">
+        <view>
+          <vc-counter 
+            bind:onChange="onCounterChange" 
+            maxValue="4" 
+            minValue="2"
+            value="2"
+          />
+        </view>
+      </view>
+      <vc-button 
+        size="large" 
+        type="{{selectValue._id && selectValue.stock !== 0 ? 'beauty':'disabled'}}" 
+        value="选择规格"
+        catchtap="handleClickConfirm"
+      />
       </view>
    </view>
   </view>

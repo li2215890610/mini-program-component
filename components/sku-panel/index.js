@@ -37,9 +37,6 @@ Component({
    * 组件的方法列表
    */
   methods: {
-    handleTouch: function (e) {
-      e.stopPropagation();
-    },
     handleClickConfirm: function () {
       const { selectValue } = this.data;
       
@@ -48,6 +45,9 @@ Component({
           selectValue
         }) 
       }
+    },
+    onCounterChange: function (params) {
+      
     },
     handleChange: function ({
       detail
@@ -122,7 +122,9 @@ Component({
           img: defaultValue.pic,
         }
       }
-    
+    },
+    handleTouch: function (e) {
+      e.stopPropagation();
     },
     clearDefaultValue: function () {
       this.triggerEvent("clearDefaultValue")

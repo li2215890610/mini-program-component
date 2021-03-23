@@ -3,6 +3,7 @@
   "usingComponents": {
     "vc-button":"../vc-button/vc-button",
     "sku-info":"./sku-info/index",
-    "sku-attribute":"./sku-attribute/sku-attribute"
+    "sku-attribute":"./sku-attribute/sku-attribute",
+    "vc-counter":"../vc-counter/vc-counter"
   }
 }

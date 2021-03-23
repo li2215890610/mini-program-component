@@ -137,8 +137,8 @@
 					"scene": null
 				},
 				{
-					"id": -1,
-					"name": "步进器",
+					"id": 10,
+					"name": "步进器-pages/counter/index",
 					"pathName": "pages/counter/index",
 					"query": "",
 					"scene": null
@@ -147,6 +147,7 @@
 					"id": -1,
 					"name": "pages/sku-selector/sku-selector",
 					"pathName": "pages/sku-selector/sku-selector",
+					"query": "",
 					"scene": null
 				}
 			]
