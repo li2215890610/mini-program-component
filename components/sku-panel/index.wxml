@@ -12,14 +12,16 @@
         />
       </view>
       <sku-attribute 
+        bind:handleChange="handleChange" 
+        bind:clearDefaultValue="clearDefaultValue"
         productAttributes="{{productAttributes}}" 
         productSku="{{productSku}}"
-        bind:handleChange="handleChange"
+        defaultValue="{{defaultValue}}"
       />
       <view>
         <vc-button 
           size="large" 
-          type="{{selectValue._id ? 'beauty':'disabled'}}" 
+          type="{{selectValue._id && selectValue.stock !== 0 ? 'beauty':'disabled'}}" 
           value="选择规格"
           catchtap="handleClickConfirm"
         />

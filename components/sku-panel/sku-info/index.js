@@ -33,21 +33,12 @@ Component({
       }
     },
   },
-
-  /**
-   * 组件的初始数据
-   */
-  data: {
-
-  },
-
   /**
    * 组件的方法列表
    */
   methods: {
     handleClose: function () {
-      console.log('handleClose',this.data)
-      
+      console.log('handleClose',this.data)      
       this.triggerEvent('handleClose')
     }
   }

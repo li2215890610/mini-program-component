@@ -11,6 +11,10 @@ Component({
     productSku: {
       type: Array,
       value: []
+    },
+    defaultValue: {
+      type: Object,
+      value: {}
     }
   },
 
@@ -37,7 +41,23 @@ Component({
     attached: function() {
       // 在组件实例进入页面节点树时执行 
       // 初始化数据
-      this.initData()
+      this.initData(()=>{
+        
+        const { defaultValue} = this.data;
+
+        //如果默认选中数据存在
+        if (defaultValue) {
+          
+          const value = this.handleDefaultSkuKey(defaultValue)
+          this.setData({
+            selectValueArr: value
+          },()=>{
+            this.checkItem()
+          })
+        }
+
+      })
+
     },
     detached: function() {
       // 在组件实例被从页面节点树移除时执行
@@ -60,10 +80,14 @@ Component({
 
       /**
        *  selectValueArr      存放被选中的值
-       *  saveCompareValue    和选中的值进行匹配的数据
        */
-      let { selectValueArr, saveCompareValue} = this.data
-  
+      let { selectValueArr, defaultValue} = this.data
+      
+      //如果有默认选中sku，在更改的时候必须清空
+      if (defaultValue) {
+        this.triggerEvent('clearDefaultValue')  
+      }
+
       // console.log('___start__');
       // console.log(selectValueArr,'_____selectValueArr_____');
       // console.log('_____');
@@ -75,9 +99,6 @@ Component({
         //selectValueArr中存放被选中的值，与当前选中的值一样 说明是取消选中
         selectValueArr[groupId] = "";
       }
-      this.setData({
-        selectValueArr,
-      })
 
       // console.log('___end__');
       // console.log(selectValueArr,'_____selectValueArr_____');
@@ -88,27 +109,24 @@ Component({
       this.setData({
         selectValueArr,
       },()=>{
-        
-        if (Object.keys(selectValueArr).length === 3) {
-                    
-          let newValues = []
-          Object.keys(selectValueArr).forEach(key => {
-            newValues.push(`${key}_${selectValueArr[key]}`)
-          })
-
-          this.triggerEvent('handleChange', {
-            value: saveCompareValue[newValues.join()],
-          })  
-        }else{
-          this.triggerEvent('handleChange', {
-            value: null,
-          })  
-        }
-
+        this.handlePropsChange(selectValueArr)
       })
       
     },
-    initData: function () {
+    handlePropsChange: function (selectValueArr) {
+
+      if (Object.keys(selectValueArr).length === 3) {
+
+        this.triggerEvent('handleChange', {
+          value: this.integrationSkuId(selectValueArr)
+        })  
+      }else{
+        this.triggerEvent('handleChange', {
+          value: null,
+        })  
+      }
+    },
+    initData: function (cb) {
 
       let { productSku , productAttributes, saveCompareValue} = this.data
 
@@ -118,7 +136,6 @@ Component({
         //修改sku数据结构格式，改成键值对的方式，以方便和选中之后的值进行匹配
         saveCompareValue[productSku[i].attr_value_str] = productSku[i];
       }
-
             
       for (let i = 0; i < newProductAttributes.length; i++) {
   
@@ -132,7 +149,7 @@ Component({
       this.setData({
         productAttributes: newProductAttributes,
         saveCompareValue
-      })
+      },cb)
   
     },
     checkItem:function () {
@@ -188,5 +205,37 @@ Component({
       // 匹配选中的数据的库存，若不为空返回true反之返回false
       return saveCompareValue[attrIdStr].stock === 0 ? false : true
     },
+    handleDefaultSkuKey: function ({attr_value_str }) {
+      /**
+       * attr_value_str = "11_6,16_10,88_3"
+       */
+      let value = {};
+  
+      attr_value_str.split(',').forEach(e => {
+        if (!e) {
+          return
+        }
+     
+        const arr = e.split("_")
+        const key = arr[0];
+        const val = arr[1];
+        value[key] = +val;
+      });
+
+      return value
+    },
+    integrationSkuId: function (selectValueArr) {
+       /**
+       *  saveCompareValue    和选中的值进行匹配的数据
+       */
+
+      let { saveCompareValue} = this.data;
+      let valueArr = []
+      Object.keys(selectValueArr).forEach(key => {
+        valueArr.push(`${key}_${selectValueArr[key]}`)
+      })
+
+      return saveCompareValue[valueArr.join()]
+    }
   }
 })

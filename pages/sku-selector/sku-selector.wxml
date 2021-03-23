@@ -3,8 +3,10 @@
   bind:handleShowSkuPanel="handleShowSkuPanel"
   bind:handleHideSkuPanel="handleHideSkuPanel"
   bind:handleClickConfirm="handleClickConfirm"
+  bind:clearDefaultValue="clearDefaultValue"
   productAttributes="{{productAttributes}}"
   productSku="{{productSku}}"
+  defaultValue="{{defaultValue}}"
 />
 
 <button

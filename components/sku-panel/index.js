@@ -6,68 +6,31 @@ Component({
     productAttributes: {
       type: Array,
       value: [],
-      observer: function (newVal) {
-        //   let str = ''
-        //   newVal.map((group)=>{
-        //     if (group.values) {
-        //       str += `${group._id}`
-        //       const { _id} = group.values[0];
-        //       str += `_${_id},`
-        //     }
-        //   })
-
-        //   str = str.substr(0,str.length-1)
-
-        //   const { sku } = this.data;
-        //   if (sku) {
-
-        //     const selectValue = Array.from(sku).find(e => e.attr_value_str === str)
-        //     console.log(selectValue);
-
-        //     this.setData({
-        //       selectValue
-        //     })
-        //   }
-
-      }
     },
     productSku: {
       type: Array,
       value: []
+    },
+    defaultValue: {
+      type: Object,
+      value: {}
     }
-  },
-  observers: {
-    // 'selectIndexArr': function (params) {
-    //   const { selectValue, selectIndexArr} = this.data;
-    //   const includeIndex = selectIndexArr.includes(-1)
-    //   //监听选中的 selectIndexArr
-    //   if (selectValue && includeIndex) {
-    //     // this.setData({
-    //     //   selectValue: null
-    //     // })
-    //     this.initData()
-    //   }
-    // }
   },
   lifetimes: {
     attached: function() {
       // 在组件实例进入页面节点树时执行 
-      // 初始化数据
+      // 初始化数据      
       this.setData({
         selectValue: this.initData()
       })
-    },
-    detached: function() {
-      // 在组件实例被从页面节点树移除时执行
-    },
+    }
   },
   /**
    * 组件的初始数据
    */
   data: {
     isShow: false,
-    selectValue: null,
-    selectIndexArr:[]
+    selectValue: null
   },
 
   /**
@@ -77,10 +40,7 @@ Component({
     handleTouch: function (e) {
       e.stopPropagation();
     },
-    handleClickInner: function (e) {
-
-    },
-    handleClickConfirm: function (params) {
+    handleClickConfirm: function () {
       const { selectValue } = this.data;
       
       if (selectValue._id) {
@@ -106,7 +66,12 @@ Component({
         })
       }
     },
-    initData: function (params) {
+    initData: function () {
+      const { defaultValue} = this.data;
+      if (defaultValue) {
+        return this.handleDefaultValue(defaultValue)
+      }
+
       let { productSku } = this.data;
 
       let priceList = []
@@ -118,19 +83,17 @@ Component({
 
       let sortPriceList = Array.from(new Set(priceList))
       
-      const skuDefaultValue = {
+      const value = {
         pic: productSku[0].pic
       }
       
       if (sortPriceList.length >= 2) {
-        skuDefaultValue['price'] = `${sortPriceList[0]}~${sortPriceList[sortPriceList.length -1]}`
+        value['price'] = `${sortPriceList[0]}~${sortPriceList[sortPriceList.length -1]}`
       }else{
-        skuDefaultValue['price'] = `${sortPriceList[0]}`
+        value['price'] = `${sortPriceList[0]}`
       }
 
-      console.log(skuDefaultValue,'_____________selectValue___________');
-
-      return skuDefaultValue      
+      return value      
     },
     handleClickShow: function (params) {
       this.setData({
@@ -139,12 +102,33 @@ Component({
         this.triggerEvent('handleShowSkuPanel')
       })
     },
-    handleClickHide: function (params) {
+    handleClickHide: function () {
       this.setData({
         isShow: false
       },()=>{
         this.triggerEvent('handleHideSkuPanel')
       })
+    },
+    handleDefaultValue: function (defaultValue) {
+
+      if (defaultValue && defaultValue.stock === 0) {
+        
+        return {
+          _id: defaultValue._id,
+          stock: defaultValue.stock,
+          price: defaultValue.price,
+          originPrice: defaultValue.origin_price,
+          name: defaultValue.name,
+          img: defaultValue.pic,
+        }
+      }
+    
+    },
+    clearDefaultValue: function () {
+      this.triggerEvent("clearDefaultValue")
+    },
+    handleClickInner: function (e) {
+
     },
   }
 })

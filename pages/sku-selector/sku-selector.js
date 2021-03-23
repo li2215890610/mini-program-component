@@ -8,6 +8,21 @@ Page({
   data: {
     productSku: product_sku,
     productAttributes: product_attributes,
+    defaultValue: {
+      "_id": "5f2e44d297bc022dbac2d289",
+      "price": 240,
+      "stock": 0,
+      "difference": "绿色,44,秋天",
+  
+      "name": "绿色 44 秋天",
+      "pic": "http://s.jinjuxiaodian.com/jinju_resource/593b78b8f8f9d516ca03a8cb/398fddc0-a3d6-11ea-aac3-f777df03dbf6.png",
+      "detail_pics": [],
+      "state": 1,
+      "count_sold": 0,
+      "origin_price": 299,
+      "attr_value_str": "11_6,16_10,88_4",
+      "product_code": "48"
+    }
   },
 
   /**
@@ -41,5 +56,10 @@ Page({
   }, 
   handleClickConfirm: function ({ detail}) {
     console.log(detail.selectValue,'当前选择sku');
+  },
+  clearDefaultValue: function (params) {
+    this.setData({
+      defaultValue: null
+    })
   }
 })
