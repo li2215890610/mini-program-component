@@ -71,12 +71,13 @@ Component({
       }
     },
     initData: function () {
-      const { defaultValue} = this.data;
+      const { defaultValue, productSku} = this.data;
       if (defaultValue) {
-        return this.handleDefaultValue(defaultValue)
+        return this.handleDefaultValue({
+          defaultValue,
+          productSku
+        })
       }
-
-      let { productSku } = this.data;
 
       let priceList = []
       productSku.map((e)=>{
@@ -113,17 +114,28 @@ Component({
         this.triggerEvent('handleHideSkuPanel')
       })
     },
-    handleDefaultValue: function (defaultValue) {
+    handleDefaultValue: function ({
+      defaultValue,
+      productSku
+    }) {
 
-      if (defaultValue && defaultValue.stock === 0) {
+      if (defaultValue) {
+        
+        let value = {};
+
+        productSku.forEach((e) => {
+          if (defaultValue._id === e._id) {
+            value = {...e}
+          }
+        });
         
         return {
-          _id: defaultValue._id,
-          stock: defaultValue.stock,
-          price: defaultValue.price,
-          originPrice: defaultValue.origin_price,
-          name: defaultValue.name,
-          img: defaultValue.pic,
+          _id: value._id,
+          stock: value.stock,
+          price: value.price,
+          originPrice: value.origin_price,
+          name: value.name,
+          img: value.pic,
         }
       }
     },

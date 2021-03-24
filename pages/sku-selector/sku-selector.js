@@ -11,7 +11,7 @@ Page({
     defaultValue: {
       "_id": "5f2e44d297bc022dbac2d289",
       "price": 240,
-      "stock": 0,
+      "stock": 10,
       "difference": "绿色,44,秋天",
   
       "name": "绿色 44 秋天",
