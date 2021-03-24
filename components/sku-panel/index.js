@@ -30,7 +30,8 @@ Component({
    */
   data: {
     isShow: false,
-    selectValue: null
+    selectValue: null,
+    counterValue: 1,
   },
 
   /**
@@ -46,8 +47,10 @@ Component({
         }) 
       }
     },
-    onCounterChange: function (params) {
-      
+    onCounterChange: function ({ detail}) {
+      this.setData({
+        counterValue: detail
+      })
     },
     handleChange: function ({
       detail
@@ -58,7 +61,8 @@ Component({
       
       if (value && value._id) {
         this.setData({
-          selectValue: value,
+          selectValue: value,            
+          counterValue: 1
         })
       }else{
         this.setData({

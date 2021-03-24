@@ -20,12 +20,12 @@
       />
       <view>
       <view class="counter">
-        <view>
+        <view wx:if="{{selectValue._id && selectValue.stock !== 0}}">
           <vc-counter 
             bind:onChange="onCounterChange" 
-            maxValue="4" 
-            minValue="2"
-            value="2"
+            maxValue="{{selectValue.stock}}" 
+            minValue="1"
+            value="{{counterValue}}"
           />
         </view>
       </view>

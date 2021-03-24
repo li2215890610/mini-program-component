@@ -67,7 +67,7 @@ export const product_sku = [
   {
     "_id": "5f2e44d297bc022dbac2d2b8",
     "price": 1,
-    "stock": 100,
+    "stock": 90,
     "difference": "红色,41,春天",
 
     "name": "红色 41 春天",
