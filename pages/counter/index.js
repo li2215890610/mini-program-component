@@ -1,6 +1,6 @@
 Page({
 
-  onChange: function (value) {
-    console.log(value);
+  onChange: function ({detail}) {
+    console.log(detail);
   }
 })

@@ -39,11 +39,12 @@ Component({
    */
   methods: {
     handleClickConfirm: function () {
-      const { selectValue } = this.data;
+      const { selectValue, counterValue } = this.data;
       
       if (selectValue._id) {
         this.triggerEvent('handleClickConfirm',{
-          selectValue
+          selectValue,
+          counterValue
         }) 
       }
     },

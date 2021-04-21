@@ -75,10 +75,17 @@ Component({
       const newValue = parseInt(value)
 
       if (newValue >= minValue && newValue <= maxValue) {
+        
         this.setData({
           value: newValue
         }, () => {
           this.triggerEvent('onChange', newValue)
+        });
+      } else if (newValue >= minValue && newValue >= maxValue) {
+        this.setData({
+          value: maxValue
+        }, () => {
+          this.triggerEvent('onChange', maxValue)
         });
       } else {
         this.setData({

@@ -55,7 +55,7 @@ Page({
     console.log('隐藏')
   }, 
   handleClickConfirm: function ({ detail}) {
-    console.log(detail.selectValue,'当前选择sku');
+    console.log(detail,'当前选择sku');
   },
   clearDefaultValue: function (params) {
     this.setData({
