@@ -5,6 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    message:"",
     type:"",//info，success，error，warning
     btnList:[
       {

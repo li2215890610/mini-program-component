@@ -33,6 +33,10 @@ Component({
       type: String,
       value: ""
     },
+    formType:{
+      type: String,
+      value:"submit"
+    },
     appParameter: {
       type: String,
       value: ""
@@ -42,12 +46,22 @@ Component({
       value: false
     },
     hoverStartTime: {
-      type: [Number, String],
-      value: 20
+      type: Number,
+      value: 20,
+      observer: function (newVal) {
+        this.setData({
+          hoverStartTime: parseInt(newVal)
+        })
+      }
     },
     hoverStayTime: {
-      type: [Number, String],
-      value: 70
+      type: Number,
+      value: 70,
+      observer: function (newVal) {
+        this.setData({
+          hoverStayTime: parseInt(newVal)
+        })
+      }
     },
     lang: {
       type: String,

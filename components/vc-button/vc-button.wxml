@@ -1,9 +1,9 @@
-<form report-submit="{{true}}" bindsubmit="onSubmit">
+<form bindsubmit="onSubmit">
     <button class="btn btn__size--{{size}} btn__{{type}}--{{plain}}"
       hover-class="{{hoverClass}}"
       style="{{btnStyle}}"
       loading="{{loading}}"
-      form-type="submit"
+      form-type="{{formType}}"
       open-type="{{openType}}"
       app-parameter="{{appParameter}}"
       hover-stop-propagation="{{hoverStopPropagation}}"

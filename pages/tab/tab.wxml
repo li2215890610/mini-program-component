@@ -1,2 +1,79 @@
-<!--pages/tab/tab.wxml-->
-<text>pages/tab/tab.wxml</text>
+<vc-tab bind:tabchange="onClick" default-index="0" component-id="c1">
+  <vc-tab-panel 
+    wx:for="{{tabs}}" 
+    wx:for-item="tab"
+    wx:key="index" 
+    tab-index="{{index}}" 
+    label="{{tab.title}}" 
+    component-id="c1"
+  >
+    {{tab.content}}默认
+  </vc-tab-panel>
+</vc-tab>
+
+<vc-tab bind:tabchange="onAnimateClick" default-index="{{4}}" active-text-color="#108ee9" active-line-color="#108ee9" component-id="c2" animate="{{true}}">
+    <vc-tab-panel 
+      wx:for="{{tabs1}}" 
+      wx:for-item="tab" 
+      wx:key="index" 
+      tab-index="{{index}}" 
+      component-id="c2" 
+      label="{{tab.title}}"
+    >
+        {{tab.content}}动画
+    </vc-tab-panel>
+</vc-tab>
+
+
+
+
+<vc-tab bind:tabchange="onClick" default-index="{{2}}" component-id="c3" animate="{{true}}" >
+    <vc-tab-panel 
+      wx:for="{{tabs2}}" 
+      wx:for-item="tab" 
+      wx:key="index" 
+      tab-index="{{index}}" 
+      component-id="c3" 
+      label="{{tab.title}}" 
+    >
+        {{tab.content}} 多个tab
+    </vc-tab-panel>
+</vc-tab>
+
+
+
+<vc-tab bind:tabchange="onIconClick" default-index="{{activeKey}}" component-id="c4" animate="{{true}}" class="demo-tab" >
+    <view slot="tablabel">
+        <vc-tab-label 
+          wx:for="{{tabs3}}" 
+          wx:for-item="tab" 
+          wx:key="index" 
+          tab-index="{{index}}" 
+          component-id="c4" 
+        >
+            <view class="demo-tab__label">
+                <vc-icon 
+                  type="icon-roundcheck" 
+                  size="40" 
+                  color="{{ activeKey === index ? '#ff5777' : '#555' }}"
+                >
+                </vc-icon>
+                <view 
+                class="demo-tab__text {{ activeKey === index ? 'demo-tab--active' : ''}}">
+                    {{tab.title}}
+                </view>
+            </view>
+        </vc-tab-label>
+    </view>
+
+    <vc-tab-panel 
+      wx:for="{{tabs3}}" 
+      wx:for-item="tab" 
+      wx:key="index" 
+      tab-index="{{index}}" 
+      component-id="c4"
+    >
+        {{tab.content}} icon
+    </vc-tab-panel>
+
+</vc-tab>

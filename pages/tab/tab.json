@@ -1,3 +1,8 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "vc-tab": "../../components/vc-tab/index",
+    "vc-tab-panel": "../../components/vc-tab/panel",
+    "vc-tab-label":"../../components/vc-tab/label",
+    "vc-icon":"../../components/vc-icon/vc-icon"
+  }
 }

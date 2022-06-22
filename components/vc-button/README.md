@@ -29,8 +29,8 @@
 |`bindcontact`         | [说明]：同微信小程序 `button` 组件。客服消息回调<br>[类型]：`Handler`<br>|
 |`bindgetphonenumber`  | [说明]：同微信小程序 `button` 组件。获取用户手机号回调<br>[类型]：`Handler`<br>|
 |`binderrror`          | [说明]：同微信小程序 `button` 组件。当使用开放能力时，发生错误的回调调<br>[类型]：`Handler`<br>|
-|`bind:submit`         | [说明]：`button` 组件 `form-type` 设置为 `submit`, 内置 `form` 表单，点击按钮时触发 `submit` 事件，可用于获取 `formId` 等，`event.detail = {value, formId}`|
-
+|`bind:submit`         | [说明]：`button` 组件 `form-type` 设置为 `submit`, 内置 `form` 表单，点击按钮时触发 `submit` 事件等，`event.detail = {value}`|
+|`formType`|`submit`	提交表单,`reset`	重置表单
 
 
 

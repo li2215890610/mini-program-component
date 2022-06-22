@@ -5,7 +5,12 @@ Component({
   properties: {
     message: {
       type: String,
-      value: "消息提示" // 
+      value: '消息提示',
+      observer: function (newVal) {
+        this.setData({
+          message: `${newVal}`
+        })
+      }
     },
     duration: {
       type: Number,

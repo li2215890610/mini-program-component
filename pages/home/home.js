@@ -6,7 +6,7 @@ Page({
   data: {
     setNav: {
       'bg': '#323232', //背景色
-      'navTitle': "城市",
+      'navTitle': "中控",
       'opacity': "1",
       'isBackNav': true, //是否显示返回按钮
       'headerBox': true,

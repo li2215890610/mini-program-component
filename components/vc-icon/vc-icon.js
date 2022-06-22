@@ -6,7 +6,7 @@ Component({
       value: 'icon-phone'
     },
     size: {
-      type: [Number, String],
+      type: Number,
       value: 26
     },
     color: {

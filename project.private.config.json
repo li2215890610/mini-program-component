@@ -21,9 +21,10 @@
           "scene": null
         },
         {
-          "name": "pages/index/index",
+          "name": "登陆页面",
           "pathName": "pages/index/index",
           "query": "",
+          "launchMode": "default",
           "scene": null
         },
         {
@@ -111,9 +112,24 @@
           "query": "",
           "launchMode": "default",
           "scene": null
+        },
+        {
+          "name": "选项卡",
+          "pathName": "pages/tab/tab",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "按钮",
+          "pathName": "pages/button/button",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
         }
       ]
     }
   },
-  "description": "项目私有配置文件。此文件中的内容将覆盖 project.config.json 中的相同字段。项目的改动优先同步到此文件中。详见文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html"
+  "description": "项目私有配置文件。此文件中的内容将覆盖 project.config.json 中的相同字段。项目的改动优先同步到此文件中。详见文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html",
+  "libVersion": "2.24.6"
 }

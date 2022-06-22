@@ -4,7 +4,7 @@ Component({
   },
   properties: {
     maxValue: {
-      type: [Number, String],
+      type: Number,
       value: 10000,
       observer: function (newVal) {
         this.setData({
@@ -13,7 +13,7 @@ Component({
       }
     },
     minValue: {
-      type: [Number, String],
+      type: Number,
       value: 1,
       observer: function (newVal) {
         this.setData({
@@ -22,7 +22,7 @@ Component({
       }
     },
     value: {
-      type: [Number, String],
+      type: Number,
       value: 1,
       observer: function (newVal) {
         this.setData({

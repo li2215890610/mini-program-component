@@ -5,7 +5,72 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    tabs: [{
+      title: '选项一',
+      content: '内容一'
+    }, {
+      title: '选项二',
+      content: '内容二'
+    }, {
+      title: '选项三',
+      content: '内容三'
+    }],
+    tabs1: [{
+      title: '选项一',
+      content: '内容一'
+    }, {
+      title: '选项二',
+      content: '内容二'
+    }, {
+      title: '选项三',
+      content: '内容三'
+    }],
+    tabs2: [{
+      title: '选项一',
+      content: '内容一'
+    }, {
+      title: '选项二',
+      content: '内容二'
+    }, {
+      title: '选项三',
+      content: '内容三'
+    }, {
+      title: '选项四',
+      content: '内容四'
+    }, {
+      title: '选项五',
+      content: '内容五'
+    }, {
+      title: '选项六',
+      content: '内容六'
+    }],
+    tabs3: [{
+      title: '选项一',
+      content: '内容一',
+      id: 0
+    }, {
+      title: '选项二',
+      content: '内容二',
+      id: 1
+    }, {
+      title: '选项三',
+      content: '内容三',
+      id: 2
+    }],
+    activeKey: 0
+  },
+  onClick: function (e) {
+    console.log(`ComponentId:${e.detail.componentId},you selected:${e.detail.key}`);
+  },
+  onAnimateClick: function (e) {
+    console.log(`ComponentId:${e.detail.componentId},you selected:${e.detail.key}`);
+  },
+  onIconClick: function (e) {
+    console.log(`ComponentId:${e.detail.componentId},you selected:${e.detail.key}`);
+    const idx = e.detail.key;
+    this.setData({
+      activeKey: idx
+    });
   },
 
   /**

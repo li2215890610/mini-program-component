@@ -2,20 +2,30 @@ Component({
   behaviors: [],
   properties: {
     value: {
-      type: [Number, String],
+      type: String,
       value: 0
     },
     max: {
-      type: [Number, String],
-      value: 100
+      type: Number,
+      value: 100,
+      observer: function (newVal) {
+        this.setData({
+          max: parseInt(newVal)
+        })
+      }
     },
     type: {
       type: String,
-      value: 'number'
+      value: 'number',
+      observer: function (newVal) {
+        this.setData({
+          type: `${newVal}`
+        })
+      }
     },
     _system_: {
       type: String,
-      value: ''
+      value: 'ios'
     }
   },
   data: {},
