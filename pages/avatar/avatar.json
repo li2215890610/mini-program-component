@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+      "vc-avatar": "../../components/vc-avatar/vc-avatar"
+  }
+}

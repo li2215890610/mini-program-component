@@ -1,0 +1,24 @@
+page{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.user{
+  margin-top: 60rpx;
+  width: 100rpx;
+  height: 100rpx;
+  position: relative;
+}
+
+.user__un-read-msg-count {
+  position: absolute;
+  top: -16rpx;
+  right: -8rpx;
+}
+
+.message__badge {
+  position: absolute;
+  top: -20rpx;
+  right: -2rpx;
+}

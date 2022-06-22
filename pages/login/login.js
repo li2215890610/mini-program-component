@@ -71,6 +71,8 @@ Page({
 
           //发起网络请求 http Request
 
+          wx.hideLoading()
+
         } else {
           wx.hideLoading();
           wx.showToast({

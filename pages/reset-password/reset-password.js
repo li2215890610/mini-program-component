@@ -2,11 +2,9 @@ Page({
   data: {
     phone: "",
     password: "",
-    code: "",
-    loading: false,
-    cd: 0
+    codeNum: "",
+    code: 0
   },
-  timer: null,
   handlePhoneChange: function (e) {
     this.setData({
       phone: e.detail.value
@@ -17,34 +15,40 @@ Page({
       password: e.detail.value
     });
   },
+  timer: null,
   handleVerifyCodeChange: function (e) {
     this.setData({
-      code: e.detail.value
+      codeNum: e.detail.value
     });
   },
-  startCD: function () {
+  startCB: function () {
 
     clearInterval(this.timer);
 
     this.setData({
-      cd: 30
+      code: 30
+    },()=>{
+      this.resizeVerifyCode()
     });
-    
+  },
+  resizeVerifyCode: function (params) {
     this.timer = setInterval(()=> {
-      if (this.data.cd === 0) {
+      const { code} = this.data;
+
+      if (code === 0) {
         clearInterval(this.timer);
         return false;
       }
       this.setData({
-        cd: this.data.cd - 1
+        code: code - 1
       });
     }, 1000);
   },
   handleTapGetVerifyCode: function () {
 
-    const { cd, phone} = this.data;
+    const { code, phone, password} = this.data;
 
-    if (cd !== 0) {
+    if (code !== 0) {
       return false;
     }
 
@@ -64,6 +68,13 @@ Page({
       return false;
     }
 
+    if(!password){
+      wx.showToast({
+        title: '请输入密码',
+        icon: 'none'
+      });
+      return false
+    }
     wx.showLoading({
       title: '正在发送验证码',
       mask: true
@@ -72,7 +83,7 @@ Page({
     // _userAccount2.default.getVerifyCode({
     //   phone: phone
     // }, function (err, data) {
-    //   wx.hideLoading();
+      wx.hideLoading();
     //   if (err) {
     //     wx.showToast({
     //       title: err.message,
@@ -83,25 +94,13 @@ Page({
     //       icon: 'none',
     //       title: '短信验证码已发送到您的手机'
     //     });
-    //     this.startCD();
+        this.startCB();
     //   }
     // });
   },
   handleTapConfirm: function () {
 
-    const { loading, phone, password, code} = this.data;
-
-    if (loading) {
-      return false;
-    }
-
-    if (!phone) {
-      wx.showToast({
-        title: '请输入手机号',
-        icon: 'none'
-      });
-      return false;
-    }
+    const { phone, password, code} = this.data;
 
     if (phone.length !== 11) {
       wx.showToast({
@@ -130,10 +129,6 @@ Page({
     wx.showLoading({
       title: '正在重置密码',
       mask: 'true'
-    });
-
-    this.setData({
-      loading: true
     });
 
     // _userAccount2.default.resetPassword({

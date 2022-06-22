@@ -7,7 +7,7 @@ Component({
       type: String,
       value: ''
     },
-    mold: {
+    type: {
       type: String,
       value: 'circle'
     }

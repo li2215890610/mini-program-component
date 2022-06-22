@@ -1,5 +1,5 @@
   <view class="avatar">
     <block wx:if="{{src}}">
-      <view class="avatar__pic avatar__mold--{{mold}}" style="background-image: url({{src}}); background-repeat: no-repeat; background-position: center center; background-size: cover"></view>
+      <view class="avatar__pic avatar__mold--{{type}}" style="background-image: url({{src}}); background-repeat: no-repeat; background-position: center center; background-size: cover"></view>
     </block>  
   </view>

@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "vc-loadmore": "../../components/vc-loadmore/index"
+  }
+}

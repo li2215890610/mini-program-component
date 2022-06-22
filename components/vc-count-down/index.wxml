@@ -1,0 +1,9 @@
+<view class="countdown">
+    <view class="countdown__item" 
+      wx:for="{{timeItems}}" 
+      wx:key="{{item.num+1}}"
+    >
+        <view class="countdown__item--num" style="{{numStyle}}">{{item.num}}</view>
+        <view class="countdown__item--symbol" style="{{symbolStyle}}">{{item.symbol}}</view>
+    </view>
+</view>

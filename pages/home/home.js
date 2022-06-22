@@ -14,6 +14,28 @@ Page({
       'color': "#FFFFFF"
     },
     goPage: [{
+      url:"/pages/avatar/avatar",
+      btnText:"头像"
+    },{
+      url:"/pages/badge/badge",
+      btnText:"徽章"
+    },{
+      url:"/pages/loadmore/loadmore",
+      btnText:"页底提示"
+    },
+    
+    // {
+    //   url:"/pages/rate/rate",
+    //   btnText:"评分"
+    // },{
+    //   url:"/pages/countDown/countDown",
+    //   btnText:"倒计时"
+    // },
+    
+    {
+      url:"/pages/tab/tab",
+      btnText: 'tab选项卡',
+    },{
       url: '/pages/message/message',
       btnText: '消息通知',
     }, {

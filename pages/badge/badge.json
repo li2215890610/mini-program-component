@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "vc-badge": "../../components/vc-badge/vc-badge",
+    "vc-icon": "../../components/vc-icon/vc-icon",
+    "vc-avatar": "../../components/vc-avatar/vc-avatar"
+
+  }
+}

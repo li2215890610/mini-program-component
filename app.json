@@ -21,7 +21,15 @@
     "pages/sku-selector/sku-selector",
     "pages/notice/notice",
     "pages/scoll-nav/scoll-nav",
-    "pages/counter/index"
+    "pages/counter/index",
+
+    "pages/countDown/countDown",
+    "pages/rate/rate",
+    
+    "pages/tab/tab",
+    "pages/loadmore/loadmore",
+    "pages/badge/badge",
+    "pages/avatar/avatar"
   ],
   "window": {
     "backgroundTextStyle": "light",
