@@ -5,61 +5,32 @@ Page({
    * 页面的初始数据
    */
   data: {
+    countdown: 10,
+    format: 'hh:mm:ss',
+    numStyle: 'width: 48rpx; font-size: 28rpx; color: #ffffff; background: #000; text-align: center; border-radius: 8rpx; padding: 5rpx 0;',
+    symbolStyle: 'font-size: 28rpx; color: #000; padding: 0 12rpx;',
+    computeTime: 5,
+    isEnd: false
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
+  onRunCount: function (e) {
+    let detail = e.detail;
+    this.setData({
+      computeTime: detail.computeTime
+    });
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  onEndCount: function () {
+    this.setData({
+      isEnd: true
+    });
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
+  countAgain: function () {
+    let countdown = this.data.countdown + 1;
+    if (this.data.isEnd) {
+      this.setData({
+        countdown: countdown,
+        isEnd: false
+      });
+    }
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
-  }
 })

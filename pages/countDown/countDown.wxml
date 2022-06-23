@@ -1,1 +1,24 @@
-<vc-count-down countdown="10000" ></vc-count-down>
+<view>
+
+  <view class="demo-box">
+    <vc-count-down countdown="{{countdown}}" title="基础调用" desc="只传参倒计时秒数 countdown"></vc-count-down>
+  </view>
+
+  <view class="demo-box">
+    <vc-count-down countdown="{{countdown}}" format="{{format}}" _pid="{{_pid}}"></vc-count-down>
+  </view>
+
+  <view class="demo-box">
+    <vc-count-down countdown="{{countdown}}" num-style="{{numStyle}}" symbol-style="{{symbolStyle}}" _pid="{{_pid}}"></vc-count-down>
+  </view>
+
+
+
+  <view class="demo-text demo-box">
+    <view>倒计时还剩{{computeTime}}秒</view>
+    <view wx:if="{{isEnd}}" class="demo-text--end">倒计时结束啦</view>
+  </view>
+  <button size="mini" type="{{isEnd ? 'primary' : 'default'}}" bindtap="countAgain">再来一次</button>
+  <vc-count-down countdown="{{countdown}}" bind:runcount="onRunCount" bind:endcount="onEndCount" _pid="{{_pid}}"></vc-count-down>
+
+</view>

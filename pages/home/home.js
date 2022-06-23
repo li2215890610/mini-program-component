@@ -27,10 +27,11 @@ Page({
     // {
     //   url:"/pages/rate/rate",
     //   btnText:"评分"
-    // },{
-    //   url:"/pages/countDown/countDown",
-    //   btnText:"倒计时"
     // },
+    {
+      url:"/pages/countDown/countDown",
+      btnText:"倒计时"
+    },
     
     {
       url:"/pages/tab/tab",

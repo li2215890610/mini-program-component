@@ -126,6 +126,13 @@
           "query": "",
           "launchMode": "default",
           "scene": null
+        },
+        {
+          "name": "倒计时",
+          "pathName": "pages/countDown/countDown",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
         }
       ]
     }
