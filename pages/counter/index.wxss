@@ -1,1 +1,9 @@
-/* pages/counter/index.wxss */
+page{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.demo-box{
+  padding-bottom: 60rpx;
+}

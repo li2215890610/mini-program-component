@@ -44,7 +44,7 @@ Component({
         this.setData({
           value
         }, () => {
-          this.triggerEvent('onChange', value)
+          this.triggerEvent('changeNumber', value)
         });
       }
     },
@@ -60,11 +60,11 @@ Component({
         this.setData({
           value
         }, () => {
-          this.triggerEvent('onChange', value)
+          this.triggerEvent('changeNumber', value)
         });
       }
     },
-    onChange: function (e) {
+    changeNumber: function (e) {
       const {
         maxValue,
         minValue
@@ -79,13 +79,13 @@ Component({
         this.setData({
           value: newValue
         }, () => {
-          this.triggerEvent('onChange', newValue)
+          this.triggerEvent('changeNumber', newValue)
         });
       } else if (newValue >= minValue && newValue >= maxValue) {
         this.setData({
           value: maxValue
         }, () => {
-          this.triggerEvent('onChange', maxValue)
+          this.triggerEvent('changeNumber', maxValue)
         });
       } else {
         this.setData({

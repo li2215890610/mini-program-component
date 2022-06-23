@@ -5,11 +5,11 @@
   </view>
 
   <view class="demo-box">
-    <vc-count-down countdown="{{countdown}}" format="{{format}}" _pid="{{_pid}}"></vc-count-down>
+    <vc-count-down countdown="{{countdown}}" format="{{format}}" ></vc-count-down>
   </view>
 
   <view class="demo-box">
-    <vc-count-down countdown="{{countdown}}" num-style="{{numStyle}}" symbol-style="{{symbolStyle}}" _pid="{{_pid}}"></vc-count-down>
+    <vc-count-down countdown="{{countdown}}" num-style="{{numStyle}}" symbol-style="{{symbolStyle}}" ></vc-count-down>
   </view>
 
 
@@ -19,6 +19,10 @@
     <view wx:if="{{isEnd}}" class="demo-text--end">倒计时结束啦</view>
   </view>
   <button size="mini" type="{{isEnd ? 'primary' : 'default'}}" bindtap="countAgain">再来一次</button>
-  <vc-count-down countdown="{{countdown}}" bind:runcount="onRunCount" bind:endcount="onEndCount" _pid="{{_pid}}"></vc-count-down>
+  <vc-count-down 
+    countdown="{{countdown}}" 
+    bind:runcount="onRunCount" 
+    bind:endcount="onEndCount"
+  ></vc-count-down>
 
 </view>

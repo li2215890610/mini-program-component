@@ -6,3 +6,4 @@
 |`maxValue`        |  最大value，默认10000  | Number
 |`minValue`        | 最小value，默认1 | Number
 |`onChange`        | value改变触发事件| 
+|`disabled`        | 是否禁用|Boolean

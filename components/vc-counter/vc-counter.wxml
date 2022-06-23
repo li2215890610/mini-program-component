@@ -7,7 +7,7 @@
   </view>
 
   <!-- 数值 --> 
-  <input class="input f1" type="number" bindchange="onChange" value="{{value}}" /> 
+  <input class="input f1" type="number" bindchange="changeNumber" value="{{value}}" /> 
 
   <!-- 加号 --> 
   <view class="normal f-e-c f1" bindtap="add">

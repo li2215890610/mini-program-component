@@ -1,5 +1,5 @@
 {
   "usingComponents": {
-    "vc-count-down": "../../components/vc-count-down/index"
+    "vc-count-down": "../../components/vc-count-down"
   }
 }

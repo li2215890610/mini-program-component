@@ -12,9 +12,9 @@ Page({
     computeTime: 5,
     isEnd: false
   },
-
-  onRunCount: function (e) {
+  onRunCounts: function (e) {
     let detail = e.detail;
+    console.log(e);
     this.setData({
       computeTime: detail.computeTime
     });
@@ -32,5 +32,5 @@ Page({
         isEnd: false
       });
     }
-  },
+  }
 })

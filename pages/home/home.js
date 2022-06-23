@@ -21,13 +21,12 @@ Page({
       btnText:"徽章"
     },{
       url:"/pages/loadmore/loadmore",
-      btnText:"页底提示"
+      btnText:"列表页底提示"
     },
-    
-    // {
-    //   url:"/pages/rate/rate",
-    //   btnText:"评分"
-    // },
+    {
+      url:"/pages/rate/rate",
+      btnText:"评分"
+    },
     {
       url:"/pages/countDown/countDown",
       btnText:"倒计时"

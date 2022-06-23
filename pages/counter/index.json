@@ -1,5 +1,5 @@
 {
   "usingComponents": {
-    "vc-counter": "../../components/vc-counter/vc-counter"
+    "vc-counter": "../../components/vc-counter"
   }
 }
