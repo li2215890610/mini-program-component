@@ -1,5 +1,6 @@
 {
   "usingComponents": {
-    "vc-loadmore": "../../components/vc-loadmore/index"
-  }
+    "vc-loadmore": "../../components/vc-loadmore"
+  },
+  "navigationBarTitleText": "页地提示、加载中、加载完毕"
 }

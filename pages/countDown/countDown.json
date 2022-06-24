@@ -1,5 +1,6 @@
 {
   "usingComponents": {
     "vc-count-down": "../../components/vc-count-down"
-  }
+  },
+  "navigationBarTitleText": "倒计时"
 }

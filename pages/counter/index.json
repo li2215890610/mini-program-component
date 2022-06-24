@@ -1,5 +1,6 @@
 {
   "usingComponents": {
     "vc-counter": "../../components/vc-counter"
-  }
+  },
+  "navigationBarTitleText": "步进器组件"
 }

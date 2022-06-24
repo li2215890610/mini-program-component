@@ -3,6 +3,6 @@
     "vc-badge": "../../components/vc-badge/vc-badge",
     "vc-icon": "../../components/vc-icon/vc-icon",
     "vc-avatar": "../../components/vc-avatar/vc-avatar"
-
-  }
+  },
+  "navigationBarTitleText": "徽章红点"
 }

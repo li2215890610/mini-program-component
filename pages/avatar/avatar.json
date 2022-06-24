@@ -1,5 +1,6 @@
 {
   "usingComponents": {
       "vc-avatar": "../../components/vc-avatar/vc-avatar"
-  }
+  },
+  "navigationBarTitleText": "头像"
 }

@@ -27,7 +27,7 @@
       class="bar__clear {{focus && 'bar__clear--left'}}" 
       bindtouchstart="handleClear" 
     >
-      <view class='iconfont icon-roundclose'></view>
+      <view class='iconfont icon-roundclose bar__clear-view'></view>
     </view>
   </view>
     

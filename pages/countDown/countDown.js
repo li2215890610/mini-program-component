@@ -25,10 +25,12 @@ Page({
     });
   },
   countAgain: function () {
-    let countdown = this.data.countdown + 1;
-    if (this.data.isEnd) {
+    const { countdown, isEnd } = this.data;
+
+    let count = countdown + 1;
+    if (isEnd) {
       this.setData({
-        countdown: countdown,
+        countdown: count,
         isEnd: false
       });
     }

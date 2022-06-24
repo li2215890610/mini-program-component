@@ -22,7 +22,7 @@ export default Component({
   },
   attached() {
     let iconStatus = IconType.HIDDEN;
-    const { icon} = this.data;
+    const { icon } = this.data;
     if (icon) {
       iconStatus = IconType.SHOW_DEFAULT;
     }

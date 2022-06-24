@@ -7,9 +7,9 @@ Page({
     verifyCode:""
   },
 
-  handleGetPhoneNumber: function (e) {
+  handleGetPhoneNumber: function ({ detail}) {
 
-    if (e.detail) {
+    if (detail.code) {
         console.log(e.detail);
         // this.setData({phone: })
     }

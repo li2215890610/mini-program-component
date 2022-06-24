@@ -1,5 +1,6 @@
 {
   "usingComponents": {
     "suk-panel": "../../components/sku-panel/index"
-  }
+  },
+  "navigationBarTitleText": "sku选择器组件"
 }

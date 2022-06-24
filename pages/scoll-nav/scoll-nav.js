@@ -47,29 +47,30 @@ Page({
       lists: [2, 3, 4, 5, 6, 7, 8, 9, 0],
       index: 0
   },
-  // 点击切换
-  onTabsChange(e) {
+  onTabsChange: function ({detail}) {
       const {
-          index
-      } = e.detail
+          index,
+      } = detail;
+
+      const { list} = this.data
       // 当前项
-      const item = this.data.list[index]
+      const item = list[index]
       console.log('item', item)
       this.setData({
           index
       })
   },
   // 滑动
-  onSwitchTab(e) {
+  onSwitchTab({ detail}) {
       const {
           current: index
-      } = e.detail
+      } = detail
       this.setData({
           index
       })
   },
   /* 转发*/
-  onShareAppMessage: function (ops) {
+  onShareAppMessage: function () {
       return {
           title: 'SOL-滚动导航条',
           path: '/pages/scoll-nav/index'

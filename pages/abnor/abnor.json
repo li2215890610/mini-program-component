@@ -1,5 +1,7 @@
 {
   "usingComponents": {
       "vc-abnor": "../../components/vc-abnor/index"
-  }
+  },
+  "navigationBarTitleText": "异常数据面板"
+
 }

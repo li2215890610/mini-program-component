@@ -70,7 +70,7 @@
   color: #eb0e0e;
   border: 1rpx solid #eb0e0e
 }
-.label-nav .drop-nav-list .nav-list-content .active text {
+.label-nav .drop-nav-list .nav-list-content .active .nav-list-content-text {
   color: #eb0e0e
 }
 .label-nav .more-bot {

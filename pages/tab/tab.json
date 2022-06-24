@@ -4,5 +4,6 @@
     "vc-tab-panel": "../../components/vc-tab/panel",
     "vc-tab-label":"../../components/vc-tab/label",
     "vc-icon":"../../components/vc-icon/vc-icon"
-  }
+  },
+  "navigationBarTitleText": "tab面板"
 }

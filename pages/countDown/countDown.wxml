@@ -14,7 +14,7 @@
 
 
 
-  <view class="demo-text demo-box">
+  <!-- <view class="demo-text demo-box">
     <view>倒计时还剩{{computeTime}}秒</view>
     <view wx:if="{{isEnd}}" class="demo-text--end">倒计时结束啦</view>
   </view>
@@ -23,6 +23,6 @@
     countdown="{{countdown}}" 
     bind:runcount="onRunCount" 
     bind:endcount="onEndCount"
-  ></vc-count-down>
+  ></vc-count-down> -->
 
 </view>

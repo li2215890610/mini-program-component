@@ -14,7 +14,7 @@
     "pages/form/form",
     "pages/get-phone/get-phone",
     "pages/search/search",
-    "pages/curtain/curtain",
+    "pages/curtain/curtain", 
     "pages/modal/modal",
     "pages/button/button",
     "pages/steps/steps",
@@ -22,8 +22,8 @@
     "pages/notice/notice",
     "pages/scoll-nav/scoll-nav",
     "pages/counter/index",
-
     "pages/countDown/countDown",
+
     "pages/rate/rate",
     
     "pages/tab/tab",

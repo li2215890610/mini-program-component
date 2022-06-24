@@ -177,5 +177,5 @@ export default Component({
     onPageHide() {
       clearInterval(this._timer);
     }
-  }
+  },
 });

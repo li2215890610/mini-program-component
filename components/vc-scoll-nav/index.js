@@ -34,11 +34,11 @@ Component({
     /**
      * 触发 点击事件
      */
-    onClick(e) {
+    onClick({ currentTarget}) {
       const {
         index,
         pop
-      } = e.currentTarget.dataset
+      } = currentTarget.dataset
       this.updated(index, pop)
     },
     /**
@@ -77,9 +77,10 @@ Component({
       //设置当前样式
       this.setData({
         activeIndex: index
-      })
-      this.triggerEvent('change', {
-        index: index
+      },()=>{
+        this.triggerEvent('change', {
+          index: index
+        })
       })
     }
   }
