@@ -1,8 +1,8 @@
 {
   "usingComponents": {
-    "vc-badge": "../../components/vc-badge/vc-badge",
+    "vc-badge": "../../components/vc-badge",
     "vc-icon": "../../components/vc-icon/vc-icon",
-    "vc-avatar": "../../components/vc-avatar/vc-avatar"
+    "vc-avatar": "../../components/vc-avatar"
   },
   "navigationBarTitleText": "徽章红点"
 }

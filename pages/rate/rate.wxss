@@ -1,1 +1,14 @@
-/* pages/rate/rate.wxss */
+
+page{
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  width:90%;
+  margin:0 auto;
+
+}
+.view{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}

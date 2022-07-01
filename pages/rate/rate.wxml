@@ -1,2 +1,5 @@
-<!--pages/rate/rate.wxml-->
-<text>pages/rate/rate.wxml</text>
+<view>
+
+  <v-rate value="1" placeholder="3" allowHalf="true" length="5" bindchange="change"></v-rate>
+  
+</view>

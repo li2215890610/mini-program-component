@@ -24,7 +24,7 @@ Page({
     ],
     active: 2,
     // direction: 'horizontal',
-    direction: 'vertical',
+    direction: 'horizontal',
     activeColor: '#EA493B'
   },
 })

@@ -140,6 +140,13 @@
           "query": "",
           "launchMode": "default",
           "scene": null
+        },
+        {
+          "name": "评分",
+          "pathName": "pages/rate/rate",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
         }
       ]
     }

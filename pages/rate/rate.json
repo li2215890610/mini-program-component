@@ -1,4 +1,6 @@
 {
-  "usingComponents": {},
+  "usingComponents": {
+    "v-rate":"../../components/vc-rate"
+  },
   "navigationBarTitleText": "评分"
 }

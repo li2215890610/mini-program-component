@@ -1,5 +1,5 @@
 {
   "usingComponents": {
-    "vc-notice": "../../components/vc-notice/vc-notice"
+    "vc-notice": "../../components/vc-notice"
   }
 }

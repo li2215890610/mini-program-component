@@ -1,6 +1,6 @@
 {
   "usingComponents": {
-    "message":"../../components/vc-message/vc-message"
+    "message":"../../components/vc-message"
   },
   "navigationBarTitleText": "消息通知"
 }

@@ -1,6 +1,6 @@
 {
   "usingComponents": {
-    "vc-button": "../../components/vc-button/vc-button"
+    "vc-button": "../../components/vc-button"
   },
   "navigationBarTitleText": "手机号组件"
 }

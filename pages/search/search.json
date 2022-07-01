@@ -1,6 +1,6 @@
 {
   "usingComponents": {
-    "vc-search":"../../components/vc-search/vc-search"
+    "vc-search":"../../components/vc-search"
   },
   "navigationBarTitleText": "搜索组件"
 }

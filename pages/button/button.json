@@ -1,6 +1,6 @@
 {
   "usingComponents": {
-    "vc-button": "../../components/vc-button/vc-button",
+    "vc-button": "../../components/vc-button",
     "vc-icon": "../../components/vc-icon/vc-icon"
   },
   "navigationBarTitleText": "button组件"

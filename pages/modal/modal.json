@@ -1,6 +1,6 @@
 {
   "usingComponents": {
-    "vc-modal": "../../components/vc-modal/vc-modal"
+    "vc-modal": "../../components/vc-modal"
   },
   "navigationBarTitleText": "弹窗组件"
 }
