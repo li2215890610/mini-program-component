@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "vc-search":"../../components/vc-search"
+  },
+  "navigationBarTitleText": "分类"
+}

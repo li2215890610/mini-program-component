@@ -10,7 +10,7 @@ Page({
   handleGetPhoneNumber: function ({ detail}) {
 
     if (detail.code) {
-        console.log(e.detail);
+        console.log(detail);
         // this.setData({phone: })
     }
   },

@@ -2,7 +2,9 @@
 
 <vc-search 
   value="" 
-  placeholder="搜索" 
+  placeholder="iphone 13火热发售中" 
   maxlength="140" 
   bind:handleChange="handleChange"
+  focus="true"
 />
+<!-- disabled="true" -->

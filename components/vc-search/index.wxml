@@ -1,34 +1,19 @@
-
 <block>
-  <view class="search-bar__container">
+  <view class="search-bar">
+    <view class="search-bar__container">
 
-    <view class="placeholder__box {{ focus && 'placeholder--left'}}" >
-      <view class='iconfont icon-search'></view>
-      <text 
-        class="placeholder__text {{ value && 'placeholder__text--left'}}">
-        {{placeholder}}
-      </text>
-    </view>
+      <view class="placeholder__box ">
+        <view class='iconfont icon-search'></view>
+      </view>
 
-    <input 
-      class="bar__input" 
-      type="search" 
-      value="{{value}}" 
-      focus="{{focus}}" 
-      disabled="{{disabled}}" 
-      maxlength="{{maxlength}}" 
-      bindinput="handleChange" 
-      bindfocus="handleFocus" 
-      bindblur="handleBlur" 
-      bindconfirm="handleConfirm" 
-    />
+      <input class="bar__input" type="search" value="{{value}}" focus="{{focus}}" disabled="{{disabled}}" maxlength="{{maxlength}}" bindinput="handleChange" 
+      placeholder="{{placeholder}}"
+      bindfocus="handleFocus" bindblur="handleBlur" bindconfirm="handleConfirm" />
 
-    <view 
-      class="bar__clear {{focus && 'bar__clear--left'}}" 
-      bindtouchstart="handleClear" 
-    >
-      <view class='iconfont icon-roundclose bar__clear-view'></view>
+      <view class="bar__clear {{focus ? 'bar__clear--left':''}}" bindtouchstart="handleClear">
+        <view class='iconfont icon-roundclose bar__clear-view'></view>
+      </view>
     </view>
   </view>
-    
+
 </block>
