@@ -10,7 +10,7 @@
                 data-key="{{tab.key}}" 
                 data-idx="{{index}}" 
                 bindtap="onSwitch" 
-style="width:{{width}}%; color:{{index === activeKey ? activeTextColor :textColor}}">
+style="width:{{width}}%; color:{{index === activeKey ? activeTextColor :textColor}}; font-weight:{{index === activeKey ? activeFontWidth :fontWidth}}; font-size:{{index === activeKey ? activeFontSize :fontSize}}rpx;">
                     <label class="tab__navbar-title">{{tab.label}}</label>
                 </view>
 

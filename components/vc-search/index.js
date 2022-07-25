@@ -33,7 +33,6 @@ Component({
    */
   methods: {
     handleBlur: function () {
-      
       this.setData({
         focus: false,
         value: ""
@@ -51,7 +50,6 @@ Component({
     handleFocus: function () {
       const { disabled} = this.data;
       if (disabled) {
-        
         return false
       }
       this.setData({

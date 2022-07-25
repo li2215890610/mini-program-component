@@ -32,7 +32,25 @@ export default Component({
     activeLineColor: {
       type: String,
       value: '#ff5777'
-    }
+    },
+
+    activeFontWidth:{
+      type: Number,
+      value:600
+    },
+    fontWidth: {
+      type: Number,
+      value:400
+    },
+    activeFontSize:{
+      type: Number,
+      value: 32
+    },
+    fontSize: {
+      type: Number,
+      value: 28
+    },
+
   },
   data: {
     tabs: [],
