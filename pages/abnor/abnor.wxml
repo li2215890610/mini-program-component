@@ -3,6 +3,7 @@
 <vc-abnor 
   type="ORDER"
   title="{{title}}"
+  bind:abnortap="onAbnorTap"
   button="点我"
   tip="小信息"
 />
