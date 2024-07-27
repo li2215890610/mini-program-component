@@ -54,8 +54,9 @@ page{
   width: 140rpx;
   height: 140rpx;
   margin-bottom: 20rpx;
-  display: block;
-  align-self: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .footer-btn{
   margin-top:20rpx;
