@@ -1,6 +1,8 @@
 /**
  * url: https://developers.weixin.qq.com/miniprogram/dev/reference/api/App.html#onLaunch-Object-object
  */
+import { setStorage } from "@utils/storage";
+
 App({
   globalData: {
     userInfo: null
@@ -8,6 +10,9 @@ App({
   //生命周期回调——监听小程序初始化。
   onLaunch: function (qurey) {
     console.log(qurey, "onLaunchonLaunch");
+
+    this.getSystemInfo()
+
     //判断api 是否可用
     if (wx.canIUse("getUpdateManager")) {
       const updateManager = wx.getUpdateManager();
@@ -38,6 +43,59 @@ App({
         content: "您的微信版本过低，建议升级到最新版本。"
       });
     }
+  },
+  getSystemInfo() {
+    wx.getSystemInfo({
+      success: function (res) {
+
+        let screenHeight = res.screenHeight
+        let screenWidth = res.screenWidth
+        console.log("设备屏幕：", screenWidth, '*', screenHeight)
+
+        setStorage("screenHeight", screenHeight)
+        setStorage("screenWidth", screenWidth)
+
+        // 2
+        console.log("状态栏高度：" + res.statusBarHeight) // 状态栏的高度
+
+        // 3 胶囊数据：
+        const pill = wx.getMenuButtonBoundingClientRect()
+        console.log("胶囊数据：" + JSON.stringify(pill))
+
+        // 4 开始计算
+        let navHeight = (pill.top - res.statusBarHeight) * 2 + pill.height // 导航栏高度
+        console.log("导航栏高度：" + navHeight)
+
+        // 5 设置自定义导航数据储存
+        let myHomeNav = {
+          statusBarHeight: res.statusBarHeight,
+          navHeight,
+        }
+
+        setStorage('NavHeadHeight',myHomeNav)
+
+        // 6 
+        // 适配iphoneX以上的底部，给tabbar一定高度的padding-bottom
+        const model = ['X', 'XR', 'XS', '11', '12', '13', '14', '15'];
+
+        let needPaddingBottom = false
+        
+        model.forEach(item => {
+          if (res.model.indexOf(item) != -1 && res.model.indexOf('iPhone') != -1) {
+            needPaddingBottom = true
+          }
+        })
+
+        if (needPaddingBottom) {
+          const customBottom = {
+            paddingBottom: 20
+          }
+          setStorage('customBottom',customBottom)
+        }
+
+      }
+
+    });
   },
   //小程序启动，或从后台进入前台显示时触发
   onShow: function (qurey) {

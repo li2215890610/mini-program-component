@@ -1,10 +1,37 @@
-<vc-header-bar nav="{{setNav}}"></vc-header-bar>
 
-<button 
-  wx:for="{{goPage}}" 
-  wx:key="index" 
-  bindtap="navigateTo"
-  data-url="{{item.url}}"
->
-  {{item.btnText}}
-</button>
+<PageNav navigationBarBackgroundColor="#2e7bf7" navigationBarTitleText="主页" hideIcon></PageNav>
+
+<SwiperList />
+<Main />
+<BootomList />
+
+<PageBody showNomore="{{record.length > 0}}" refresherTriggered="{{refresherTriggered}}" bind:scrollend="handleBodyReachBottom" bind:pull="headerPullingDown">
+
+
+  <view class="list" wx:if="{{record.length > 0}}">
+    <view class="list___item" wx:for="{{record}}" wx:key="index" bindtap="handleClick">
+      {{item}}
+    </view>
+  </view>
+
+  <!-- 空数据的 展示 -->
+  <view wx:if="{{record.length === 0}}" slot="empty" class="no-data" style="font-size:24rpx;color:#aaa;">暂无数据</view>
+  
+</PageBody>
+
+
+<ModalPanel showClose="{{true}}" showTitle="{{true}}" text="测试1" show-check="{{true}}" show="{{isStoreEmpty}}" bind:done="handleStoreEmpty" buttonText="我知道啦！">
+  <view class="store___empty">
+    <view>
+      <view class="store___empty_title">
+        当前手机号无门店
+      </view>
+      <view class="store___empty_message">
+        非雪花CRM系统负责人电话
+      </view>
+      <view class="store___empty_handle">
+        请联系雪花业务员处理
+      </view>
+    </view>
+  </view>
+</ModalPanel>

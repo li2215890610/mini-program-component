@@ -1,0 +1,18 @@
+<!-- 定义一个view，class为flex-col modal-panel-container，如果show为true，则添加show类 -->
+<view class="flex-col modal-panel-container {{show?'show':''}}">
+    <!-- 定义一个view，class为flex-col panel -->
+    <view class="flex-col panel">
+        <!-- 如果showClose为true，则显示一个关闭按钮 -->
+        <image wx:if="{{showClose}}" class="close-btn" src="./images/close.svg" bindtap="handleClose" />
+        <!-- 如果showCheck为true，则显示一个图标 -->
+        <view wx:if="{{showCheck}}" class="icon">
+            <image class="icon-img" src="./images/done.png" />
+        </view>
+        <!-- 如果showTitle为true，则显示一个标题 -->
+        <view wx:if="{{showTitle}}" class="title">{{text}}</view>
+        <!-- 显示内容 -->
+        <view class="content"><slot /></view>
+        <!-- 定义一个view，class为flex-col button，点击时触发handleTap事件 -->
+        <view class="flex-col button" bindtap="handleTap">{{buttonText}}</view>
+    </view>
+</view>

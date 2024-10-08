@@ -1,0 +1,5 @@
+/* pages/home/components/main/index.wxss */
+.main__{
+  height: 200rpx;
+  background-color: rebeccapurple;
+}

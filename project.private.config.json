@@ -3,6 +3,13 @@
     "miniprogram": {
       "list": [
         {
+          "name": "中间件登陆",
+          "pathName": "pages/index/index",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
           "name": " 中控",
           "pathName": "pages/home/home",
           "query": "",
@@ -22,7 +29,9 @@
   "description": "项目私有配置文件。此文件中的内容将覆盖 project.config.json 中的相同字段。项目的改动优先同步到此文件中。详见文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html",
   "libVersion": "2.24.1",
   "setting": {
-    "compileHotReLoad": false,
-    "autoAudits": false
-  }
+    "compileHotReLoad": true,
+    "autoAudits": false,
+    "urlCheck": false
+  },
+  "projectname": "%E5%B0%8F%E7%A8%8B%E5%BA%8FUI%E7%BB%84%E4%BB%B6%E5%BA%93"
 }

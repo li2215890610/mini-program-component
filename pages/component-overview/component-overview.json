@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "组件一览",
+  "usingComponents": {
+    "PageNav":"/components/PageNav",
+    "vc-icon": "/components/vc-icon/vc-icon",
+    "vc-header-bar":"/components/vc-header-bar/vc-header-bar"
+  }
+}

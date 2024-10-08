@@ -1,8 +1,14 @@
 {
-  "navigationBarTitleText": "中控",
-  "navigationStyle":"custom",
   "usingComponents": {
-    "vc-icon": "../../components/vc-icon/vc-icon",
-    "vc-header-bar":"../../components/vc-header-bar/vc-header-bar"
-  }
+    "SwiperList":"./components/swiper-list",
+    "Main":"./components/main",
+    "BootomList":"./components/bottom-list",
+
+    "PageNav":"/components/PageNav",
+    "ModalPanel":"/components/ModalPanel",
+    "PageBody":"/components/PageBody"
+  },
+  "navigationStyle": "custom",
+  "navigationBarTitleText": "主页",
+  "enablepulldownRefresh": "false"
 }

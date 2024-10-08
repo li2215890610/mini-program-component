@@ -1,0 +1,28 @@
+<!-- 页面头部容器 -->
+<view class="page-head-container {{fixed?'fixed':''}}" style="background-color: {{navigationBarBackgroundColor}};">
+    <!-- 页面头部占位符 -->
+    <view class="page-head-placeholder" style="height:{{top}}px;"></view>
+    <!-- 页面头部主体 -->
+    <view class="page-head-body" style="height:{{height}}px;">
+        <!-- 页面头部返回按钮 -->
+        <view class="page-head-back" style="width:{{width}}px;margin-left:{{screenWidth - right}}px;">
+            <!-- 返回按钮 -->
+            <view class="back-btn" wx:if="{{!hideIcon && backStatus>0}}" bindtap="handleBack">
+                <!-- 返回按钮图标 -->
+                <image wx:if="{{backStatus==2}}" class="icon" src="./back.svg" mode="aspectFill" />
+                <!-- 返回首页按钮图标 -->
+                <image wx:elif="{{backStatus==1}}" class="icon" src="./back-home.svg" mode="aspectFill" />
+            </view>
+        </view>
+        <!-- 页面头部标题 -->
+        <view class="page-head-title" style="color:{{navigationBarTextStyle}}">
+            <text>{{navigationBarTitleText}}</text>
+        </view>
+        <!-- 页面头部右侧 -->
+        <view class="page-head-right" style="width:{{width}}px;margin-right:{{screenWidth - right}}px;"></view>
+    </view>
+    <!-- 页面头部间隙 -->
+    <view class="page-head-gap" style="height:{{gap}}rpx;"></view>
+    <!-- 插槽 -->
+    <slot />
+</view>

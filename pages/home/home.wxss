@@ -1,5 +1,44 @@
 
-button{
-  margin: 50rpx;
+.back___image{
+  width: 25px;
+  height: 25px;
+}
+.logo{
 }
 
+
+
+
+.store__empty {
+  display: flex;
+  flex-direction: column;
+  color: red;
+}
+.store___empty_title{
+  margin: 20rpx 0;
+}
+.store___empty_title,
+.store___empty_handle,
+.store___empty_message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30rpx;
+}
+.store___empty_handle,
+.store___empty_message {
+  margin-bottom: 20rpx;
+}
+.store___empty_handle {
+  color: #0081FF;
+}
+
+.list{
+  width: 100%;
+}
+.list___item{
+  width: 100%;
+  height: 300px;
+  margin-bottom: 20px;
+  background-color: #0081FF;
+}

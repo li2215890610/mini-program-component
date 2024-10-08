@@ -32,7 +32,8 @@
     "pages/tab/tab",
     "pages/loadmore/loadmore",
     "pages/badge/badge",
-    "pages/avatar/avatar"
+    "pages/avatar/avatar",
+    "pages/component-overview/component-overview"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -51,6 +52,12 @@
         "iconPath": "images/D81B60/home/fill/opacity.png",
         "selectedIconPath": "images/D81B60/home/fill/normal.png",
         "text": "主页"
+      },
+      {
+        "pagePath": "pages/component-overview/component-overview",
+        "iconPath": "images/D81B60/home/fill/opacity.png",
+        "selectedIconPath": "images/D81B60/home/fill/normal.png",
+        "text": "组件一览"
       },
       {
         "pagePath": "pages/category/category",
@@ -81,5 +88,15 @@
         "pages/reset-password"
       ]
     }
+  },
+  "resolveAlias": {
+    "~/*": "/*",
+    "@utils/*": "utils/*",
+    "@components/*": "components/*",
+    "@assets/*": "assets/*",
+    "@servers/*": "servers/*",
+    "@styles/*": "styles/*",
+    "@images/*": "images/*",
+    "@config/*": "config/*"
   }
 }

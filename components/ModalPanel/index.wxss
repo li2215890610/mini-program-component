@@ -1,0 +1,68 @@
+.flex-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.modal-panel-container {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 200;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.modal-panel-container.show {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.modal-panel-container .panel {
+    width: 540rpx;
+    min-height: 300rpx;
+    box-sizing: border-box;
+    border-radius: 24rpx;
+    background-color: #fff;
+    position: relative;
+    justify-content: space-between;
+}
+
+.modal-panel-container .panel .close-btn {
+    position: absolute;
+    width: 42rpx;
+    height: 42rpx;
+    right: 24rpx;
+    top: 24rpx;
+}
+
+.modal-panel-container .panel .icon {
+    width: 162rpx;
+    height: 162rpx;
+    margin-top: -60rpx;
+}
+
+.modal-panel-container .panel .icon .icon-img {
+    width: 100%;
+    height: 100%;
+}
+
+.modal-panel-container .panel .title {
+    font-family: "PingFangSC-Medium";
+    font-size: 42rpx;
+    color: #222222;
+}
+
+.modal-panel-container .panel .button {
+    height: 90rpx;
+    width: 100%;
+    border-top: 1px solid #eee;
+    font-family: "PingFangSC-Medium";
+    font-size: 30rpx;
+    color: #0081FF;
+}

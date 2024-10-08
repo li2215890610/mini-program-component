@@ -1,6 +1,8 @@
 {
   "usingComponents": {
-      "vc-avatar": "../../components/vc-avatar"
+      "vc-avatar": "/components/vc-avatar",
+      "PageNav":"/components/PageNav"
   },
-  "navigationBarTitleText": "头像"
+  "navigationBarTitleText": "头像",
+  "navigationStyle": "custom"
 }

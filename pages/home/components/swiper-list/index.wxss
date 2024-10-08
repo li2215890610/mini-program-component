@@ -1,0 +1,5 @@
+/* pages/home/home.wxss */
+.swiper__box{
+  background-color: red;
+  height: 600rpx !important;
+}

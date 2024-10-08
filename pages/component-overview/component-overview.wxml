@@ -1,0 +1,8 @@
+<button 
+  wx:for="{{goPage}}" 
+  wx:key="index" 
+  bindtap="navigateTo"
+  data-url="{{item.url}}"
+>
+  {{item.btnText}}
+</button>

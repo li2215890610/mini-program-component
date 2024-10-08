@@ -1,0 +1,57 @@
+<!-- 
+    滚动视图组件，提供了可滚动的视图区域，常用于实现滚动列表、滚动页面等。
+    enable-flex: 启用 flexbox 布局，子元素可以通过 flex 属性进行布局。
+    class: 指定样式类，用于设置组件的样式。
+    scroll-y: 允许纵向滚动。
+    enhanced: 启用增强滚动性能，但可能在某些情况下导致样式问题。
+    bounces: 设置是否启用滚动反弹效果，这里设置为 false，表示不启用。
+    
+    refresher-enabled: 设置是否启用下拉刷新，这里设置为 false，表示不启用。
+    refresher-threshold： 设置下拉刷新时下拉的距离阈值，这里设置为 80px。
+    refresher-background： 设置下拉刷新时下拉区域的颜色，这里设置为 #00182E。
+    bindrefresherrefresh: 下拉刷新时触发的函数。
+    refresher-triggered: 设置下拉刷新是否被触发，通过数据绑定来控制。
+
+    show-scrollbar: 设置是否显示滚动条，这里设置为 false，表示不显示。
+    style: 设置组件的内联样式，这里动态设置了组件的高度。
+    bindscrolltolower: 滚动到底部时触发的函数。
+    lower-threshold: 距底部多少距离时，触发 bindscrolltolower 事件，这里设置为 50px。
+-->
+<scroll-view
+    enable-flex 
+    class="page-body-scroll"
+    scroll-y
+    scroll-top="0"
+    enhanced
+    bounces="{{false}}"
+    refresher-enabled="{{true}}" 
+    refresher-threshold="{{80}}"
+    refresher-background="#00182E"
+    bindrefresherrefresh="handleRefresh"
+    refresher-triggered="{{refresherTriggered}}"
+
+    show-scrollbar="{{false}}"
+    style="height:{{H}}px;"
+    bindscrolltolower="handleReachBottom"
+    lower-threshold="{{50}}"
+>
+
+
+   <!-- 默认插槽，用于插入默认的内容，通常是滚动视图的主要内容列表。 -->
+    <slot />
+
+    <!-- 插槽，用于插入名为 "empty" 的内容，常用于列表为空时显示提示信息。 -->
+    <slot name="empty" />
+    
+    <!-- "没有更多了" 提示视图，当列表数据全部加载完毕后显示。 -->
+    <view wx:if="{{showNomore}}" class="flex-row no-more">
+        <!-- 线条视图，用于装饰提示信息 -->
+        <view class="line"></view>
+        <!-- 提示文本 -->
+        <text>没有更多了</text>
+        <!-- 线条视图，用于装饰提示信息 -->
+        <view class="line"></view>
+    </view>
+
+    <view class="bottom-step"></view>
+</scroll-view>

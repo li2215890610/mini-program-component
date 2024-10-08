@@ -1,12 +1,11 @@
-page{
+.page {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   padding-top: 60rpx;
+  height: 500px;
 }
 
-.success{
-  width: 100%;
-  height: 100%;
-  margin-top:60rpx;
+.success {
+  margin-top: 60rpx;
 }

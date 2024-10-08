@@ -1,4 +1,6 @@
-<view>
+<PageNav navigationBarBackgroundColor="#2e7bf7" navigationBarTitleText="头像"></PageNav>
+
+<view class="page">
 
 	<view class="success">
 		<vc-avatar type="square" src="https://img2.woyaogexing.com/2022/06/21/8a788e0c20235be9!400x400.jpg"></vc-avatar>
