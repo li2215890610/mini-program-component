@@ -1,7 +1,9 @@
 /**
  * url: https://developers.weixin.qq.com/miniprogram/dev/reference/api/App.html#onLaunch-Object-object
  */
-import { setStorage } from "@utils/storage";
+import {
+  setStorage
+} from "@utils/storage";
 
 App({
   globalData: {
@@ -45,68 +47,67 @@ App({
     }
   },
   getSystemInfo() {
-    wx.getSystemInfo({
-      success: function (res) {
 
-        let screenHeight = res.screenHeight
-        let screenWidth = res.screenWidth
-        console.log("设备屏幕：", screenWidth, '*', screenHeight)
+    const windowInfo = wx.getWindowInfo()
 
-        setStorage("screenHeight", screenHeight)
-        setStorage("screenWidth", screenWidth)
+    let screenHeight = windowInfo.screenHeight
+    let screenWidth = windowInfo.screenWidth
+    console.log("设备屏幕：", screenWidth, '*', screenHeight)
 
-        // 2
-        console.log("状态栏高度：" + res.statusBarHeight) // 状态栏的高度
+    setStorage("screenHeight", screenHeight)
+    setStorage("screenWidth", screenWidth)
 
-        // 3 胶囊数据：
-        const pill = wx.getMenuButtonBoundingClientRect()
-        console.log("胶囊数据：" + JSON.stringify(pill))
+    // 2
+    console.log("状态栏高度：" + windowInfo.statusBarHeight) // 状态栏的高度
 
-        // 4 开始计算
-        let navHeight = (pill.top - res.statusBarHeight) * 2 + pill.height // 导航栏高度
-        console.log("导航栏高度：" + navHeight)
+    // 3 胶囊数据：
+    const pill = wx.getMenuButtonBoundingClientRect()
+    console.log("胶囊数据：" + JSON.stringify(pill))
 
-        // 5 设置自定义导航数据储存
-        let myHomeNav = {
-          statusBarHeight: res.statusBarHeight,
-          navHeight,
-        }
+    // 4 开始计算
+    let navHeight = (pill.top - windowInfo.statusBarHeight) * 2 + pill.height // 导航栏高度
+    console.log("导航栏高度：" + navHeight)
 
-        setStorage('NavHeadHeight',myHomeNav)
+    // 5 设置自定义导航数据储存
+    let myHomeNav = {
+      statusBarHeight: windowInfo.statusBarHeight,
+      navHeight,
+    }
 
-        // 6 
-        // 适配iphoneX以上的底部，给tabbar一定高度的padding-bottom
-        const model = ['X', 'XR', 'XS', '11', '12', '13', '14', '15'];
+    setStorage('NavHeadHeight', myHomeNav)
 
-        let needPaddingBottom = false
-        
-        model.forEach(item => {
-          if (res.model.indexOf(item) != -1 && res.model.indexOf('iPhone') != -1) {
-            needPaddingBottom = true
-          }
-        })
+    const deviceInfo = wx.getDeviceInfo()
+    
+    // 6 
+    // 适配iphoneX以上的底部，给tabbar一定高度的padding-bottom
+    const model = ['X', 'XR', 'XS', '11', '12', '13', '14', '15'];
 
-        if (needPaddingBottom) {
-          const customBottom = {
-            paddingBottom: 20
-          }
-          setStorage('customBottom',customBottom)
-        }
+    let needPaddingBottom = false
 
+    model.forEach(item => {
+      if (deviceInfo.model.indexOf(item) != -1 && deviceInfo.model.indexOf('iPhone') != -1) {
+        needPaddingBottom = true
       }
+    })
 
-    });
+    if (needPaddingBottom) {
+      const customBottom = {
+        paddingBottom: 20
+      }
+      setStorage('customBottom', customBottom)
+    }
+
   },
   //小程序启动，或从后台进入前台显示时触发
   onShow: function (qurey) {
     console.log(qurey, "onShowonShowonShow");
   },
   //小程序从前台进入后台时触发
-  onHide () {
+  onHide() {
     // Do something when hide.
   },
   //小程序发生脚本错误或 API 调用报错时触发
-  onError (msg) {
+  onError(msg) {
     console.log(msg)
   },
   //小程序要打开的页面不存在时触发
@@ -116,7 +117,7 @@ App({
     })
   },
   //系统切换主题时触发。也可以使用 
-  onThemeChange: function(){
+  onThemeChange: function () {
 
   }
 })
